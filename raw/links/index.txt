@@ -16,6 +16,17 @@ http://khpi-iip.mipk.kharkiv.edu/library/extent/index.html
 Много информации вообще
 https://docstore.mik.ua/
 
+Национальный Открытый Университет «ИНТУИТ»
+https://www.intuit.ru/
+
+
+Курс видеолекций о дискретной математике
+https://www.youtube.com/playlist?list=PLDrmKwRSNx7J16QBIZMNmAUDRQjjwVTTG
+
+
+Одна из самых доходчивых схем родословной Unix-систем
+http://www.netneurotic.de/mac/unix/images/UNIX.png
+
 
 Вроде как справочник по названиям операций в Логике.
 https://ru.wikipedia.org/wiki/Категория:Логические_операции
@@ -29,12 +40,55 @@ https://www.youtube.com/watch?v=0SGQo8-dcww
 https://www.nasa.gov/
 
 
-
 Яшкардин Владимир Леонидович
 http://www.softelectro.ru/
 
 
+Страница о популярности различных операционных систем в различных сферах IT
+https://en.wikipedia.org/wiki/Usage_share_of_operating_systems
+
+
+Разработчик Lev Walkin рассказывает почему BSD лицензия лучше
+https://lionet.livejournal.com/31952.html
+
+
 
 =====
+https://rsload.net/
+=====
+
 Для создания загрузочных флешек с MS Windows лучше всего работают WinSetupFromUSB или Rufus.
+
 The Expert
+
+Для тех, кто устал включать NumLock есть программа numlockx.
+Можно прописать в .xinitrc numlockx on чтоб NumLock включался при запуске xinit.
+
+=====
+
+Универскальная переключалка клавиатуры X11:
+setxkbmap
+
+Параметры:
+-layout 'us,ru' — список используемых раскладок.
+-option 'grp:lctrl_lshift_toggle' — комбинация переключения раскладок (здесь - левые ctrl+shift).
+Скажем, 'grp:lalt_lshift_toggle' - переключение по левым alt+shift.
+Я использую 'grp:lwin_toggle' - переключение по левому winkey.
+-option 'grp_led:scroll' - индикатор переключения раскладки, можно и не указывать.
+
+Я записал в .xinitrc (скрипт запуска X11) следующее:
+setxkbmap -layout 'us,ru' -option 'grp:lwin_toggle,grp_led:scroll'
+
+=====
+
+В 1992 году компания AT&T подала в суд на BSDI, компанию-поставщика ОС BSD/386. Основным пунктом обвинения было то, что BSD/386 содержала в себе закрытый код, принадлежавший AT&T. Дело вроде бы уладили за пределами суда в 1994-ом, но целая серия вторичных тяжб портила жизнь многим людям. В марте 2000, в Internet была опубликована статья, утверждавшая, что судебное разбирательство окончательно завершено («recently settled»).
+
+В результате разбирательства прояснился вопрос с названиями: если в 80-х годах BSD была известна под именем «BSD UNIX(R)», то с исключением последних следов кода, принадлежавшего AT&T, BSD потеряла право называться UNIX(R). Вы можете заметить этот факт по изменившимся заглавиям книг: «операционная система 4.3BSD UNIX(R)» и «операционная система 4.4BSD».
+
+=====
+
+For most people, yes. But this question is not quite that cut-and-dried.
+
+Most people do not actually use an operating system. They use applications. The applications are what really use the operating system. FreeBSD is designed to provide a robust and full-featured environment for applications. It supports a wide variety of web browsers, office suites, email readers, graphics programs, programming environments, network servers, and much more. Most of these applications can be managed through the Ports Collection.
+
+If an application is only available on one operating system, that operating system cannot just be replaced. Chances are, there is a very similar application on FreeBSD, however. As a solid office or Internet server or a reliable workstation, FreeBSD will almost certainly do everything you need. Many computer users across the world, including both novices and experienced UNIX® administrators, use FreeBSD as their only desktop operating system.
