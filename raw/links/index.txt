@@ -23,12 +23,21 @@ http://www.softelectro.ru/
 https://www.ibm.com/developerworks/ru/library
 
 
+Много букв про шрифты в X11, потому что шрифты в X11 это кошмар
+https://ru.wikibooks.org/wiki/Шрифты_в_Linux
+и вообще
+https://ru.wikibooks.org -- кладязь
 
+
+Библиотека "Харьковского Политехнического Института"
+http://khpi-iip.mipk.kharkiv.edu/library/index.html
+http://khpi-iip.mipk.kharkiv.edu/library/extent/index.html
 
 
 
 Много инфы
 https://docstore.mik.ua/
+
 
 
 =====
