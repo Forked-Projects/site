@@ -37,3 +37,4 @@ http://www.softelectro.ru/
 
 =====
 Для создания загрузочных флешек с MS Windows лучше всего работают WinSetupFromUSB или Rufus.
+The Expert
