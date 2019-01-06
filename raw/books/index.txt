@@ -1,0 +1,5 @@
+Маршалл Кирк МакКузик, Джордж В. Невилл-Нил
+FreeBSD. Архитектура и реализация
+Год: 2006
+Перевод: Р. Галеев
+http://muff.kiev.ua/content/freebsd-arkhitektura-i-realizatsiya
