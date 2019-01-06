@@ -52,6 +52,23 @@ https://en.wikipedia.org/wiki/Usage_share_of_operating_systems
 https://lionet.livejournal.com/31952.html
 
 
+Красивейшая тема для icewm + gtk
+https://www.box-look.org/content/show.php/IceClearlooks?content=96346
+
+
+Джоэл Спольски — программист и писатель. Известен прежде всего как автор блога «Джоэл о программном обеспечении» (Joel on Software), в котором он обсуждает вопросы программирования. В 1991—1994 годах он занимал должность менеджера по продуктам в команде Microsoft Excel.
+Весьма увлекательные переводы его книг можно найти здесь:
+http://russian.joelonsoftware.com
+
+
+
+Оригинальное объявление Ричарда Столлмана о создании проекта GNU:
+https://groups.google.com/forum/#!topic/net.unix-wizards/8twfRPM79u0
+
+
+Clearlooks 0.6.2 + Tango Icons is the best theme for GTK++
+https://vk.com/wall-34632406?day=05012019&offset=840&w=wall-34632406_3575
+
 
 =====
 https://rsload.net/
@@ -92,3 +109,42 @@ For most people, yes. But this question is not quite that cut-and-dried.
 Most people do not actually use an operating system. They use applications. The applications are what really use the operating system. FreeBSD is designed to provide a robust and full-featured environment for applications. It supports a wide variety of web browsers, office suites, email readers, graphics programs, programming environments, network servers, and much more. Most of these applications can be managed through the Ports Collection.
 
 If an application is only available on one operating system, that operating system cannot just be replaced. Chances are, there is a very similar application on FreeBSD, however. As a solid office or Internet server or a reliable workstation, FreeBSD will almost certainly do everything you need. Many computer users across the world, including both novices and experienced UNIX® administrators, use FreeBSD as their only desktop operating system.
+
+=====
+
+Вот при печати если нужно написать один символ много раз (например, этоооооооооооооооо),
+мы нажимаем кнопку символа, и есть задержка, а потом повторения этого символа.
+
+Чтоб задать эти настройки в Xorg, достаточно сделать следующее:
+xset r rate ЗАДЕРЖКА[мс] ЧАСТОТА[Гц]
+
+То есть я себе сделал:
+xset r rate 250 25
+
+
+=====
+
+zenity -- программа для создания оповещений
+
+=====
+
+какие DE используют ЛОР-овцы
+https://www.linux.org.ru/polls/polls/9380184
+
+=====
+
+Мигель Де Икаса
+https://www.computerra.ru/213376/linux-dlya-polzovateley-pogubili-mac-os-x-i-veb-s/
+https://habr.com/post/127970/
+
+=====
+
+Если вы хотите вручную поиграться с цветами, можно это сделать, создав свою тему gnome-shell и отредактировав её.
+Создать файл ~/.themes/mytheme/gnome-shell/gnome-shell.css
+Вписать туда css свойства для элементов (в данном случае - настройка прозрачности панели).
+Подсмотреть элементы "разметки" gnome-shell можно, например, в файле /usr/share/gnome-shell/theme/gnome-classic.css
+
+https://vk.com/wall-34632406?day=05012019&offset=860&w=wall-34632406_3524
+
+
+42 / 820
