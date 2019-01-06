@@ -19,12 +19,17 @@ https://ru.wikipedia.org/wiki/Категория:Логические_опера
 http://www.softelectro.ru/
 
 
+Техническая библиотека IBM
+https://www.ibm.com/developerworks/ru/library
 
 
 
 
 
 
-
-Много
+Много инфы
 https://docstore.mik.ua/
+
+
+=====
+Для создания загрузочных флешек с MS Windows лучше всего работают WinSetupFromUSB или Rufus.
