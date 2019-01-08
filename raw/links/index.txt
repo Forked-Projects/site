@@ -128,14 +128,13 @@ zenity -- программа для создания оповещений
 
 =====
 
-какие DE используют ЛОР-овцы
+какие DE используют ЛОРовцы
 https://www.linux.org.ru/polls/polls/9380184
 
 =====
 
-Мигель Де Икаса
+MacOS X и веб погубили Linux для пользователей, считает Мигель Де Икаса
 https://www.computerra.ru/213376/linux-dlya-polzovateley-pogubili-mac-os-x-i-veb-s/
-https://habr.com/post/127970/
 
 =====
 
