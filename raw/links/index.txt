@@ -1,5 +1,5 @@
 Здесь много различного материала -- и ассемблер, и шрифты в X11,
-но информация изложена кучно. Можно ознакомиться, чтоб зацепиться за слова
+но информация изложена кучно. Можно ознакомиться, чтоб зацепиться за слова 
 или по-другому прочитать то что уже читал в другом месте,
 однако глубоко учить материал стоит по книгам
 https://ru.wikibooks.org
@@ -14,8 +14,9 @@ http://khpi-iip.mipk.kharkiv.edu/library/index.html
 http://khpi-iip.mipk.kharkiv.edu/library/extent/index.html
 
 
-Много информации вообще
+Много старой документации по UNIX на русском языке
 https://docstore.mik.ua/
+
 
 Национальный Открытый Университет «ИНТУИТ»
 https://www.intuit.ru/
@@ -31,6 +32,10 @@ http://www.netneurotic.de/mac/unix/images/UNIX.png
 
 Вроде как справочник по названиям операций в Логике.
 https://ru.wikipedia.org/wiki/Категория:Логические_операции
+
+
+Страница о популярности различных операционных систем в различных сферах IT
+https://en.wikipedia.org/wiki/Usage_share_of_operating_systems
 
 
 Revolution OS -- фильм о Ричарде Столлмане и возниконовении движения
@@ -50,8 +55,14 @@ https://www.nasa.gov/
 http://www.softelectro.ru/
 
 
-Страница о популярности различных операционных систем в различных сферах IT
-https://en.wikipedia.org/wiki/Usage_share_of_operating_systems
+Джоэл Спольски — программист и писатель.
+Известен прежде всего как автор блога «Джоэл о программном обеспечении» (Joel on Software),
+в котором он обсуждает вопросы программирования.
+В 1991—1994 годах он занимал должность менеджера по продуктам в команде Microsoft Excel.
+Весьма увлекательные переводы его статей можно найти здесь:
+http://local.joelonsoftware.com/mediawiki/index.php/Russian
+
+
 
 
 Разработчик Lev Walkin рассказывает почему BSD лицензия лучше
@@ -60,11 +71,6 @@ https://lionet.livejournal.com/31952.html
 
 Красивейшая тема для icewm + gtk
 https://www.box-look.org/content/show.php/IceClearlooks?content=96346
-
-
-Джоэл Спольски — программист и писатель. Известен прежде всего как автор блога «Джоэл о программном обеспечении» (Joel on Software), в котором он обсуждает вопросы программирования. В 1991—1994 годах он занимал должность менеджера по продуктам в команде Microsoft Excel.
-Весьма увлекательные переводы его книг можно найти здесь:
-http://russian.joelonsoftware.com
 
 
 Clearlooks 0.6.2 + Tango Icons is the best theme for GTK++
