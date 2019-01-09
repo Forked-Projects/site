@@ -1,6 +1,5 @@
-Здесь много различного материала -- и ассемблер, и шрифты в X11,
-но информация изложена кучно. Можно ознакомиться, чтоб зацепиться за слова 
-или по-другому прочитать то что уже читал в другом месте,
+Здесь много различного материала -- и ассемблер, и шрифты в X11, но информация изложена кучно.
+Можно ознакомиться, чтоб зацепиться за слова или по-другому прочитать то что уже читал в другом месте,
 однако глубоко учить материал стоит по книгам
 https://ru.wikibooks.org
 
@@ -13,8 +12,7 @@ https://www.ibm.com/developerworks/ru/library
 https://docstore.mik.ua/
 
 
-Библиотека "Харьковского Политехнического Института",
-переводы статей Эдсгера Дейкстры
+Библиотека "Харьковского Политехнического Института", переводы статей Эдсгера Дейкстры
 http://khpi-iip.mipk.kharkiv.edu/library/index.html
 http://khpi-iip.mipk.kharkiv.edu/library/extent/index.html
 
@@ -27,7 +25,7 @@ https://www.intuit.ru/
 https://www.youtube.com/playlist?list=PLDrmKwRSNx7J16QBIZMNmAUDRQjjwVTTG
 
 
-Одна из самых доходчивых схем родословной Unix-систем
+Одна из самых полных схем родословной Unix-систем 
 http://www.netneurotic.de/mac/unix/images/UNIX.png
 
 
@@ -39,8 +37,7 @@ https://ru.wikipedia.org/wiki/Категория:Логические_опера
 https://en.wikipedia.org/wiki/Usage_share_of_operating_systems
 
 
-Revolution OS -- фильм о Ричарде Столлмане и возниконовении движения
-за свободное программное обеcпечение.
+Revolution OS -- фильм о Ричарде Столлмане и возниконовении движения за свободное программное обеcпечение.
 https://www.youtube.com/watch?v=0SGQo8-dcww
 
 
@@ -56,7 +53,7 @@ nvi/vim full list of keys
 http://www.jeffw.com/vi/index.html
 
 
-какие DE используют ЛОРовцы
+Какие DE используют ЛОРовцы
 https://www.linux.org.ru/polls/polls/9380184
 
 
@@ -68,10 +65,8 @@ MacOS X и веб погубили Linux для пользователей, сч
 https://www.computerra.ru/213376/linux-dlya-polzovateley-pogubili-mac-os-x-i-veb-s/
 
 
-Джоэл Спольски — программист и писатель.
-Известен прежде всего как автор блога «Джоэл о программном обеспечении»
-(Joel on Software), в котором он обсуждает вопросы программирования.
-Переводы его статей:
+Переводы блога программиста и писателя Джоэла Спольски ("Joel on Software"),
+в котором он обсуждает вопросы программирования
 http://local.joelonsoftware.com/mediawiki/index.php/Russian
 
 
@@ -79,23 +74,17 @@ http://local.joelonsoftware.com/mediawiki/index.php/Russian
 https://lionet.livejournal.com/31952.html
 
 
-Красивейшая тема для icewm + gtk
+Красивейшая тема для IceWM и GTK+
 https://www.box-look.org/content/show.php/IceClearlooks?content=96346
 
 
-Clearlooks 0.6.2 + Tango Icons is the best theme for GTK++
+Clearlooks 0.6.2 + Tango Icons is the best theme for GTK+
 https://vk.com/wall-34632406?day=05012019&offset=840&w=wall-34632406_3575
 
 
-=====
+Для создания загрузочных флешек с MS Windows лучше всего работает WinSetupFromUSB
+https://winsetupfromusb.com
 
-Для создания загрузочных флешек с MS Windows лучше всего работают WinSetupFromUSB или Rufus.
-
-The Expert
-
-=====
-
-https://rsload.net/
 
 =====
 
@@ -126,7 +115,6 @@ xset r rate ЗАДЕРЖКА[мс] ЧАСТОТА[Гц]
 
 То есть я себе сделал:
 xset r rate 250 25
-
 
 =====
 
