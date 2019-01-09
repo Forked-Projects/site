@@ -56,8 +56,16 @@ nvi/vim full list of keys
 http://www.jeffw.com/vi/index.html
 
 
+какие DE используют ЛОРовцы
+https://www.linux.org.ru/polls/polls/9380184
+
+
 Яшкардин Владимир Леонидович
 http://www.softelectro.ru/
+
+
+MacOS X и веб погубили Linux для пользователей, считает Мигель Де Икаса
+https://www.computerra.ru/213376/linux-dlya-polzovateley-pogubili-mac-os-x-i-veb-s/
 
 
 Джоэл Спольски — программист и писатель.
@@ -80,12 +88,16 @@ https://vk.com/wall-34632406?day=05012019&offset=840&w=wall-34632406_3575
 
 
 =====
-https://rsload.net/
-=====
 
 Для создания загрузочных флешек с MS Windows лучше всего работают WinSetupFromUSB или Rufus.
 
 The Expert
+
+=====
+
+https://rsload.net/
+
+=====
 
 Для тех, кто устал включать NumLock есть программа numlockx.
 Можно прописать в .xinitrc numlockx on чтоб NumLock включался при запуске xinit.
@@ -100,24 +112,9 @@ setxkbmap
 -option 'grp:lctrl_lshift_toggle' — комбинация переключения раскладок (здесь - левые ctrl+shift).
 Скажем, 'grp:lalt_lshift_toggle' - переключение по левым alt+shift.
 Я использую 'grp:lwin_toggle' - переключение по левому winkey.
--option 'grp_led:scroll' - индикатор переключения раскладки, можно и не указывать.
-
+-option 'grp_led:scroll' - горит ScrollLock когда включена альтернативная (русская) раскладка, можно не указывать.
 Я записал в .xinitrc (скрипт запуска X11) следующее:
 setxkbmap -layout 'us,ru' -option 'grp:lwin_toggle,grp_led:scroll'
-
-=====
-
-В 1992 году компания AT&T подала в суд на BSDI, компанию-поставщика ОС BSD/386. Основным пунктом обвинения было то, что BSD/386 содержала в себе закрытый код, принадлежавший AT&T. Дело вроде бы уладили за пределами суда в 1994-ом, но целая серия вторичных тяжб портила жизнь многим людям. В марте 2000, в Internet была опубликована статья, утверждавшая, что судебное разбирательство окончательно завершено («recently settled»).
-
-В результате разбирательства прояснился вопрос с названиями: если в 80-х годах BSD была известна под именем «BSD UNIX(R)», то с исключением последних следов кода, принадлежавшего AT&T, BSD потеряла право называться UNIX(R). Вы можете заметить этот факт по изменившимся заглавиям книг: «операционная система 4.3BSD UNIX(R)» и «операционная система 4.4BSD».
-
-=====
-
-For most people, yes. But this question is not quite that cut-and-dried.
-
-Most people do not actually use an operating system. They use applications. The applications are what really use the operating system. FreeBSD is designed to provide a robust and full-featured environment for applications. It supports a wide variety of web browsers, office suites, email readers, graphics programs, programming environments, network servers, and much more. Most of these applications can be managed through the Ports Collection.
-
-If an application is only available on one operating system, that operating system cannot just be replaced. Chances are, there is a very similar application on FreeBSD, however. As a solid office or Internet server or a reliable workstation, FreeBSD will almost certainly do everything you need. Many computer users across the world, including both novices and experienced UNIX® administrators, use FreeBSD as their only desktop operating system.
 
 =====
 
@@ -134,16 +131,6 @@ xset r rate 250 25
 =====
 
 zenity -- программа для создания оповещений
-
-=====
-
-какие DE используют ЛОРовцы
-https://www.linux.org.ru/polls/polls/9380184
-
-=====
-
-MacOS X и веб погубили Linux для пользователей, считает Мигель Де Икаса
-https://www.computerra.ru/213376/linux-dlya-polzovateley-pogubili-mac-os-x-i-veb-s/
 
 =====
 
