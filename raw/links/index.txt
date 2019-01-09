@@ -9,13 +9,14 @@ https://ru.wikibooks.org
 https://www.ibm.com/developerworks/ru/library
 
 
-Библиотека "Харьковского Политехнического Института", переводы Эдсгера Дейкстры
-http://khpi-iip.mipk.kharkiv.edu/library/index.html
-http://khpi-iip.mipk.kharkiv.edu/library/extent/index.html
-
-
 Много старой документации по UNIX на русском языке
 https://docstore.mik.ua/
+
+
+Библиотека "Харьковского Политехнического Института",
+переводы статей Эдсгера Дейкстры
+http://khpi-iip.mipk.kharkiv.edu/library/index.html
+http://khpi-iip.mipk.kharkiv.edu/library/extent/index.html
 
 
 Национальный Открытый Университет «ИНТУИТ»
@@ -56,13 +57,10 @@ http://www.softelectro.ru/
 
 
 Джоэл Спольски — программист и писатель.
-Известен прежде всего как автор блога «Джоэл о программном обеспечении» (Joel on Software),
-в котором он обсуждает вопросы программирования.
-В 1991—1994 годах он занимал должность менеджера по продуктам в команде Microsoft Excel.
-Весьма увлекательные переводы его статей можно найти здесь:
+Известен прежде всего как автор блога «Джоэл о программном обеспечении»
+(Joel on Software), в котором он обсуждает вопросы программирования.
+Переводы его статей:
 http://local.joelonsoftware.com/mediawiki/index.php/Russian
-
-
 
 
 Разработчик Lev Walkin рассказывает почему BSD лицензия лучше
