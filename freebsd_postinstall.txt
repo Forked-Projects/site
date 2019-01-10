@@ -1,5 +1,4 @@
-Нужно подключить драйверы для видеокарты в /boot/loader.conf
-или исполнить временно
+Нужно подключить драйверы для видеокарты в /boot/loader.conf или исполнить временно
 kldload i915kms -- для Intel
 или
 kldload radeonkms -- для Radeon
