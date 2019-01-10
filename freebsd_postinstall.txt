@@ -1,36 +1,41 @@
-If you want russian tty you can add to /etc/rc.conf
-keymap="ru.kbd" -- for switching between eng and ru keys with CapsLock
-keymap="ru.win.kbd" -- for switching with Ctrl+Shift
+Нужно подключить драйверы для видеокарты в /boot/loader.conf
+или исполнить временно
+kldload i915kms -- для Intel
+или
+kldload radeonkms -- для Radeon
 
-And add your user to class 'russian'
-pw user mod user -L russian
-
-Also for forcing load VT add to /boot/loader.conf
+Также если загружается syscons вместо vt -- в /boot/loader.conf
 hw.vga.textmode=0
 
-Or for cool resolution add to /boot/loader.conf
-kldload i915kms
-or
-kldload radeonkms
+Изменить шрифт на олдскульный vgafont в rc.conf
+font8x16="/usr/share/vt/fonts/vgarom-8x16.fnt"
+или временно
+vidcontrol -f /usr/share/vt/fonts/vgarom-8x16.fnt
+
+Для русского ввода в терминале нужно добавить это в /etc/rc.conf
+keymap="ru.kbd" -- для переключения по CapsLock
+keymap="ru.win.kbd" -- для переключения по Ctrl+Shift
+
+И добавить пользователя в класс 'russian'
+pw user mod user -L russian
 
 =====
 
-For wired internet add to /etc/rc.conf
-ifconfig_re0="DHCP"
+Для проводного интернета в /etc/rc.conf
+ifconfig_re0="DHCP" -- где 're0' -- имя карты в ifconfig
 
 For WiFi
-sysctl -a | grep wlan  -- it gives 'name0' name of card
+sysctl -a | grep net.wlan.devices  -- так можно глянуть имя wifi-карты 'name0'
 
-In rc.conf
+И прописать её в rc.conf
 wlans_name0="wlan0"
 ifconfig_wlan0="WPA SYNCDHCP"
 
-And for storing pass
-wpa_passphrase ssid pass > /etc/wpa_supplicant.conf
+Для пароля
+wpa_passphrase вайфай пароль > /etc/wpa_supplicant.conf
 
 =====
 
-Change font to vgafont in rc.conf
-font8x16="/usr/share/vt/fonts/vgarom-8x16.fnt"
+
 
 =====
