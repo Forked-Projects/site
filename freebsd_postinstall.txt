@@ -18,6 +18,8 @@ keymap="ru.win.kbd" -- для переключения по Ctrl+Shift
 
 И добавить пользователя в класс 'russian'
 pw user mod user -L russian
+или временно
+export LANG=ru_RU.UTF-8
 
 =====
 
