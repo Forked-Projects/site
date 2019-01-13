@@ -1,12 +1,14 @@
 Это минимальный срез того что можно сделать с FreeBSD сразу после установки.
 Всё это есть в FreeBSD Handbook, но тут всё какбэ на одной страничке.
-Можно сделать fetch http://vall.su/freebsd_postinstall.txt
-и читать файл прямо из консоли.
+Можно скачать 
+fetch http://vall.su/freebsd_postinstall.txt
 
+=====
 
 Поменять shell для root с tcsh на sh
 pw user mod -n root -s sh
 
+=====
 
 adduser -- диалог для создания пользователя
 Можно задать пользователю Login group -- wheel чтоб иметь возможность делать su,
@@ -18,25 +20,28 @@ Use an empty password? -- yes
 Очистить пароль пользователя
 pw user mod -n username -w none
 
+=====
 
 Подключить kms-драйверы для видеокарты в /boot/loader.conf или исполнить временно
 kldload i915kms -- для Intel
 или
 kldload radeonkms -- для Radeon
 
+=====
 
-Также если загружается syscons вместо vt -- в /boot/loader.conf
+Если загружается syscons вместо vt -- в /boot/loader.conf
 hw.vga.textmode=0
 
+=====
 
 Для русской локализации в консоли можно добавить пользователя в класс 'russian'
 pw user mod user -L russian 
 Все классы можно посмотреть в /etc/login.conf
 
 Другой путь -- задать переменную LANG
-export LANG=ru_RU.UTF-8, что также можно прописать в ~/.profile
+export LANG=ru_RU.UTF-8
+что также можно прописать в ~/.profile
 Файлы локализации находятся в /usr/share/locale/
-
 
 Для русского ввода в терминале нужно добавить это в /etc/rc.conf
 keymap="ru.kbd" -- для переключения по CapsLock
@@ -48,6 +53,7 @@ keymap="ru.win.kbd" -- для переключения по Ctrl+Shift
 Для проводного интернета в /etc/rc.conf
 ifconfig_re0="DHCP" -- где 're0' -- имя карты в ifconfig
 
+=====
 
 Для WiFi
 sysctl -a | grep net.wlan.devices  -- так можно глянуть имя wifi-карты 'name0'
