@@ -26,17 +26,18 @@ kldload radeonkms -- для Radeon
 hw.vga.textmode=0
 
 
-Для русского ввода в терминале нужно добавить это в /etc/rc.conf
-keymap="ru.kbd" -- для переключения по CapsLock
-keymap="ru.win.kbd" -- для переключения по Ctrl+Shift
-
-
 Для русской локализации в консоли можно добавить пользователя в класс 'russian'
 pw user mod user -L russian 
 Все классы можно посмотреть в /etc/login.conf
+
 Другой путь -- задать переменную LANG
 export LANG=ru_RU.UTF-8, что также можно прописать в ~/.profile
-Все файлы локализации находятся в /usr/share/locale
+Файлы локализации находятся в /usr/share/locale
+
+
+Для русского ввода в терминале нужно добавить это в /etc/rc.conf
+keymap="ru.kbd" -- для переключения по CapsLock
+keymap="ru.win.kbd" -- для переключения по Ctrl+Shift
 
 =====
 
@@ -99,9 +100,6 @@ export LANG EDITOR PAGER ENV LESSHISTFILE;
 set -o vi
 bind -a -r v
 alias svn=svnlite
-
-=====
-
 
 =====
 
