@@ -1,3 +1,7 @@
+pkg install firefox
+dbus-uuidgen > /etc/machine-id
+
+
 Localization
 https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack
 
@@ -6,7 +10,9 @@ https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/
 
 intl.locale.requested -> ru
 
+
 extensions.pocket.enabled -> false
+
 
 insecure_field_warning.contextual.enabled -> false
 signon.autofillForms.http -> false
