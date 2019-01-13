@@ -41,16 +41,20 @@ https://ru.wikipedia.org/wiki/Категория:Логические_опера
 https://en.wikipedia.org/wiki/Usage_share_of_operating_systems
 
 
+Сайт о создании операционных систем и программировании на низком уровне
+https://wiki.osdev.org
+
+
 Revolution OS -- фильм о Ричарде Столлмане и возниконовении движения за свободное программное обеcпечение.
 https://www.youtube.com/watch?v=0SGQo8-dcww
 
 
+Канал AT&T на Youtube
+https://www.youtube.com/user/ATTTechChannel/playlists
+
+
 Оригинальное объявление Ричарда Столлмана о создании проекта GNU:
 https://groups.google.com/forum/#!topic/net.unix-wizards/8twfRPM79u0
-
-
-Сайт NASA
-https://www.nasa.gov/
 
 
 Полный список команд для nvi/vim 
@@ -59,6 +63,10 @@ http://www.jeffw.com/vi/index.html
 
 Какие DE используют ЛОРовцы
 https://www.linux.org.ru/polls/polls/9380184
+
+
+Сайт NASA
+https://www.nasa.gov/
 
 
 Яшкардин Владимир Леонидович
