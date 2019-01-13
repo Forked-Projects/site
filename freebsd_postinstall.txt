@@ -84,6 +84,12 @@ pkg install xorg -- метапакет, в который входит вся ф
 
 =====
 
+Установка Firefox
+pkg install firefox firefox-i18n
+
+В about:config
+
+
 Упрощённый ~/.profile
 
 LANG=en_US.UTF-8;
