@@ -11,7 +11,6 @@ map щ o
 map з p
 map х [
 map ъ ]
-
 map ф a
 map ы s
 map в d
@@ -23,7 +22,6 @@ map л k
 map д l
 map ж ;
 map э '
-
 map я z
 map ч x
 map с c
@@ -47,7 +45,6 @@ map Щ O
 map З P
 map Х {
 map Ъ }
-
 map Ф A
 map Ы S
 map В D
@@ -59,7 +56,6 @@ map Л K
 map Д L
 map Ж :
 map Э "
-
 map Я Z
 map Ч X
 map С C
