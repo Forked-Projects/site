@@ -65,12 +65,8 @@ http://www.jeffw.com/vi/index.html
 https://www.linux.org.ru/polls/polls/9380184
 
 
-Сайт NASA
-https://www.nasa.gov/
-
-
-Яшкардин Владимир Леонидович
-http://www.softelectro.ru/
+Разработчик Lev Walkin рассказывает почему BSD лицензия лучше
+https://lionet.livejournal.com/31952.html
 
 
 MacOS X и веб погубили Linux для пользователей, считает Мигель Де Икаса
@@ -82,8 +78,16 @@ https://www.computerra.ru/213376/linux-dlya-polzovateley-pogubili-mac-os-x-i-veb
 http://local.joelonsoftware.com/mediawiki/index.php/Russian
 
 
-Разработчик Lev Walkin рассказывает почему BSD лицензия лучше
-https://lionet.livejournal.com/31952.html
+История системных администраторов о том, как "упали" Одноклассники
+https://habr.com/company/odnoklassniki/blog/268413/
+
+
+Сайт NASA
+https://www.nasa.gov/
+
+
+Яшкардин Владимир Леонидович
+http://www.softelectro.ru/
 
 
 Красивейшая тема для IceWM и GTK+
