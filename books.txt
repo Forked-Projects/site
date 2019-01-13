@@ -5,8 +5,16 @@ FreeBSD. Архитектура и реализация
 http://muff.kiev.ua/content/freebsd-arkhitektura-i-realizatsiya
 
 
+Брайан Керниган, Роб Пайк
+UNIX. Программное окружение
+Год: 2003
+Перевод: П. Шера
+http://muff.kiev.ua/content/unix-programmnoe-okruzhenie
+
+
 Ричард Бёрд
 Жемчужины проектирования алгоритмов. Функциональный подход
 Год: 2013
 Перевод: Брагилевский В., Пеленицын А.
 https://vk.com/wall-34632406?day=05012019&offset=940&w=wall-34632406_3099
+
