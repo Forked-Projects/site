@@ -12,9 +12,22 @@ UNIX. Программное окружение
 http://muff.kiev.ua/content/unix-programmnoe-okruzhenie
 
 
+Брайан Керниган, Роб Пайк
+Практика программирования
+Год: 2001
+
+http://bioinformatics.ru/Books/kernigan.html
+
+
 Ричард Бёрд
 Жемчужины проектирования алгоритмов. Функциональный подход
 Год: 2013
 Перевод: Брагилевский В., Пеленицын А.
 https://vk.com/wall-34632406?day=05012019&offset=940&w=wall-34632406_3099
 
+
+Линус Торвальдс, Дэвид Даймонд
+Just for fun
+Год: 2002
+Перевод: Наталья Шахова
+http://www.lib.ru/LINUXGUIDE/torvalds_jast_for_fun.txt
