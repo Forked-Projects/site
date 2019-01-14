@@ -51,7 +51,7 @@ ifconfig_re0="DHCP" -- где 're0' -- имя карты в ifconfig
 =====
 
 Для WiFi
-sysctl -a | grep net.wlan.devices  -- так можно глянуть имя wifi-карты 'name0'
+sysctl net.wlan.devices  -- так можно глянуть имя wifi-карты 'name0'
 
 И прописать её в rc.conf
 wlans_name0="wlan0"
