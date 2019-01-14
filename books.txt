@@ -1,9 +1,13 @@
+Источники мудрости:
+http://mexalib.com
+http://revall.info
+
+
 Маршалл Кирк МакКузик, Джордж В. Невилл-Нил
 FreeBSD. Архитектура и реализация
 Год: 2006
 Перевод: Р. Галеев
 http://muff.kiev.ua/content/freebsd-arkhitektura-i-realizatsiya
-
 
 Брайан Керниган, Роб Пайк
 UNIX. Программное окружение
@@ -11,23 +15,21 @@ UNIX. Программное окружение
 Перевод: П. Шера
 http://muff.kiev.ua/content/unix-programmnoe-okruzhenie
 
-
 Брайан Керниган, Роб Пайк
 Практика программирования
-Год: 2001
-
-http://bioinformatics.ru/Books/kernigan.html
-
+Год: 2015
+Перевод: В. Л. Бродовой
+http://revall.info/praktika-programmirovaniya.html
 
 Ричард Бёрд
 Жемчужины проектирования алгоритмов. Функциональный подход
 Год: 2013
 Перевод: Брагилевский В., Пеленицын А.
-https://vk.com/wall-34632406?day=05012019&offset=940&w=wall-34632406_3099
-
+http://rutracker.org/forum/viewtopic.php?t=4357181
 
 Линус Торвальдс, Дэвид Даймонд
 Just for fun
 Год: 2002
 Перевод: Наталья Шахова
 http://www.lib.ru/LINUXGUIDE/torvalds_jast_for_fun.txt
+
