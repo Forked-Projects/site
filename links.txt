@@ -61,6 +61,10 @@ https://groups.google.com/forum/#!topic/net.unix-wizards/8twfRPM79u0
 http://www.jeffw.com/vi/index.html
 
 
+Как попробовать и понять Vim
+http://rus-linux.net/MyLDP/BOOKS/Vim/prosto-o-vim.pdf
+
+
 Какие DE используют ЛОРовцы
 https://www.linux.org.ru/polls/polls/9380184
 
@@ -82,12 +86,25 @@ http://local.joelonsoftware.com/mediawiki/index.php/Russian
 https://habr.com/company/odnoklassniki/blog/268413/
 
 
+Screenshots from developers & Unix people
+https://anders.unix.se/2015/10/28/screenshots-from-developers--unix-people-2002/
+https://anders.unix.se/2015/12/10/screenshots-from-developers--2002-vs.-2015/
+
+
+Ubuntu online tour
+http://tour.ubuntu.com
+
+
 Сайт NASA
 https://www.nasa.gov/
 
 
 Яшкардин Владимир Леонидович
 http://www.softelectro.ru/
+
+
+Блог Алексея Федорчука aka alv
+https://www.alv.me
 
 
 Красивейшая тема для IceWM и GTK+
