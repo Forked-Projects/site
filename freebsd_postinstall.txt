@@ -1,5 +1,6 @@
 Это минимальный срез того что можно сделать с FreeBSD сразу после установки.
-Всё это есть в FreeBSD Handbook, но тут всё какбэ на одной страничке.
+Всё это есть в FreeBSD Handbook, в wiki.freebsd.org, в man, 
+но тут всё какбэ на одной страничке.
 Можно скачать 
 fetch http://vall.su/freebsd_postinstall.txt
 
@@ -11,8 +12,8 @@ pw user mod -n root -s sh
 =====
 
 adduser -- диалог для создания пользователя
-Можно задать пользователю Login group -- wheel чтоб иметь возможность делать su,
-а чтоб выключать комп задать other groups -- operator.
+Login group: wheel -- чтоб иметь возможность делать su 
+Invite into other groups: operator -- чтоб иметь возможность выключать комп.
 Чтоб создался пользователь без пароля
 Use password-based authentication? -- yes
 Use an empty password? -- yes
@@ -34,19 +35,12 @@ hw.vga.textmode=0
 
 =====
 
-Для русской локализации в консоли можно добавить пользователя в класс 'russian'
-pw user mod user -L russian 
-Все классы можно посмотреть в /etc/login.conf
-
-Другой путь -- задать переменную LANG
-export LANG=ru_RU.UTF-8
-что также можно прописать в ~/.profile
-Файлы локализации находятся в /usr/share/locale/
-
-Для русского ввода в терминале нужно добавить это в /etc/rc.conf
-keymap="ru.kbd" -- для переключения по CapsLock
-keymap="ru.win.kbd" -- для переключения по Ctrl+Shift
-Файлы клавиатур находятся в /usr/share/vt(syscons)/keymaps/
+Чтобы при входе в систему не показывалось сообщение "Welcome to FreeBSD!" (motd), можно сделать
+touch ~/.hushlogin
+или отредактировать класс default в /etc/login.conf (если пользователь в этом классе или в дочернем)
+:hushlogin:
+после чего
+cap_mkdb /etc/login.conf
 
 =====
 
@@ -70,19 +64,38 @@ service netif restart
 
 =====
 
+Synaptics touchpad
+
+/boot/loader.conf
+hw.psm.synaptics_support="1"
+
+/etc/rc.conf
+moused_enable="YES"
+
+=====
+
+Для русской локализации в консоли можно добавить пользователя в класс 'russian'
+pw user mod user -L russian 
+Все классы можно посмотреть в /etc/login.conf
+
+Другой путь -- задать переменную LANG
+export LANG=ru_RU.UTF-8
+но оно разрушает sh при попытке ввода русских букв (на freebsd 12, надо исправлять) 
+Файлы локализации находятся в /usr/share/locale/
+
+Для русского ввода в терминале нужно добавить это в /etc/rc.conf
+keymap="ru.kbd" -- для переключения по CapsLock
+keymap="ru.win.kbd" -- для переключения по Ctrl+Shift
+или временно
+kbdmap
+Файлы клавиатур находятся в /usr/share/vt(syscons)/keymaps/
+
+=====
+
 Обновить систему
 
 freebsd-update fetch
 freebsd-update install
-
-=====
-
-Чтобы при входе в систему не показывалось сообщение "Welcome to FreeBSD!" (motd), можно сделать
-touch ~/.hushlogin
-или отредактировать класс default в /etc/login.conf (если пользователь в этом классе или в дочернем)
-:hushlogin:
-после чего
-cap_mkdb /etc/login.conf
 
 =====
 
