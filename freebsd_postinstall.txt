@@ -35,16 +35,6 @@ hw.vga.textmode=0
 
 =====
 
-Synaptics touchpad
-
-/boot/loader.conf
-hw.psm.synaptics_support="1"
-
-/etc/rc.conf
-moused_enable="YES"
-
-=====
-
 Для проводного интернета в /etc/rc.conf
 ifconfig_re0="DHCP" -- где 're0' -- имя карты в ifconfig
 
@@ -62,6 +52,16 @@ wpa_passphrase вайфай пароль > /etc/wpa_supplicant.conf
 
 И затестить
 service netif restart
+
+=====
+
+Synaptics touchpad
+
+/boot/loader.conf
+hw.psm.synaptics_support="1"
+
+/etc/rc.conf
+moused_enable="YES"
 
 =====
 
