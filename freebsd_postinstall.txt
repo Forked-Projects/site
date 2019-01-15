@@ -6,6 +6,15 @@ fetch http://vall.su/freebsd_postinstall.txt
 
 =====
 
+Если поставил MS Windows после FreeBSD на смежный раздел,
+то чтобы восстановить загрузчик FreeBSD, можно загрузиться с liveUSB и сделать
+boot0cfg -B ada0
+
+Имя диска (ada0) можно узнать из
+dmesg | grep ada
+
+=====
+
 Поменять shell для root с tcsh на sh
 pw user mod -n root -s sh
 
@@ -20,6 +29,9 @@ Use an empty password? -- yes
 
 Очистить пароль пользователя
 pw user mod -n username -w none
+
+Добавить пользователя в группу operator
+pw group mod operator -m vall
 
 =====
 
@@ -41,10 +53,10 @@ ifconfig_re0="DHCP" -- где 're0' -- имя карты в ifconfig
 =====
 
 Для WiFi
-sysctl net.wlan.devices  -- так можно глянуть имя wifi-карты 'name0'
+sysctl net.wlan.devices  -- так можно глянуть имя wifi-карты, например 'ath0'
 
 И прописать её в rc.conf
-wlans_name0="wlan0"
+wlans_ath0="wlan0"
 ifconfig_wlan0="WPA SYNCDHCP"
 
 Для пароля
