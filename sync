@@ -1,0 +1,5 @@
+svnlite status site | grep ^'?' | sed 's/?  *//' | xargs svnlite add;
+svnlite status site | grep ^'!' | sed 's/!  *//' | xargs svnlite del;
+svnlite commit -m 'just one another update' site;
+svnlite update site;
+svnlite status -uv site;
