@@ -25,43 +25,37 @@ http://khpi-iip.mipk.kharkiv.edu/library/extent/index.html
 https://www.intuit.ru/
 
 
+xv6 — это учебная Unix-подобная операционная система, созданная в 2002 году 
+в институте MIT для курса по разработке операционных систем
+https://pdos.csail.mit.edu/6.828/2014/reference.html
+
+
 Физика студентам и школьникам -- образовательный проект А. Н. Варгина (МИФИ)
 http://ph4s.ru/
 http://wiki.mephist.ru/wiki/Ph4s.ru
+
+
+Фейнмановские лекции по физике:
+http://librams.ru/serie-1485.html
 
 
 Курс видеолекций о дискретной математике
 https://www.youtube.com/playlist?list=PLDrmKwRSNx7J16QBIZMNmAUDRQjjwVTTG
 
 
-Одна из самых полных схем родословной Unix-систем 
-http://www.netneurotic.de/mac/unix/images/UNIX.png
-
-
 Вроде как справочник по названиям операций в Логике.
 https://ru.wikipedia.org/wiki/Категория:Логические_операции
-
-
-Страница о популярности различных операционных систем в различных сферах IT
-https://en.wikipedia.org/wiki/Usage_share_of_operating_systems
 
 
 Сайт о создании операционных систем и программировании на низком уровне
 https://wiki.osdev.org
 
 
-Revolution OS -- фильм о Ричарде Столлмане и возниконовении движения за
-свободное программное обеcпечение.
-https://www.youtube.com/watch?v=0SGQo8-dcww
+Статья 1998 года от Адама Коккрофта, важного инженера в компании Sun, 
+о том, почему динамическая компоновка лучше статичной.
+http://sunsite.uakom.sk/sunworldonline/swol-02-1996/swol-02-perf.html
 
-
-Канал AT&T на Youtube
-https://www.youtube.com/user/ATTTechChannel/playlists
-
-
-Оригинальное объявление Ричарда Столлмана о создании проекта GNU:
-https://groups.google.com/forum/#!topic/net.unix-wizards/8twfRPM79u0
-
+=====
 
 Полный список команд для nvi/vim 
 http://www.jeffw.com/vi/index.html
@@ -71,8 +65,34 @@ http://www.jeffw.com/vi/index.html
 http://rus-linux.net/MyLDP/BOOKS/Vim/prosto-o-vim.pdf
 
 
-Какие DE используют ЛОРовцы
-https://www.linux.org.ru/polls/polls/9380184
+The Art of Command Line -- статья-руководство о сжатых основах работы 
+в командной строке GNU/Linux
+https://github.com/jlevy/the-art-of-command-line/blob/master/README-ru.md
+
+
+Об архитектуре браузерного движка на примере написания своего игрушечного движка
+https://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html
+
+=====
+
+
+Voices from the Open Source Revolution - книга от O'Reilly Media, 
+представляющая собой антогологию различных эссе, написанных в своё время 
+светилами движения свободного программного обеспечения и ПО с открытым исходным кодом.
+https://www.oreilly.com/openbook/opensources/book/index.html
+
+
+FAQ от Эрика Реймонда о том, как стать хакером.
+http://www.catb.org/~esr/faqs/hacker-howto.html
+
+
+Интервью с Кеном Томсоном, 2014 год
+https://litresp.ru/chitat/ru/%D0%A1/sejbel-piter/koderi-za-rabotoj-razmishleniya-o-remesle-programmista/15
+
+
+Screenshots from developers & Unix people
+https://anders.unix.se/2015/10/28/screenshots-from-developers--unix-people-2002/
+https://anders.unix.se/2015/12/10/screenshots-from-developers--2002-vs.-2015/
 
 
 Разработчик Lev Walkin рассказывает почему BSD лицензия лучше
@@ -91,33 +111,11 @@ http://local.joelonsoftware.com/mediawiki/index.php/Russian
 История системных администраторов о том, как "упали" Одноклассники
 https://habr.com/company/odnoklassniki/blog/268413/
 
-
-Screenshots from developers & Unix people
-https://anders.unix.se/2015/10/28/screenshots-from-developers--unix-people-2002/
-https://anders.unix.se/2015/12/10/screenshots-from-developers--2002-vs.-2015/
+=====
 
 
 Apache Guacamole -- браузерный HTML5 клиент VNC/RDP/SSH
 http://guacamole.apache.org/
-
-
-Об архитектуре браузерного движка на примере написания своего игрушечного движка
-https://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html
-
-
-The Art of Command Line -- статья-руководство о сжатых основах работы 
-в командной строке GNU/Linux
-https://github.com/jlevy/the-art-of-command-line/blob/master/README-ru.md
-
-
-Ретро компы и интерфейсы
-http://www.retrotechnology.com/
-http://toastytech.com/guis/index.html
-
-
-Уоррен Туми по крупицам восстанавливает считающийся утерянным код
-оригинальной UNIX 1969 года, написанной дла PDP-7 на ассемблере.
-https://github.com/DoctorWkt/pdp7-unix
 
 
 Nuklear — небольшая библиотека для построения GUI, написанная на ANSI C
@@ -128,8 +126,23 @@ Javascript PC Emulator. Автор - Fabrice Bellard, также основат�
 http://bellard.org/jslinux/
 
 
-Интервью с Кеном Томсоном, 2014 год
-https://litresp.ru/chitat/ru/%D0%A1/sejbel-piter/koderi-za-rabotoj-razmishleniya-o-remesle-programmista/15
+Программа и ресурс для записи и выкладывания терминальной сессии.
+https://asciinema.org
+
+
+Некто Bjorn Stahl делает свой дисплейный сервер Arcan и тайловое окружение Durden
+https://arcan-fe.com/
+
+
+=====
+
+Одна из самых полных схем родословной Unix-систем 
+http://www.netneurotic.de/mac/unix/images/UNIX.png
+
+
+Revolution OS -- фильм о Ричарде Столлмане и возниконовении движения за
+свободное программное обеcпечение.
+https://www.youtube.com/watch?v=0SGQo8-dcww
 
 
 Самобытное, но одно из полнейших описаний истории и формирования Unix 
@@ -138,39 +151,48 @@ https://litresp.ru/chitat/ru/%D0%A1/sejbel-piter/koderi-za-rabotoj-razmishleniya
 https://www.alv.me/voprosy-istorii-unix-linux-bsd-i-drugie-kratkij-k/
 
 
-Некто Bjorn Stahl делает свой дисплейный сервер Arcan и тайловое окружение Durden
-https://arcan-fe.com/
+Канал AT&T на Youtube
+https://www.youtube.com/user/ATTTechChannel/playlists
 
 
-xv6 — это учебная Unix-подобная операционная система, созданная в 2002 году 
-в институте MIT для курса по разработке операционных систем
-https://pdos.csail.mit.edu/6.828/2014/reference.html
-
-Статья 1998 года от Адама Коккрофта, важного инженера в компании Sun, 
-о том, почему динамическая компоновка лучше статичной.
-http://sunsite.uakom.sk/sunworldonline/swol-02-1996/swol-02-perf.html
-
-
-История развития и дробления BSD
-https://github.com/FabioLolix/BSD-Timeline/releases
+Оригинальное объявление Ричарда Столлмана о создании проекта GNU:
+https://groups.google.com/forum/#!topic/net.unix-wizards/8twfRPM79u0
 
 
 Первая BSD для Intel 80386
 https://386bsd.org/
 
 
-Фейнмановские лекции по физике:
-http://librams.ru/serie-1485.html
+История развития и дробления BSD
+https://github.com/FabioLolix/BSD-Timeline/releases
+
+
+Исторические объявления о выпусках разных BSD систем начиная от 2.9BSD
+https://wolfram.schneider.org/bsd/ftp/releases/
+
+
+Исходные коды Research Unix от Bell Labs в редакциях 8, 9 и 10
+http://www.tuhs.org/Archive/Distributions/Research/
+
+
+Уоррен Туми по крупицам восстанавливает считающийся утерянным код
+оригинальной UNIX 1969 года, написанной дла PDP-7 на ассемблере.
+https://github.com/DoctorWkt/pdp7-unix
+
+
+Ретро компы и интерфейсы
+http://www.retrotechnology.com/
+http://toastytech.com/guis/index.html
+
+=====
+
+
+Страница о популярности различных операционных систем в различных сферах IT
+https://en.wikipedia.org/wiki/Usage_share_of_operating_systems
 
 
 Ubuntu online tour
 http://tour.ubuntu.com
-
-
-Voices from the Open Source Revolution - книга от O'Reilly Media, 
-представляющая собой антогологию различных эссе, написанных в своё время 
-светилами движения свободного программного обеспечения и ПО с открытым исходным кодом.
-https://www.oreilly.com/openbook/opensources/book/index.html
 
 
 Игровые испытания на shell
@@ -181,12 +203,12 @@ https://cmdchallenge.com/
 https://opensource.google.com/projects/list/featured
 
 
+Какие DE используют ЛОРовцы
+https://www.linux.org.ru/polls/polls/9380184
+
+
 Сайт NASA
 https://www.nasa.gov/
-
-
-Исходные коды Research Unix от Bell Labs в редакциях 8, 9 и 10
-http://www.tuhs.org/Archive/Distributions/Research/
 
 
 Яшкардин Владимир Леонидович
@@ -203,13 +225,4 @@ https://vk.com/wall-34632406?day=05012019&offset=840&w=wall-34632406_3575
 
 Для создания загрузочных флешек с MS Windows лучше всего работает WinSetupFromUSB
 https://winsetupfromusb.com
-
-=====
-
-Если вы хотите вручную поиграться с цветами, можно это сделать, создав свою тему gnome-shell и отредактировав её.
-Создать файл ~/.themes/mytheme/gnome-shell/gnome-shell.css
-Вписать туда css свойства для элементов (в данном случае - настройка прозрачности панели).
-Подсмотреть элементы "разметки" gnome-shell можно, например, в файле /usr/share/gnome-shell/theme/gnome-classic.css
-
-https://vk.com/wall-34632406?day=05012019&offset=860&w=wall-34632406_3524
 
