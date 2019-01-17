@@ -3,6 +3,12 @@ http://mexalib.com
 http://revall.info
 
 
+Чарльз Петцольд
+Код. Тайный язык информатики
+Год: 2001
+Перевод: Д. З. Вибе
+http://www.1553.ru/lessons/uploaded/CODE_-_Charlz_Pettsold.pdf
+
 Маршалл Кирк МакКузик, Джордж В. Невилл-Нил
 FreeBSD. Архитектура и реализация
 Год: 2006
