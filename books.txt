@@ -33,3 +33,13 @@ Just for fun
 Перевод: Наталья Шахова
 http://www.lib.ru/LINUXGUIDE/torvalds_jast_for_fun.txt
 
+Юреш Фахалия
+UNIX изнутри
+Год: 2003
+http://mexalib.com/view/22478
+
+Карл Маркс
+Капитал
+Год: 1952
+Перевод: И. И. Степанов-Скворцов
+http://nnm-club.me/forum/viewtopic.php?t=1140215
