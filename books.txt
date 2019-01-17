@@ -51,6 +51,12 @@ UNIX изнутри
 Перевод: Е. Васильев, Л. Серебрякова
 http://mexalib.com/view/22478
 
+Брайан Уорд
+Внутреннее устройство Linux
+Год: 2016
+Перевод: М. Райтман
+http://itsecforu.ru/wp-content/uploads/2018/01/uord_brayan_vnutrennee_ustroystvo_linux.pdf
+
 Карл Маркс
 Капитал
 Год: 1952
