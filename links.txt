@@ -45,7 +45,8 @@ https://en.wikipedia.org/wiki/Usage_share_of_operating_systems
 https://wiki.osdev.org
 
 
-Revolution OS -- фильм о Ричарде Столлмане и возниконовении движения за свободное программное обеcпечение.
+Revolution OS -- фильм о Ричарде Столлмане и возниконовении движения за
+свободное программное обеcпечение.
 https://www.youtube.com/watch?v=0SGQo8-dcww
 
 
@@ -89,6 +90,28 @@ https://habr.com/company/odnoklassniki/blog/268413/
 Screenshots from developers & Unix people
 https://anders.unix.se/2015/10/28/screenshots-from-developers--unix-people-2002/
 https://anders.unix.se/2015/12/10/screenshots-from-developers--2002-vs.-2015/
+
+
+Apache Guacamole -- браузерный HTML5 клиент VNC/RDP/SSH
+http://guacamole.apache.org/
+
+
+Об архитектуре браузерного движка на примере написания своего игрушечного движка
+https://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html
+
+
+The Art of Command Line -- статья-руководство о сжатых основах работы 
+в командной строке GNU/Linux
+https://github.com/jlevy/the-art-of-command-line/blob/master/README-ru.md
+
+
+Ретро компы
+http://www.retrotechnology.com/
+
+
+Уоррен Туми по крупицам восстанавливает считающийся утерянным код
+оригинальной UNIX 1969 года, написанной дла PDP-7 на ассемблере.
+https://github.com/DoctorWkt/pdp7-unix
 
 
 Ubuntu online tour
