@@ -33,9 +33,16 @@ Just for fun
 Перевод: Наталья Шахова
 http://www.lib.ru/LINUXGUIDE/torvalds_jast_for_fun.txt
 
+Эрик Стивен Реймонд
+Искусство программирования для Unix
+Год: 2005
+Перевод: В. А. Швец
+https://eknigi.org/programmirovanie/56692-iskusstvo-programmirovaniya-dlya-unix.html
+
 Юреш Фахалия
 UNIX изнутри
 Год: 2003
+Перевод: Е. Васильев, Л. Серебрякова
 http://mexalib.com/view/22478
 
 Карл Маркс
