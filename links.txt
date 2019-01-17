@@ -114,6 +114,14 @@ http://www.retrotechnology.com/
 https://github.com/DoctorWkt/pdp7-unix
 
 
+Nuklear — небольшая библиотека для построения GUI, написанная на ANSI C
+https://github.com/vurtun/nuklear
+
+
+Javascript PC Emulator. Автор - Fabrice Bellard, также основатель проекта ffmpeg
+http://bellard.org/jslinux/
+
+
 Ubuntu online tour
 http://tour.ubuntu.com
 
@@ -126,8 +134,18 @@ https://www.nasa.gov/
 http://www.softelectro.ru/
 
 
-Блог Алексея Федорчука aka alv
+Эпичный Алексей Федорчук aka alv
 https://www.alv.me
+
+
+Самобытное, но одно из полнейших описаний истории и формирования Unix 
+от 1970 года до современных систем.
+От эпичного отечественного автора Алексея Федорчука.
+http://alv.me/?p=4691
+
+
+Некто Bjorn Stahl делает свой дисплейный сервер Arcan и тайловое окружение Durden
+https://arcan-fe.com/
 
 
 Красивейшая тема для IceWM и GTK+
