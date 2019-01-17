@@ -105,8 +105,9 @@ The Art of Command Line -- статья-руководство о сжатых �
 https://github.com/jlevy/the-art-of-command-line/blob/master/README-ru.md
 
 
-Ретро компы
+Ретро компы и интерфейсы
 http://www.retrotechnology.com/
+http://toastytech.com/guis/index.html
 
 
 Уоррен Туми по крупицам восстанавливает считающийся утерянным код
@@ -134,6 +135,15 @@ https://www.alv.me/voprosy-istorii-unix-linux-bsd-i-drugie-kratkij-k/
 
 Некто Bjorn Stahl делает свой дисплейный сервер Arcan и тайловое окружение Durden
 https://arcan-fe.com/
+
+
+xv6 — это учебная Unix-подобная операционная система, созданная в 2002 году 
+в институте MIT для курса по разработке операционных систем
+https://pdos.csail.mit.edu/6.828/2014/reference.html
+
+
+История развития и дробления BSD
+https://github.com/FabioLolix/BSD-Timeline/releases
 
 
 Ubuntu online tour
