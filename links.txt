@@ -64,6 +64,17 @@ http://www.compsci.hunter.cuny.edu/~sweiss/
 https://wiki.osdev.org
 
 
+Немного (много) про AT&T синтаксис ассемблера
+http://neuraldk.org/document.php?att_asm
+http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
+https://www.cs.cmu.edu/~fp/courses/15213-s07/misc/asm64-handout.pdf
+
+
+Рекомендации Ассоциации вычислительной техники (ACM) для университетских 
+учебных программ по информатике. В совете есть Bryan Cantrill
+https://www.acm.org/education/curricula-recommendations
+
+
 Статья 1998 года от Адама Коккрофта, важного инженера в компании Sun, 
 о том, почему динамическая компоновка лучше статичной.
 http://sunsite.uakom.sk/sunworldonline/swol-02-1996/swol-02-perf.html
@@ -279,6 +290,10 @@ http://www.softelectro.ru/
 GNOME Layout Manager — shell скрипт, который может сделать 
 из Gnome 3 интерфейс подобия Unity 8, Windows 10 или MacOS X.
 https://github.com/vmavromatis/gnome-layout-manager
+
+
+Почему Devuan (форк Debian без systemd) — это не просто из вредности
+https://ungleich.ch/en-us/cms/blog/2017/12/10/the-importance-of-devuan/
 
 
 Красивейшая тема для IceWM и GTK+
