@@ -25,6 +25,10 @@ http://khpi-iip.mipk.kharkiv.edu/library/extent/index.html
 https://www.intuit.ru/
 
 
+Лекции Санкт-Петербургского университета ИТМО
+http://neerc.ifmo.ru/wiki/
+
+
 xv6 — это учебная Unix-подобная операционная система, созданная в 2002 году 
 в институте MIT для курса по разработке операционных систем
 https://pdos.csail.mit.edu/6.828/2014/reference.html
@@ -47,6 +51,11 @@ https://www.youtube.com/playlist?list=PLDrmKwRSNx7J16QBIZMNmAUDRQjjwVTTG
 https://ru.wikipedia.org/wiki/Категория:Логические_операции
 
 
+Prof. Stewart Weiss, Department of Computer Science, Hunter College
+Много лекций по Unix и Computer Science
+http://www.compsci.hunter.cuny.edu/~sweiss/
+
+
 Сайт о создании операционных систем и программировании на низком уровне
 https://wiki.osdev.org
 
@@ -54,6 +63,10 @@ https://wiki.osdev.org
 Статья 1998 года от Адама Коккрофта, важного инженера в компании Sun, 
 о том, почему динамическая компоновка лучше статичной.
 http://sunsite.uakom.sk/sunworldonline/swol-02-1996/swol-02-perf.html
+
+
+Journaling versus Soft Updates: Asynchronous Meta-data Protection in File Systems
+https://www.archive.ece.cmu.edu/~ganger/papers/usenix2000.pdf
 
 =====
 
@@ -73,6 +86,10 @@ https://github.com/jlevy/the-art-of-command-line/blob/master/README-ru.md
 Об архитектуре браузерного движка на примере написания своего игрушечного движка
 https://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html
 
+
+Написание Unix shell с нуля (в трёх частях)
+https://indradhanush.github.io/blog/writing-a-unix-shell-part-1/
+
 =====
 
 
@@ -88,6 +105,10 @@ http://www.catb.org/~esr/faqs/hacker-howto.html
 
 Интервью с Кеном Томсоном, 2014 год
 https://litresp.ru/chitat/ru/%D0%A1/sejbel-piter/koderi-za-rabotoj-razmishleniya-o-remesle-programmista/15
+
+
+Роб Пайк расстраивается если ты не пишешь новых операционных систем
+http://herpolhode.com/rob/utah2000.pdf
 
 
 Screenshots from developers & Unix people
@@ -184,6 +205,12 @@ https://github.com/DoctorWkt/pdp7-unix
 http://www.retrotechnology.com/
 http://toastytech.com/guis/index.html
 
+
+«The TTL Data Book for Design Engineers» — справочник по ТТЛ-микросхемам 
+серии 7400 фирмы Texas Instruments, по аналогии с которыми строилась 
+советская серия К155
+http://www.smcelectronics.com/DOWNLOADS/1976-TTL%20DATABOOK.PDF
+
 =====
 
 
@@ -197,6 +224,10 @@ http://tour.ubuntu.com
 
 Игровые испытания на shell
 https://cmdchallenge.com/
+
+
+MapSCII - карта в консоли по telnet mapscii.me
+https://github.com/rastapasta/mapscii
 
 
 Проекты Google с открытым исходным кодом
@@ -213,6 +244,11 @@ https://www.nasa.gov/
 
 Яшкардин Владимир Леонидович
 http://www.softelectro.ru/
+
+
+GNOME Layout Manager — shell скрипт, который может сделать 
+из Gnome 3 интерфейс подобия Unity 8, Windows 10 или MacOS X.
+https://github.com/vmavromatis/gnome-layout-manager
 
 
 Красивейшая тема для IceWM и GTK+
