@@ -88,6 +88,10 @@ https://www.archive.ece.cmu.edu/~ganger/papers/usenix2000.pdf
 лидирующего разработчика операционной системы OpenIndiana.
 https://drive.google.com/drive/folders/0B5aSh2tKvpqDdkVQM2Uzbnp2eVE
 
+
+Cайт-методичка по Cisco и архитектуре компьютерных сетей
+https://ciscolearning.ru/
+
 =====
 
 Полный список команд для nvi/vim 
@@ -171,6 +175,11 @@ Unix Architecture Evolution from the 1970 PDP-7 to the 2018 FreeBSD
 https://www.youtube.com/watch?v=FbDebSinSQo
 
 
+Репозиторий исследования Д. Спинеллиса об истории Unix
+с исходными текстами (выбери Branch)
+https://github.com/dspinellis/unix-history-repo
+
+
 История системных администраторов о том, как "упали" Одноклассники
 https://habr.com/company/odnoklassniki/blog/268413/
 
@@ -195,6 +204,11 @@ https://asciinema.org
 
 Некто Bjorn Stahl делает свой дисплейный сервер Arcan и тайловое окружение Durden
 https://arcan-fe.com/
+
+
+Запускаторы старых версий Research Unix и BSD в MS Windows
+"4BSD Under Windows/v0.4/4.3BSD-Uwisc-install-0.4.exe" — эмулятор SIMH с 4.3BSD
+https://sourceforge.net/projects/bsd42/
 
 
 =====
@@ -268,6 +282,15 @@ https://github.com/ocochard/netbenches
 http://mywiki.wooledge.org/BashPitfalls
 
 
+misc-fixed -- лучший шрифт для X11
+https://www.cl.cam.ac.uk/~mgk25/ucs-fonts.html
+
+
+Один из старейших некоммерческих shell провайдеров в Интернете.
+Работает на NetBSD
+https://sdf.org/
+
+
 Ubuntu online tour
 http://tour.ubuntu.com
 
@@ -286,6 +309,11 @@ https://opensource.google.com/projects/list/featured
 
 Какие DE используют ЛОРовцы
 https://www.linux.org.ru/polls/polls/9380184
+
+
+Сервис хранения текста на подобие pastebin, но без необходимости 
+использовать браузер
+https://termbin.com/
 
 
 Сайт NASA
