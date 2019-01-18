@@ -47,6 +47,10 @@ http://librams.ru/serie-1485.html
 https://www.youtube.com/playlist?list=PLDrmKwRSNx7J16QBIZMNmAUDRQjjwVTTG
 
 
+Плейлист обучающих видосов от Брайана Кернигана
+https://www.youtube.com/playlist?list=PLzH6n4zXuckqZ90zLyy36qjO5YIn1RulG
+
+
 Вроде как справочник по названиям операций в Логике.
 https://ru.wikipedia.org/wiki/Категория:Логические_операции
 
@@ -99,6 +103,11 @@ Voices from the Open Source Revolution - книга от O'Reilly Media,
 https://www.oreilly.com/openbook/opensources/book/index.html
 
 
+Настоящий Unix — не есть "удовлетворительный" Unix (перевод)
+https://habr.com/ru/post/326176/
+http://mkremins.github.io/blog/unix-not-acceptable-unix/
+
+
 FAQ от Эрика Реймонда о том, как стать хакером.
 http://www.catb.org/~esr/faqs/hacker-howto.html
 
@@ -109,6 +118,10 @@ https://litresp.ru/chitat/ru/%D0%A1/sejbel-piter/koderi-za-rabotoj-razmishleniya
 
 Роб Пайк расстраивается если ты не пишешь новых операционных систем
 http://herpolhode.com/rob/utah2000.pdf
+
+
+Rob Pike, Brian W. Kernighan. Program design in the UNIX environment
+http://harmful.cat-v.org/cat-v/unix_prog_design.pdf
 
 
 Screenshots from developers & Unix people
@@ -127,6 +140,15 @@ https://www.computerra.ru/213376/linux-dlya-polzovateley-pogubili-mac-os-x-i-veb
 Переводы блога программиста и писателя Джоэла Спольски ("Joel on Software"),
 в котором он обсуждает вопросы программирования
 http://local.joelonsoftware.com/mediawiki/index.php/Russian
+
+
+Блог Диомидиса Спинеллиса (Diomidis D. Spinellis), некогда коммитера FreeBSD, 
+автора современного sed и книг по отладке программ
+https://www.spinellis.gr/blog/
+
+
+Сравнение сложности первой Unix и современной её реализации в виде FreeBSD
+https://dspinellis.github.io/unix-architecture/
 
 
 История системных администраторов о том, как "упали" Одноклассники
@@ -216,6 +238,14 @@ http://www.smcelectronics.com/DOWNLOADS/1976-TTL%20DATABOOK.PDF
 
 Страница о популярности различных операционных систем в различных сферах IT
 https://en.wikipedia.org/wiki/Usage_share_of_operating_systems
+
+
+Тесты пропускной способности пакетных фильтров в FreeBSD.
+https://github.com/ocochard/netbenches
+
+
+56 способов выстрелить себе в ногу в shell
+http://mywiki.wooledge.org/BashPitfalls
 
 
 Ubuntu online tour
