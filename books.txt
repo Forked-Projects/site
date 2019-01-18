@@ -9,11 +9,19 @@ http://revall.info
 Перевод: Д. З. Вибе
 http://www.1553.ru/lessons/uploaded/CODE_-_Charlz_Pettsold.pdf
 
+
+А. П. Ершов, В. М. Монахов
+Основы информатики и вычислительной техники
+Год: 1985
+http://publ.lib.ru/ARCHIVES/E/ERSHOV_Andrey_Petrovich/_Ershov_A.P..html
+
+
 Маршалл Кирк МакКузик, Джордж В. Невилл-Нил
 FreeBSD. Архитектура и реализация
 Год: 2006
 Перевод: Р. Галеев
 http://muff.kiev.ua/content/freebsd-arkhitektura-i-realizatsiya
+
 
 Брайан Керниган, Роб Пайк
 UNIX. Программное окружение
@@ -21,11 +29,13 @@ UNIX. Программное окружение
 Перевод: П. Шера
 http://muff.kiev.ua/content/unix-programmnoe-okruzhenie
 
+
 Брайан Керниган, Роб Пайк
 Практика программирования
 Год: 2015
 Перевод: В. Л. Бродовой
 http://revall.info/praktika-programmirovaniya.html
+
 
 Ричард Бёрд
 Жемчужины проектирования алгоритмов. Функциональный подход
@@ -33,11 +43,13 @@ http://revall.info/praktika-programmirovaniya.html
 Перевод: Брагилевский В., Пеленицын А.
 http://rutracker.org/forum/viewtopic.php?t=4357181
 
+
 Линус Торвальдс, Дэвид Даймонд
 Just for fun
 Год: 2002
 Перевод: Наталья Шахова
 http://www.lib.ru/LINUXGUIDE/torvalds_jast_for_fun.txt
+
 
 Эрик Стивен Реймонд
 Искусство программирования для Unix
@@ -45,17 +57,20 @@ http://www.lib.ru/LINUXGUIDE/torvalds_jast_for_fun.txt
 Перевод: В. А. Швец
 https://eknigi.org/programmirovanie/56692-iskusstvo-programmirovaniya-dlya-unix.html
 
+
 Юреш Фахалия
 UNIX изнутри
 Год: 2003
 Перевод: Е. Васильев, Л. Серебрякова
 http://mexalib.com/view/22478
 
+
 Брайан Уорд
 Внутреннее устройство Linux
 Год: 2016
 Перевод: М. Райтман
 http://itsecforu.ru/wp-content/uploads/2018/01/uord_brayan_vnutrennee_ustroystvo_linux.pdf
+
 
 Хоровиц П., Хилл У.
 Искусство схемотехники
@@ -65,12 +80,21 @@ http://mexalib.com/view/19790
 http://mexalib.com/view/19791
 http://mexalib.com/view/19792
 
+
 Берклеевский курс физики (Berkeley Physics Course) - серия книг по физике, 
 написанная разными профессорами из Университета в Беркли.
 Год: 1971-1974
 Перевод: Издательство "Наука"
 http://mexalib.com/search/?q=берклеевский+курс+физики
 http://rutracker.org/forum/viewtopic.php?t=1310960
+
+
+Коутинхо С.
+Введение в теорию чисел. Алгоритм RSA
+Год: 2001
+Перевод: С. А. Кулешов
+http://mexalib.com/view/2653
+
 
 Карл Маркс
 Капитал
