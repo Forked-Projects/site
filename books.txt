@@ -15,6 +15,11 @@ http://www.1553.ru/lessons/uploaded/CODE_-_Charlz_Pettsold.pdf
 Год: 1985
 http://publ.lib.ru/ARCHIVES/E/ERSHOV_Andrey_Petrovich/_Ershov_A.P..html
 
+Д. А. Поспелов
+Моделирование рассуждений
+Год: 1989
+http://mexalib.com/view/1997
+
 
 Маршалл Кирк МакКузик, Джордж В. Невилл-Нил
 FreeBSD. Архитектура и реализация
@@ -94,6 +99,12 @@ http://rutracker.org/forum/viewtopic.php?t=1310960
 Год: 2001
 Перевод: С. А. Кулешов
 http://mexalib.com/view/2653
+
+
+The Art of Assembly Language, 2nd edition
+Randall Hyde
+Год: 2010
+http://1.droppdf.com/files/T11iW/the-art-of-assembly-language-2nd-edition.pdf
 
 
 Карл Маркс
