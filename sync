@@ -1,5 +1,5 @@
 svnlite status ~/site | grep ^'?' | sed 's/?  *//' | xargs svnlite add;
 svnlite status ~/site | grep ^'!' | sed 's/!  *//' | xargs svnlite del;
-svnlite commit -m "Update at `date +%d-%m-%Y_%H-%M`" ~/site;
+svnlite commit -m "Update `date +%d-%m-%Y_%H-%M`" ~/site;
 svnlite update ~/site;
 svnlite status -uv ~/site;
