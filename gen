@@ -1,0 +1,2 @@
+sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' ~/site/links.txt > \
+~/site/cooked/links.html
