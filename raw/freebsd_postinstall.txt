@@ -2,7 +2,7 @@
 Всё это есть в FreeBSD Handbook, в wiki.freebsd.org, в man, но тут всё какбэ на
 одной страничке.
 Можно скачать 
-fetch http://vall.su/freebsd_postinstall.txt
+fetch http://vall.su/raw/freebsd_postinstall.txt
 
 =====
 
