@@ -1,0 +1,186 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>vall.su</header>
+    <div id="main">
+Это минимальный срез того что можно сделать с FreeBSD сразу после установки.<br>
+Всё это есть в FreeBSD Handbook, в wiki.freebsd.org, в man, но тут всё какбэ на<br>
+одной страничке.<br>
+Можно скачать <br>
+fetch http://vall.su/raw/freebsd_postinstall.txt<br>
+<br>
+=====<br>
+<br>
+Если поставил MS Windows после FreeBSD на смежный раздел, то чтобы восстановить<br>
+загрузчик FreeBSD, можно загрузиться с liveUSB и сделать<br>
+boot0cfg -B ada0<br>
+<br>
+Имя диска (ada0) можно узнать из<br>
+dmesg | grep ada<br>
+<br>
+=====<br>
+<br>
+Поменять shell для root с tcsh на sh<br>
+pw user mod -n root -s sh<br>
+<br>
+=====<br>
+<br>
+adduser -- диалог для создания пользователя<br>
+Login group: wheel -- чтоб иметь возможность делать su <br>
+Invite into other groups: operator -- чтоб иметь возможность выключать комп<br>
+Чтоб создался пользователь без пароля<br>
+Use password-based authentication? -- yes<br>
+Use an empty password? -- yes<br>
+<br>
+Очистить пароль пользователя<br>
+pw user mod -n username -w none<br>
+<br>
+Добавить пользователя в группу operator<br>
+pw group mod operator -m vall<br>
+<br>
+=====<br>
+<br>
+Включить kms-драйверы для видеокарты в /boot/loader.conf или исполнить временно<br>
+kldload i915kms -- для Intel<br>
+или<br>
+kldload radeonkms -- для Radeon<br>
+<br>
+=====<br>
+<br>
+Если загружается syscons вместо vt -- в /boot/loader.conf<br>
+hw.vga.textmode=0<br>
+<br>
+=====<br>
+<br>
+Для проводного интернета в /etc/rc.conf<br>
+ifconfig_re0="DHCP" -- где 're0' -- имя карты в ifconfig<br>
+<br>
+=====<br>
+<br>
+Для WiFi<br>
+sysctl net.wlan.devices  -- так можно глянуть имя wifi-карты, например 'ath0'<br>
+<br>
+И прописать её в rc.conf<br>
+wlans_ath0="wlan0"<br>
+ifconfig_wlan0="WPA SYNCDHCP"<br>
+<br>
+Для пароля<br>
+wpa_passphrase вайфай пароль > /etc/wpa_supplicant.conf<br>
+<br>
+И затестить<br>
+service netif restart<br>
+<br>
+=====<br>
+<br>
+Synaptics touchpad<br>
+<br>
+/boot/loader.conf<br>
+hw.psm.synaptics_support="1"<br>
+<br>
+/etc/rc.conf<br>
+moused_enable="YES"<br>
+<br>
+=====<br>
+<br>
+Чтобы при входе в систему не показывалось сообщение "Welcome to FreeBSD!"<br>
+(motd), можно сделать<br>
+touch ~/.hushlogin<br>
+или отредактировать класс default в /etc/login.conf (если пользователь в этом<br>
+классе или в дочернем), добавив<br>
+:hushlogin:<br>
+после чего<br>
+cap_mkdb /etc/login.conf<br>
+<br>
+=====<br>
+<br>
+Для русской локализации в консоли можно добавить пользователя в класс 'russian'<br>
+pw user mod user -L russian <br>
+Все классы можно посмотреть в /etc/login.conf<br>
+<br>
+Другой путь -- задать переменную LANG<br>
+export LANG=ru_RU.UTF-8<br>
+Файлы локализации находятся в /usr/share/locale/<br>
+<br>
+Для русского ввода в терминале нужно добавить это в /etc/rc.conf<br>
+keymap="ru.kbd" -- для переключения по CapsLock<br>
+keymap="ru.win.kbd" -- для переключения по Ctrl+Shift<br>
+или временно<br>
+kbdmap<br>
+Файлы клавиатур находятся в /usr/share/vt(syscons)/keymaps/<br>
+<br>
+=====<br>
+<br>
+Обновить систему<br>
+<br>
+freebsd-update fetch<br>
+freebsd-update install<br>
+<br>
+=====<br>
+<br>
+Установка маломальского X11<br>
+pkg install xorg-server xinit xterm setxkbmap xset font-misc-misc xf86-input-keyboard xf86-input-mouse xf86-video-intel fluxbox<br>
+<br>
+Конечно, вместо xf86-video-intel надо ставить соответствующий драйвер видеокарты<br>
+Или просто<br>
+pkg install xorg -- метапакет, в который входит вся фигня.<br>
+<br>
+=====<br>
+<br>
+Firefox<br>
+<br>
+pkg install firefox<br>
+dbus-uuidgen > /etc/machine-id<br>
+<br>
+Русификацию проще всего сделать как описано здесь<br>
+<a href="https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack" target="_blank">https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack</a><br>
+<br>
+Вкратце, поставить Add-on<br>
+<a href="https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/" target="_blank">https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/</a><br>
+<br>
+и в about:config создать строковый параметр<br>
+New - String - intl.locale.requested -> ru<br>
+<br>
+Отключить Pocket<br>
+extensions.pocket.enabled -> false<br>
+<br>
+Включить спокойствие на сайтах без https<br>
+insecure_field_warning.contextual.enabled -> false<br>
+signon.autofillForms.http -> false<br>
+<br>
+=====<br>
+<br>
+Упрощённый ~/.profile<br>
+<br>
+LANG=en_US.UTF-8;<br>
+EDITOR=vi;<br>
+PAGER=less;<br>
+ENV=$HOME/.shrc;<br>
+LESSHISTFILE=-;<br>
+export LANG EDITOR PAGER ENV LESSHISTFILE;<br>
+<br>
+=====<br>
+<br>
+Упрощённый ~/.shrc<br>
+<br>
+set -o vi<br>
+bind -a -r v<br>
+alias svn=svnlite<br>
+<br>
+=====<br>
+<br>
+~/.xinitrc<br>
+<br>
+export LANG=ru_RU.UTF-8<br>
+setxkbmap -layout 'us,ru' -option 'grp:lwin_toggle,grp_led:scroll';<br>
+xset r rate 250 34;<br>
+fluxbox;<br>
+<br>
+=====<br>
+<br>
+</div>
+    <footer></footer>
+  </body>
+</html>

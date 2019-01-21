@@ -1,0 +1,8 @@
+This is main page.
+It's still blank.
+
+But you can go to
+<a href="cooked/books.html">books</a>
+<a href="cooked/links.html">links</a>
+<a href="cooked/freebsd_postinstall.html">freebsd_postinstall</a>
+<a href="cooked/notes.html">notes</a>
