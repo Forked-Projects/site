@@ -11,12 +11,17 @@ a {
   color: #0c4984;
 }
 
-footer {
+header, #main, #menu {
+  display: inline-block;
+}
+
+header {
   width: 20ch;
 }
 
 #main {
   width: 80ch;
+  border: dotted;
 }
 
 #menu {
