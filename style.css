@@ -11,14 +11,14 @@ a {
   color: #0c4984;
 }
 
-#main, #menu {
+footer, #main, #menu {
   display: inline-block;
 }
 
 header {
   width: 10ch;
-  height: 1em;
-  margin-top: 0px;
+  height: 20px;
+  vertical-align: top;
 }
 
 #main {
