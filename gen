@@ -1,2 +1,2 @@
-sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' ~/site/links.txt > \
-~/site/cooked/links.html
+sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' ~/site/links.txt | \
+sed 's/$/<br>/' > ~/site/cooked/links.html
