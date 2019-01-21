@@ -16,12 +16,15 @@ header, #main, #menu {
 }
 
 header {
-  width: 20ch;
+  width: 10ch;
+  height: 1em;
+  margin-top: 0px;
 }
 
 #main {
   width: 80ch;
   border: dotted;
+  padding: 7px;
 }
 
 #menu {
