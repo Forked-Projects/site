@@ -1,13 +1,13 @@
 Это минимальный срез того что можно сделать с FreeBSD сразу после установки.
-Всё это есть в FreeBSD Handbook, в wiki.freebsd.org, в man, 
-но тут всё какбэ на одной страничке.
+Всё это есть в FreeBSD Handbook, в wiki.freebsd.org, в man, но тут всё какбэ на
+одной страничке.
 Можно скачать 
 fetch http://vall.su/freebsd_postinstall.txt
 
 =====
 
-Если поставил MS Windows после FreeBSD на смежный раздел,
-то чтобы восстановить загрузчик FreeBSD, можно загрузиться с liveUSB и сделать
+Если поставил MS Windows после FreeBSD на смежный раздел, то чтобы восстановить
+загрузчик FreeBSD, можно загрузиться с liveUSB и сделать
 boot0cfg -B ada0
 
 Имя диска (ada0) можно узнать из
@@ -35,7 +35,7 @@ pw group mod operator -m vall
 
 =====
 
-Подключить kms-драйверы для видеокарты в /boot/loader.conf или исполнить временно
+Включить kms-драйверы для видеокарты в /boot/loader.conf или исполнить временно
 kldload i915kms -- для Intel
 или
 kldload radeonkms -- для Radeon
@@ -77,9 +77,11 @@ moused_enable="YES"
 
 =====
 
-Чтобы при входе в систему не показывалось сообщение "Welcome to FreeBSD!" (motd), можно сделать
+Чтобы при входе в систему не показывалось сообщение "Welcome to FreeBSD!"
+(motd), можно сделать
 touch ~/.hushlogin
-или отредактировать класс default в /etc/login.conf (если пользователь в этом классе или в дочернем)
+или отредактировать класс default в /etc/login.conf (если пользователь в этом
+классе или в дочернем), добавив
 :hushlogin:
 после чего
 cap_mkdb /etc/login.conf
@@ -92,7 +94,6 @@ pw user mod user -L russian
 
 Другой путь -- задать переменную LANG
 export LANG=ru_RU.UTF-8
-но оно разрушает sh при попытке ввода русских букв (на freebsd 12, надо исправлять) 
 Файлы локализации находятся в /usr/share/locale/
 
 Для русского ввода в терминале нужно добавить это в /etc/rc.conf
@@ -114,7 +115,7 @@ freebsd-update install
 Установка маломальского X11
 pkg install xorg-server xinit xterm setxkbmap xset font-misc-misc xf86-input-keyboard xf86-input-mouse xf86-video-intel fluxbox
 
-Конечно, вместо xf86-video-intel надо ставить соответствующий драйвер видеокарты.
+Конечно, вместо xf86-video-intel надо ставить соответствующий драйвер видеокарты
 Или просто
 pkg install xorg -- метапакет, в который входит вся фигня.
 
