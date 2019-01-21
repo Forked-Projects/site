@@ -1,4 +1,7 @@
 dir=$(dirname $0);
+
+svnlite update $dir;
+
 makehtml() {
 name=$1;
 echo '<html>
@@ -11,10 +14,8 @@ echo '<html>
       <a href="/">vall.su</a>
     </header>
     <div id="main">' > $dir/cooked/$name.html;
-
 sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt | \
 sed 's/$/<br>/' >> $dir/cooked/$name.html;
-
 echo '    </div>
     <div id=menu>
       <ul>
@@ -33,9 +34,7 @@ do makehtml $i;
 done;
 mv $dir/cooked/index.html $dir/;
 
-#sync with github
 svnlite status $dir | grep ^'?' | sed 's/?  *//' | xargs svnlite add;
 svnlite status $dir | grep ^'!' | sed 's/!  *//' | xargs svnlite del;
 svnlite commit -m "Update `date +%d-%h-%Y_%H-%M`" $dir;
-svnlite update $dir;
 svnlite status -uv $dir;
