@@ -5,6 +5,8 @@ html {
 body {
   max-width: 1000px;
   margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 a {
@@ -29,7 +31,6 @@ header {
 }
 
 #menu {
-  width: 20ch;
   vertical-align: top;
 }
 
@@ -37,7 +38,5 @@ header {
   width: 80ch;
   border: dotted;
   padding: 7px;
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
