@@ -42,7 +42,7 @@ Use an empty password? -- yes<br>
 pw user mod -n username -w none<br>
 <br>
 Добавить пользователя в группу operator<br>
-pw group mod operator -m vall<br>
+pw group mod operator -m username<br>
 <br>
 =====<br>
 <br>
@@ -58,9 +58,10 @@ hw.vga.textmode=0<br>
 <br>
 =====<br>
 <br>
-/etc/wall_cmos_clock -- наличие этого пустого файла означает, что время в BIOS<br>
-(CMOS) является локальным; отсутствие же этого файла означает, что время CMOS<br>
-настроено на UTC, а время в системе рассчитывается по часовому поясу.<br>
+/etc/wall_cmos_clock -- наличие этого пустого файла сообщает системе, что BIOS<br>
+настроен на местное (фактическое) время; отсутствие же этого файла означает, что<br>
+время в BIOS (CMOS) настроено на UTC, а время в системе рассчитывается по<br>
+часовому поясу.<br>
 Подробнее: man adjkerntz<br>
 <br>
 =====<br>
@@ -110,15 +111,13 @@ cap_mkdb /etc/login.conf<br>
 pw user mod user -L russian <br>
 Все классы можно посмотреть в /etc/login.conf<br>
 <br>
-Другой путь -- задать переменную LANG<br>
+Другой путь -- задать переменную LANG, которую можно прописать в ~/.profile<br>
 export LANG=ru_RU.UTF-8<br>
 Файлы локализации находятся в /usr/share/locale/<br>
 <br>
 Для русского ввода в терминале нужно добавить это в /etc/rc.conf<br>
 keymap="ru.kbd" -- для переключения по CapsLock<br>
 keymap="ru.win.kbd" -- для переключения по Ctrl+Shift<br>
-или временно<br>
-kbdmap<br>
 Файлы клавиатур находятся в /usr/share/vt(syscons)/keymaps/<br>
 <br>
 =====<br>
@@ -177,7 +176,6 @@ export LANG EDITOR PAGER ENV LESSHISTFILE;<br>
 <br>
 set -o vi<br>
 bind -a -r v<br>
-alias svn=svnlite<br>
 <br>
 =====<br>
 <br>

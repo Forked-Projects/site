@@ -31,7 +31,7 @@ Use an empty password? -- yes
 pw user mod -n username -w none
 
 Добавить пользователя в группу operator
-pw group mod operator -m vall
+pw group mod operator -m username
 
 =====
 
@@ -47,9 +47,10 @@ hw.vga.textmode=0
 
 =====
 
-/etc/wall_cmos_clock -- наличие этого пустого файла означает, что время в BIOS
-(CMOS) является локальным; отсутствие же этого файла означает, что время CMOS
-настроено на UTC, а время в системе рассчитывается по часовому поясу.
+/etc/wall_cmos_clock -- наличие этого пустого файла сообщает системе, что BIOS
+настроен на местное (фактическое) время; отсутствие же этого файла означает, что
+время в BIOS (CMOS) настроено на UTC, а время в системе рассчитывается по
+часовому поясу.
 Подробнее: man adjkerntz
 
 =====
@@ -99,15 +100,13 @@ cap_mkdb /etc/login.conf
 pw user mod user -L russian 
 Все классы можно посмотреть в /etc/login.conf
 
-Другой путь -- задать переменную LANG
+Другой путь -- задать переменную LANG, которую можно прописать в ~/.profile
 export LANG=ru_RU.UTF-8
 Файлы локализации находятся в /usr/share/locale/
 
 Для русского ввода в терминале нужно добавить это в /etc/rc.conf
 keymap="ru.kbd" -- для переключения по CapsLock
 keymap="ru.win.kbd" -- для переключения по Ctrl+Shift
-или временно
-kbdmap
 Файлы клавиатур находятся в /usr/share/vt(syscons)/keymaps/
 
 =====
@@ -166,7 +165,6 @@ export LANG EDITOR PAGER ENV LESSHISTFILE;
 
 set -o vi
 bind -a -r v
-alias svn=svnlite
 
 =====
 
