@@ -1,6 +1,6 @@
 dir=$(dirname $0);
 
-if $1 = 'down'
+if [ $1 = 'down' ]
 then svnlite update $dir;
 fi;
 
