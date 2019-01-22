@@ -102,7 +102,7 @@ http://revall.info/praktika-programmirovaniya.html
 https://eknigi.org/programmirovanie/56692-iskusstvo-programmirovaniya-dlya-unix.html
 
 
-Юреш Фахалия
+Юреш Вахалия
 UNIX изнутри
 Год: 2003
 Перевод: Е. Васильев, Л. Серебрякова
