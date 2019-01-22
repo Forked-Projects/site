@@ -23,7 +23,7 @@ books
 links
 freebsd_postinstall
 notes
-' | sed 's/^$//' | sed 's:.*:      <li><a href="/cooked/&.html">&</a></li>:' \
+' | sed '/^$/d' | sed 's:.*:      <li><a href="/cooked/&.html">&</a></li>:' \
 >> $dir/cooked/$name.html;
 echo '      </ul>
     </div>
