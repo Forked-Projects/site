@@ -3,6 +3,7 @@ https://mexalib.com
 http://revall.info
 http://publ.lib.ru
 
+=====
 
 Чарльз Петцольд
 Код. Тайный язык информатики
@@ -17,11 +18,37 @@ http://www.1553.ru/lessons/uploaded/CODE_-_Charlz_Pettsold.pdf
 http://publ.lib.ru/ARCHIVES/E/ERSHOV_Andrey_Petrovich/_Ershov_A.P..html
 
 
+Михайлов А.И., Черный А.И., Гиляревский Р.С.
+Основы информатики
+Год: 1968
+http://rutracker.org/forum/viewtopic.php?t=5145559
+
+=====
+
+В. Минто
+Дедуктивная и индуктивная логика 
+Год: 1896
+https://mexalib.com/view/224805
+
+
 Д. А. Поспелов
 Моделирование рассуждений
 Год: 1989
 http://mexalib.com/view/1997
 
+
+Ю. С. Маслов
+Теория дедуктивных систем и ее применения
+Год: 1986
+https://mexalib.com/view/40928
+
+
+С. Л. Эдельман
+Математическая логика
+Год: 1975
+https://mexalib.com/view/10588
+
+=====
 
 С. В. Зубков
 Assembler для DOS, Windows и UNIX
@@ -29,61 +56,12 @@ Assembler для DOS, Windows и UNIX
 http://publ.lib.ru/ARCHIVES/D/%27%27Dlya_programmistov%27%27/_''DP''.html#003
 
 
-Маршалл Кирк МакКузик, Джордж В. Невилл-Нил
-FreeBSD. Архитектура и реализация
-Год: 2006
-Перевод: Р. Галеев
-http://muff.kiev.ua/content/freebsd-arkhitektura-i-realizatsiya
+The Art of Assembly Language, 2nd edition
+Randall Hyde
+Год: 2010
+http://1.droppdf.com/files/T11iW/the-art-of-assembly-language-2nd-edition.pdf
 
-
-Брайан Керниган, Роб Пайк
-UNIX. Программное окружение
-Год: 2003
-Перевод: П. Шера
-http://muff.kiev.ua/content/unix-programmnoe-okruzhenie
-
-
-Брайан Керниган, Роб Пайк
-Практика программирования
-Год: 2015
-Перевод: В. Л. Бродовой
-http://revall.info/praktika-programmirovaniya.html
-
-
-Ричард Бёрд
-Жемчужины проектирования алгоритмов. Функциональный подход
-Год: 2013
-Перевод: Брагилевский В., Пеленицын А.
-http://rutracker.org/forum/viewtopic.php?t=4357181
-
-
-Линус Торвальдс, Дэвид Даймонд
-Just for fun
-Год: 2002
-Перевод: Наталья Шахова
-http://www.lib.ru/LINUXGUIDE/torvalds_jast_for_fun.txt
-
-
-Эрик Стивен Реймонд
-Искусство программирования для Unix
-Год: 2005
-Перевод: В. А. Швец
-https://eknigi.org/programmirovanie/56692-iskusstvo-programmirovaniya-dlya-unix.html
-
-
-Юреш Фахалия
-UNIX изнутри
-Год: 2003
-Перевод: Е. Васильев, Л. Серебрякова
-http://mexalib.com/view/22478
-
-
-Брайан Уорд
-Внутреннее устройство Linux
-Год: 2016
-Перевод: М. Райтман
-http://itsecforu.ru/wp-content/uploads/2018/01/uord_brayan_vnutrennee_ustroystvo_linux.pdf
-
+=====
 
 Хоровиц П., Хилл У.
 Искусство схемотехники
@@ -101,6 +79,63 @@ http://mexalib.com/view/19792
 http://mexalib.com/search/?q=берклеевский+курс+физики
 http://rutracker.org/forum/viewtopic.php?t=1310960
 
+=====
+
+Брайан Керниган, Роб Пайк
+UNIX. Программное окружение
+Год: 2003
+Перевод: П. Шера
+http://muff.kiev.ua/content/unix-programmnoe-okruzhenie
+
+
+Брайан Керниган, Роб Пайк
+Практика программирования
+Год: 2015
+Перевод: В. Л. Бродовой
+http://revall.info/praktika-programmirovaniya.html
+
+
+Эрик Стивен Реймонд
+Искусство программирования для Unix
+Год: 2005
+Перевод: В. А. Швец
+https://eknigi.org/programmirovanie/56692-iskusstvo-programmirovaniya-dlya-unix.html
+
+
+Юреш Фахалия
+UNIX изнутри
+Год: 2003
+Перевод: Е. Васильев, Л. Серебрякова
+http://mexalib.com/view/22478
+
+
+Think Unix
+Jon Lasser
+Год: 2000
+https://epdf.tips/think-unixe9133e6ce6b9025dec9cdeb9a074b44a85528.html
+
+
+Брайан Уорд
+Внутреннее устройство Linux
+Год: 2016
+Перевод: М. Райтман
+http://itsecforu.ru/wp-content/uploads/2018/01/uord_brayan_vnutrennee_ustroystvo_linux.pdf
+
+
+Маршалл Кирк МакКузик, Джордж В. Невилл-Нил
+FreeBSD. Архитектура и реализация
+Год: 2006
+Перевод: Р. Галеев
+http://muff.kiev.ua/content/freebsd-arkhitektura-i-realizatsiya
+
+
+Ричард Бёрд
+Жемчужины проектирования алгоритмов. Функциональный подход
+Год: 2013
+Перевод: Брагилевский В., Пеленицын А.
+http://rutracker.org/forum/viewtopic.php?t=4357181
+
+=====
 
 Коутинхо С.
 Введение в теорию чисел. Алгоритм RSA
@@ -109,16 +144,11 @@ http://rutracker.org/forum/viewtopic.php?t=1310960
 http://mexalib.com/view/2653
 
 
-The Art of Assembly Language, 2nd edition
-Randall Hyde
-Год: 2010
-http://1.droppdf.com/files/T11iW/the-art-of-assembly-language-2nd-edition.pdf
-
-
-Think Unix
-Jon Lasser
-Год: 2000
-https://epdf.tips/think-unixe9133e6ce6b9025dec9cdeb9a074b44a85528.html
+Линус Торвальдс, Дэвид Даймонд
+Just for fun
+Год: 2002
+Перевод: Наталья Шахова
+http://www.lib.ru/LINUXGUIDE/torvalds_jast_for_fun.txt
 
 
 Карл Маркс
