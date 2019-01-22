@@ -4,10 +4,11 @@ html {
 
 body {
   margin: 0px;
+  width: 100%;
 }
 
 #wrapper {
-  width: 110ch;
+  width: 115ch;
   margin: 5px auto;
 }
 
