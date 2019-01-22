@@ -10,6 +10,7 @@ echo '<html>
     <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
   <body>
+  <div id="wrapper">
     <header>
       <a href="/">vall.su</a>
     </header>
@@ -18,18 +19,17 @@ sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt | \
 sed 's/$/<br>/' >> $dir/cooked/$name.html;
 echo '    </div>
     <div id=menu>
-      <ul>
-	<li><a href="/cooked/books.html">books</a></li>
-	<li><a href="/cooked/links.html">links</a></li>
-	<li><a href="/cooked/freebsd_postinstall.html">freebsd_postinstall</a></li>
-	<li><a href="/cooked/notes.html">notes</a></li>
-      </ul>
+      <ul>';
+ls -1 $dir/raw/ | sed 's/.txt$//' | sed '/index/d' | \
+sed 's:.*:<li><a href="/cooked/&.html">&</a></li>:' >> $dir/cooked/$name.html;
+echo '      </ul>
     </div>
+  </div>
   </body>
 </html>' >> $dir/cooked/$name.html;
 }
 
-for i in $(ls $dir/raw/ | sed 's/.txt$//');
+for i in $(ls -1 $dir/raw/ | sed 's/.txt$//');
 do makehtml $i;
 done;
 mv $dir/cooked/index.html $dir/;

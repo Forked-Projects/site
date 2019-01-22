@@ -2,11 +2,9 @@ html {
   font-family: monospace;
 }
 
-body {
-  max-width: 1000px;
-  margin: auto;
-  margin-top: 5px;
-  margin-bottom: 5px;
+#wrapper {
+  width: 100%;
+  margin: 5px auto;
 }
 
 a {
@@ -32,6 +30,7 @@ header {
 
 #menu {
   vertical-align: top;
+  width: 12ch;
 }
 
 #main {
