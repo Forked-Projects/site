@@ -1,15 +1,14 @@
 html {
   font-family: monospace;
-  width: 800px;
 }
 
 body {
   margin: 0px;
-  width: 800px;
+  width: 100%;
 }
 
 #wrapper {
-/*  width: 115ch;*/
+  width: 115ch;
   margin: 5px auto;
 }
 
