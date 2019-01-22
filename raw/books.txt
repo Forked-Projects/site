@@ -22,6 +22,12 @@ http://publ.lib.ru/ARCHIVES/E/ERSHOV_Andrey_Petrovich/_Ershov_A.P..html
 http://mexalib.com/view/1997
 
 
+С. В. Зубков
+Assembler для DOS, Windows и UNIX
+Год: 2004
+http://publ.lib.ru/ARCHIVES/D/%27%27Dlya_programmistov%27%27/_''DP''.html#003
+
+
 Маршалл Кирк МакКузик, Джордж В. Невилл-Нил
 FreeBSD. Архитектура и реализация
 Год: 2006
