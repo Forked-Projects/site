@@ -18,10 +18,11 @@ echo '<html>
 sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt | \
 sed 's/$/<br>/' >> $dir/cooked/$name.html;
 echo '    </div>
-    <div id=menu>
+    <div id="menu">
       <ul>' >> $dir/cooked/$name.html;
 ls -1 $dir/raw/ | sed 's/.txt$//' | sed '/index/d' | \
-sed 's:.*:<li><a href="/cooked/&.html">&</a></li>:' >> $dir/cooked/$name.html;
+sed 's:.*:      <li><a href="/cooked/&.html">&</a></li>:' \
+>> $dir/cooked/$name.html;
 echo '      </ul>
     </div>
   </div>
