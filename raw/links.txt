@@ -335,8 +335,12 @@ https://ungleich.ch/en-us/cms/blog/2017/12/10/the-importance-of-devuan/
 https://www.box-look.org/content/show.php/IceClearlooks?content=96346
 
 
-Clearlooks 0.6.2 + Tango Icons is the best theme for GTK+
-https://vk.com/wall-34632406?day=05012019&offset=840&w=wall-34632406_3575
+Clearlooks 0.6.2 + Tango Icons
+https://vk.com/wedontknowunix?w=wall-34632406_3575
+
+
+OpenSUSE + Gilouche
+https://vk.com/wedontknowunix?w=wall-34632406_4061
 
 
 Для создания загрузочных флешек с MSWindows лучше всего работает WinSetupFromUSB
