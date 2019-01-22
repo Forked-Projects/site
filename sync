@@ -1,9 +1,5 @@
 dir=$(dirname $0);
 
-if [ $1 = 'down' ]
-then svnlite update $dir;
-fi;
-
 makehtml() {
 name=$1;
 echo '<html>
@@ -31,6 +27,11 @@ echo '      </ul>
   </body>
 </html>' >> $dir/cooked/$name.html;
 }
+
+if [ `svnliteversion $dir | sed 's/M$//'` -lt `svnlite status -u $dir | \
+grep '^Status' | cut -d ':' -f 2` ]
+then svnlite update $dir;
+fi;
 
 for i in $(ls -1 $dir/raw/ | sed 's/.txt$//');
 do makehtml $i;
