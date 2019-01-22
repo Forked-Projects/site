@@ -32,8 +32,8 @@ echo '      </ul>
 </html>' >> $dir/cooked/$name.html;
 }
 
-if [ `svnliteversion $dir | sed 's/M$//'` -lt `svnlite status -u $dir | \
-grep '^Status' | cut -d ':' -f 2` ]
+if [ `svnliteversion $dir | sed 's/:.*//; s/M$//'` -lt `svnlite status -u $dir \
+ | grep '^Status' | cut -d ':' -f 2` ]
 then svnlite update $dir;
 fi;
 
