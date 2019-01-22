@@ -40,4 +40,5 @@ mv $dir/cooked/index.html $dir/;
 svnlite status $dir | grep ^'?' | sed 's/?  *//' | xargs svnlite add;
 svnlite status $dir | grep ^'!' | sed 's/!  *//' | xargs svnlite del;
 svnlite commit -m "Update `date +%d-%h-%Y_%H-%M`" $dir;
+svnlite update $dir;
 svnlite status -uv $dir;
