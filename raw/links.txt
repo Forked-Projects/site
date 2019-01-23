@@ -246,7 +246,7 @@ https://github.com/FabioLolix/BSD-Timeline/releases
 https://wolfram.schneider.org/bsd/ftp/releases/
 
 
-Исходные коды Research Unix от Bell Labs в редакциях 8, 9 и 10
+The Unix Heritage Society -- архивы дистрибутивов и документации о Unix
 http://www.tuhs.org/Archive/Distributions/Research/
 
 
