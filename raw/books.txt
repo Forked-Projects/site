@@ -84,7 +84,7 @@ http://rutracker.org/forum/viewtopic.php?t=1310960
 Брайан Керниган, Роб Пайк
 UNIX. Программное окружение
 Год: 2003
-Перевод: П. Шера
+Перевод: П. Шер
 http://muff.kiev.ua/content/unix-programmnoe-okruzhenie
 
 
