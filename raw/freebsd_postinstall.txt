@@ -149,6 +149,9 @@ New - String - intl.locale.requested -> ru
 Отключить Pocket
 extensions.pocket.enabled -> false
 
+Отключить рендеринг страниц как для читалки
+reader.parse-on-load.enabled -> false
+
 Включить спокойствие на сайтах без https
 insecure_field_warning.contextual.enabled -> false
 signon.autofillForms.http -> false
