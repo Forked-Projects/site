@@ -102,6 +102,8 @@ http://www.stolyarov.info/books/programming_intro
 =====
 
 Далее представлены просто книги, которые могут быть полезны.
+Разделено тематически примерно на книги по Логике, по Unix и прочие книги,
+так или иначе связанные с Информатикой.
 
 =====
 
@@ -121,6 +123,48 @@ https://mexalib.com/view/40928
 Математическая логика
 Год: 1975
 https://mexalib.com/view/10588
+
+=====
+
+Брайан Керниган, Роб Пайк
+Практика программирования
+Год: 2015
+Перевод: В. Л. Бродовой
+http://revall.info/praktika-programmirovaniya.html
+
+
+Эрик Стивен Реймонд
+Искусство программирования для Unix
+Год: 2005
+Перевод: В. А. Швец
+https://eknigi.org/programmirovanie/56692-iskusstvo-programmirovaniya-dlya-unix.html
+
+
+Юреш Вахалия
+UNIX изнутри
+Год: 2003
+Перевод: Е. Васильев, Л. Серебрякова
+http://mexalib.com/view/22478
+
+
+Think Unix
+Jon Lasser
+Год: 2000
+https://epdf.tips/think-unixe9133e6ce6b9025dec9cdeb9a074b44a85528.html
+
+
+Брайан Уорд
+Внутреннее устройство Linux
+Год: 2016
+Перевод: М. Райтман
+http://itsecforu.ru/wp-content/uploads/2018/01/uord_brayan_vnutrennee_ustroystvo_linux.pdf
+
+
+Маршалл Кирк МакКузик, Джордж В. Невилл-Нил
+FreeBSD. Архитектура и реализация
+Год: 2006
+Перевод: Р. Галеев
+http://muff.kiev.ua/content/freebsd-arkhitektura-i-realizatsiya
 
 =====
 
@@ -166,49 +210,6 @@ http://mexalib.com/view/2653
 Перевод: Брагилевский В., Пеленицын А.
 http://rutracker.org/forum/viewtopic.php?t=4357181
 
-=====
-
-Брайан Керниган, Роб Пайк
-Практика программирования
-Год: 2015
-Перевод: В. Л. Бродовой
-http://revall.info/praktika-programmirovaniya.html
-
-
-Эрик Стивен Реймонд
-Искусство программирования для Unix
-Год: 2005
-Перевод: В. А. Швец
-https://eknigi.org/programmirovanie/56692-iskusstvo-programmirovaniya-dlya-unix.html
-
-
-Юреш Вахалия
-UNIX изнутри
-Год: 2003
-Перевод: Е. Васильев, Л. Серебрякова
-http://mexalib.com/view/22478
-
-
-Think Unix
-Jon Lasser
-Год: 2000
-https://epdf.tips/think-unixe9133e6ce6b9025dec9cdeb9a074b44a85528.html
-
-
-Брайан Уорд
-Внутреннее устройство Linux
-Год: 2016
-Перевод: М. Райтман
-http://itsecforu.ru/wp-content/uploads/2018/01/uord_brayan_vnutrennee_ustroystvo_linux.pdf
-
-
-Маршалл Кирк МакКузик, Джордж В. Невилл-Нил
-FreeBSD. Архитектура и реализация
-Год: 2006
-Перевод: Р. Галеев
-http://muff.kiev.ua/content/freebsd-arkhitektura-i-realizatsiya
-
-=====
 
 Линус Торвальдс, Дэвид Даймонд
 Just for fun
