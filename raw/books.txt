@@ -37,7 +37,8 @@ http://www.1553.ru/lessons/uploaded/CODE_-_Charlz_Pettsold.pdf
 Основы информатики и вычислительной техники
 Год: 1985
 Описание: Информатика с советский привкусом, основы архитектуры ЭВМ, основы
-применения алгоритмов.
+применения алгоритмов. Учебное пособие, с которого началось преподавание
+информатики в школах и средних учебных заведениях Советского Союза.
 http://publ.lib.ru/ARCHIVES/E/ERSHOV_Andrey_Petrovich/_Ershov_A.P..html
 
 
@@ -172,6 +173,12 @@ http://muff.kiev.ua/content/freebsd-arkhitektura-i-realizatsiya
 Основы информатики
 Год: 1968
 http://rutracker.org/forum/viewtopic.php?t=5145559
+
+
+Ершов А. П.
+Введение в теоретическое программирование
+Год: 1977
+http://bookfi.net/book/1499378
 
 
 С. В. Зубков
