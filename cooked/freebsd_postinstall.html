@@ -53,8 +53,14 @@ kldload radeonkms -- для Radeon<br>
 <br>
 =====<br>
 <br>
-Если загружается syscons вместо vt -- в /boot/loader.conf<br>
+Если загружается vt в тексотовом режиме -- в /boot/loader.conf<br>
 hw.vga.textmode=0<br>
+<br>
+Если надо загрузить syscons вместо vt -- туда же<br>
+kern.vty=sc<br>
+<br>
+Загрузить точно vt<br>
+kern.vty=vt<br>
 <br>
 =====<br>
 <br>
