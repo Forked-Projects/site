@@ -184,6 +184,11 @@ https://www.youtube.com/watch?v=FbDebSinSQo
 https://github.com/dspinellis/unix-history-repo
 
 
+Сборник материалов об Андрее Петровиче Ершове, пионере и лидере отечественного
+программирования
+http://www.computer-museum.ru/books/n_ershov/
+
+
 История системных администраторов о том, как "упали" Одноклассники
 https://habr.com/company/odnoklassniki/blog/268413/
 
@@ -294,10 +299,6 @@ NetBSD
 https://sdf.org/
 
 
-Ubuntu online tour
-http://tour.ubuntu.com/
-
-
 Игровые испытания на shell
 https://cmdchallenge.com/
 
@@ -317,10 +318,6 @@ https://www.linux.org.ru/polls/polls/9380184
 Сервис хранения текста на подобие pastebin, но без необходимости использовать
 браузер
 https://termbin.com/
-
-
-Сайт NASA
-https://www.nasa.gov/
 
 
 Яшкардин Владимир Леонидович
