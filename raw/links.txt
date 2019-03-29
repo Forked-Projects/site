@@ -68,7 +68,11 @@ http://www.compsci.hunter.cuny.edu/~sweiss/
 https://wiki.osdev.org/
 
 
-Немного (много) про AT&T синтаксис ассемблера
+Немного (много) по ассемблеру в Unix
+http://heather.cs.ucdavis.edu/~matloff/50/LinuxAssembly.html
+https://sourceware.org/binutils/docs/as/
+http://www.int80h.org/
+https://ru.wikibooks.org/wiki/Ассемблер_в_Linux_для_программистов_C
 http://neuraldk.org/document.php?att_asm
 http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 https://www.cs.cmu.edu/~fp/courses/15213-s07/misc/asm64-handout.pdf
