@@ -39,6 +39,13 @@ xrandr -s 800x600 -- поставить разрешение экрана
 
 =====
 
+Узнать свой внешний IP
+drill @resolver1.opendns.com ANY myip.opendns.com | grep ^myip
+или
+dig   @resolver1.opendns.com ANY myip.opendns.com | grep ^myip
+
+=====
+
 Чтобы в xterm выделенный мышью текст попадал в главный буфер
 ~/.Xdefaults
 XTerm*SelectToClipboard: true
