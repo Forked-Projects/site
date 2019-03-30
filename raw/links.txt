@@ -204,7 +204,6 @@ https://habr.com/company/odnoklassniki/blog/268413/
 
 =====
 
-
 Apache Guacamole -- браузерный HTML5 клиент VNC/RDP/SSH
 http://guacamole.apache.org/
 
