@@ -195,7 +195,7 @@ https://www.computerra.ru/213376/linux-dlya-polzovateley-pogubili-mac-os-x-i-veb
 
 
 Переводы блога программиста и писателя Джоэла Спольски ("Joel on Software"),
-в котором он обсуждает вопросы программирования
+в котором он обсуждает программистскую жизнь
 http://local.joelonsoftware.com/mediawiki/index.php/Russian
 
 
@@ -319,6 +319,10 @@ https://opensource.google.com/projects/list/featured
 http://www.softelectro.ru/
 
 
+Тур по Ubuntu
+http://tour.ubuntu.com/
+
+
 Какие DE используют ЛОРовцы
 https://www.linux.org.ru/polls/polls/9380184
 
@@ -338,10 +342,6 @@ https://vk.com/public34632406?w=wall-34632406_3575
 
 OpenSUSE + Gilouche
 https://vk.com/public34632406?w=wall-34632406_4061
-
-
-Тур по Ubuntu
-http://tour.ubuntu.com/
 
 
 Для создания загрузочных флешек с MSWindows лучше всего работает WinSetupFromUSB
