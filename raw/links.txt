@@ -80,6 +80,7 @@ https://www.youtube.com/playlist?list=PLzH6n4zXuckqZ90zLyy36qjO5YIn1RulG
 http://asm.sourceforge.net/intro/Assembly-Intro.pdf
 https://www.freebsd.org/doc/en/books/developers-handbook/x86.html
 http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
+http://cs.lmu.edu/~ray/notes/gasexamples
 https://sourceware.org/binutils/docs/as/
 http://heather.cs.ucdavis.edu/~matloff/50/LinuxAssembly.html
 https://ru.wikibooks.org/wiki/Ассемблер_в_Linux_для_программистов_C
