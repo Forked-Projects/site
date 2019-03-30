@@ -53,8 +53,8 @@ kern.vty=vt
 
 =====
 
-Отключить вывод системных сообщений в консоль -- закомментировать строку в
-/etc/syslog.conf
+Отключить вывод системных сообщений в консоль -- в /etc/syslog.conf
+закомментировать строку
 # *.err;kern.warning;auth.notice;mail.crit		/dev/console
 
 =====
