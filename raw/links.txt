@@ -77,12 +77,14 @@ https://www.youtube.com/playlist?list=PLzH6n4zXuckqZ90zLyy36qjO5YIn1RulG
 =====
 
 Немного (много) по ассемблеру в Unix
-http://heather.cs.ucdavis.edu/~matloff/50/LinuxAssembly.html
+http://asm.sourceforge.net/intro/Assembly-Intro.pdf
+https://www.freebsd.org/doc/en/books/developers-handbook/x86.html
+http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 https://sourceware.org/binutils/docs/as/
-http://www.int80h.org/
+http://heather.cs.ucdavis.edu/~matloff/50/LinuxAssembly.html
 https://ru.wikibooks.org/wiki/Ассемблер_в_Linux_для_программистов_C
 http://neuraldk.org/document.php?att_asm
-http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
+https://people.freebsd.org/~lstewart/references/amd64.pdf
 https://www.cs.cmu.edu/~fp/courses/15213-s07/misc/asm64-handout.pdf
 
 =====
