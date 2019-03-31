@@ -1,0 +1,44 @@
+Простая программа Hello, world! на стандартном ассемблере as во FreeBSD i386 с
+использованием классического синтаксиса Unix, называемого AT&T синтаксис или
+GNU Assembler синтаксис.
+Во FreeBSD до сих пор используются GNU as и GNU ld из пакета GNU Binutils.
+
+=====
+
+.text
+  .global _start
+
+_syscall:
+  int   $0x80
+  ret
+
+_start:
+  pushl $len
+  pushl $msg
+  pushl $1
+  movl  $0x4,%eax
+  call  _syscall
+
+  add   $12,%esp
+
+  pushl $0
+  movl  $0x1,%eax
+  call  _syscall
+
+.data
+
+msg:
+  .ascii "Hello, world!\n"
+  len = . - msg
+
+=====
+
+Можно записать в файл, например, в hello.S и собрать
+as -o hello.o hello.S
+ld -s -o hello hello.o
+
+Запуск
+$ ./hello
+Hello, world!
+$
+
