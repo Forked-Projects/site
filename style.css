@@ -40,6 +40,6 @@ header {
   width: 80ch;
   border: dotted;
   padding: 7px;
-  white-space: pre;
+  white-space: pre-wrap;
 }
 
