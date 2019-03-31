@@ -14,7 +14,7 @@
 GNU Assembler синтаксис.<br>
 Во FreeBSD до сих пор используются GNU as и GNU ld из пакета GNU Binutils.<br>
 <br>
-<code>=====<br>
+<pre>=====<br>
 <br>
 .text<br>
   .global _start<br>
@@ -42,7 +42,7 @@ msg:<br>
   .ascii "Hello, world!\n"<br>
   len = . - msg<br>
 <br>
-=====</code><br>
+=====</pre><br>
 <br>
 Можно записать в файл, например, в hello.S и собрать<br>
 as -o hello.o hello.S<br>
