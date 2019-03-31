@@ -16,6 +16,13 @@ a {
   color: #0c4984;
 }
 
+#main a {
+  display: inline-block;
+  width: 80ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 ul {
   list-style: none;
   padding-left: 2px;
@@ -41,7 +48,5 @@ header {
   border: dotted;
   padding: 7px;
   white-space: pre;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
