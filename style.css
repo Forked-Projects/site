@@ -18,7 +18,7 @@ a {
 
 #main a {
   display: inline-block;
-  width: 80ch;
+  max-width: 80ch;
   overflow: hidden;
   text-overflow: ellipsis;
 }
