@@ -12,8 +12,13 @@
 Это минимальный срез того что можно сделать с FreeBSD сразу после установки.<br>
 Всё это есть в FreeBSD Handbook, в wiki.freebsd.org, в man, но тут всё какбэ на<br>
 одной страничке.<br>
+<br>
 Можно скачать <br>
-fetch http://vall.su/raw/freebsd_postinstall.txt<br>
+fetch --no-verify-peer https://vall.su/raw/freebsd_postinstall.txt<br>
+<br>
+Чтобы fetch мог скачивать с проверкой цифровой подписи (--no-verify-peer её<br>
+отключает) достаточно поставить пакет с корневыми сертификатами<br>
+pkg install ca_root_nss<br>
 <br>
 =====<br>
 <br>
