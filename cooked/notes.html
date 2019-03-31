@@ -9,6 +9,74 @@
       <a href="/">vall.su</a>
     </header>
     <div id="main">
+Универскальная переключалка клавиатуры X11 -- setxkbmap
+
+Например
+setxkbmap -layout 'us,ru' -option 'grp:lwin_toggle,grp_led:scroll'
+
+Параметры:
+-layout 'us,ru' — список используемых раскладок.
+-option 'grp:lctrl_lshift_toggle' — переключение раскладок левым ctrl+shift.
+-option 'grp:lalt_lshift_toggle' - переключение левым alt+shift.
+-option 'grp:lwin_toggle' - переключение по левому winkey.
+-option 'grp:caps_toggle' - переключение по CapsLock.
+-option 'grp_led:scroll' - горит ScrollLock когда включена альтернативная
+(русская) раскладка, можно не указывать.
+
+=====
+
+Чтоб NumLock включался при запуске xinit можно поставить numlockx и прописать
+в ~/.xinitrc
+numlockx on 
+
+=====
+
+Вот при печати если нужно написать один символ много раз (например, этоооооооо),
+мы нажимаем кнопку символа, и есть задержка, а потом повторения этого символа
+пока держится кнопка символа.
+
+Настройка этого параметра для консоли FreeBSD -- man kbdcontrol, параметр -r.
+По-умолчанию там стоит fast (250.34) 
+
+Чтоб задать эти настройки в Xorg, достаточно сделать следующее:
+xset r rate ЗАДЕРЖКА[мс] ЧАСТОТА[Гц]
+
+То есть я себе сделал в ~/.xinitrc как в консоли:
+xset r rate 250 34
+
+=====
+
+xrandr -s 800x600 -- поставить разрешение экрана
+
+=====
+
+Узнать свой внешний IP
+drill @resolver1.opendns.com ANY myip.opendns.com | grep ^myip
+или
+dig   @resolver1.opendns.com ANY myip.opendns.com | grep ^myip
+
+=====
+
+Чтобы в xterm выделенный мышью текст попадал в главный буфер
+~/.Xdefaults
+XTerm*SelectToClipboard: true
+
+=====
+
+wmctrl - это инструмент командной строки для взаимодействия с EWMH/NetWM
+совместимыми менеджерами окон (например Icewm, Kwin, и Xfce). Она может
+максимизировать окна, сделать их липкими, переместить на конкретный рабочий
+стол, установить окно на переднем плане.
+
+=====
+
+zenity -- программа для создания оповещений и диалоговых окон, используется в
+Gnome и Mate.
+
+=====
+
+Sylpheed -- великолепный почтовый клиент.
+
     </div>
     <div id="menu">
       <ul>

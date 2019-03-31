@@ -14,8 +14,8 @@ echo '<html>
     </header>
     <div id="main">' > $dir/cooked/$name.html;
 sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt \
-#sed 's/$/<br>/'
 >> $dir/cooked/$name.html;
+#sed 's/$/<br>/'
 echo '    </div>
     <div id="menu">
       <ul>' >> $dir/cooked/$name.html;
