@@ -9,50 +9,6 @@
       <a href="/">vall.su</a>
     </header>
     <div id="main">
-Простая программа Hello, world! на стандартном ассемблере as во FreeBSD i386 с<br>
-использованием классического синтаксиса Unix, называемого AT&T синтаксис или<br>
-GNU Assembler синтаксис.<br>
-Во FreeBSD до сих пор используются GNU as и GNU ld из пакета GNU Binutils.<br>
-<br>
-<pre>=====<br>
-<br>
-.text<br>
-  .global _start<br>
-<br>
-_syscall:<br>
-  int   $0x80<br>
-  ret<br>
-<br>
-_start:<br>
-  pushl $len<br>
-  pushl $msg<br>
-  pushl $1<br>
-  movl  $0x4,%eax<br>
-  call  _syscall<br>
-<br>
-  add   $12,%esp<br>
-<br>
-  pushl $0<br>
-  movl  $0x1,%eax<br>
-  call  _syscall<br>
-<br>
-.data<br>
-<br>
-msg:<br>
-  .ascii "Hello, world!\n"<br>
-  len = . - msg<br>
-<br>
-=====</pre><br>
-<br>
-Можно записать в файл, например, в hello.S и собрать<br>
-as -o hello.o hello.S<br>
-ld -s -o hello hello.o<br>
-<br>
-Запуск<br>
-$ ./hello<br>
-Hello, world!<br>
-$<br>
-<br>
     </div>
     <div id="menu">
       <ul>
