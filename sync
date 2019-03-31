@@ -12,10 +12,12 @@ echo '<html>
     <header>
       <a href="/">vall.su</a>
     </header>
-    <div id="main">' > $dir/cooked/$name.html;
+    <div id="main">
+    <div id="main2">' > $dir/cooked/$name.html;
 sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt \
 >> $dir/cooked/$name.html;
 echo '  </div>
+    </div>
     <div id="menu">
       <ul>' >> $dir/cooked/$name.html;
 echo '

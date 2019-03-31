@@ -16,16 +16,6 @@ a {
   color: #0c4984;
 }
 
-#main::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 7px;
-  height: 100%;
-  background: linear-gradient(to right, transparent, white 90%);
-}
-
 ul {
   list-style: none;
   padding-left: 2px;
@@ -52,6 +42,9 @@ header {
   padding: 7px;
   white-space: pre;
   overflow: hidden;
-  position: relative;
+  text-overflow: ellipsis;
+}
+
+#main2 {
 }
 
