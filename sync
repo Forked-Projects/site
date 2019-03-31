@@ -13,7 +13,7 @@ echo '<html>
       <a href="/">vall.su</a>
     </header>
     <div id="main">' > $dir/cooked/$name.html;
-sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt | \
+sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt \
 #sed 's/$/<br>/'
 >> $dir/cooked/$name.html;
 echo '    </div>
