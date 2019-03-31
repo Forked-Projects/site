@@ -14,15 +14,16 @@ body {
 
 a {
   color: #0c4984;
-  position: relative;
 }
 
-#main a::after {
+#main::after {
   content: '';
   position: absolute;
-  left: 77ch;
-  width: 4ch;
-  background: linear-gradient(to right, rgba(255,255,255,0.2), white);
+  right: 0;
+  top: 0;
+  width: 7px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, white 90%);
 }
 
 ul {
@@ -51,5 +52,6 @@ header {
   padding: 7px;
   white-space: pre;
   overflow: hidden;
+  position: relative;
 }
 
