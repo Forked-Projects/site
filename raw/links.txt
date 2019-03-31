@@ -83,6 +83,7 @@ https://efxa.org/2011/03/02/assembly-gnulinux/
 http://neuraldk.org/document.php?att_asm
 http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 http://cs.lmu.edu/~ray/notes/gasexamples
+https://csiflabs.cs.ucdavis.edu/~ssdavis/50/att-syntax.htm
 https://sourceware.org/binutils/docs/as/
 https://ru.wikibooks.org/wiki/Ассемблер_в_Linux_для_программистов_C
 https://www.freebsd.org/doc/en/books/developers-handbook/x86.html
