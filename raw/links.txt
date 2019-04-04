@@ -76,22 +76,6 @@ https://www.youtube.com/playlist?list=PLzH6n4zXuckqZ90zLyy36qjO5YIn1RulG
 
 =====
 
-Немного (много) по ассемблеру в Unix
-http://asm.sourceforge.net/intro/Assembly-Intro.pdf
-http://heather.cs.ucdavis.edu/~matloff/50/LinuxAssembly.html
-https://efxa.org/2011/03/02/assembly-gnulinux/
-http://neuraldk.org/document.php?att_asm
-http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
-http://cs.lmu.edu/~ray/notes/gasexamples
-https://csiflabs.cs.ucdavis.edu/~ssdavis/50/att-syntax.htm
-https://sourceware.org/binutils/docs/as/
-https://ru.wikibooks.org/wiki/Ассемблер_в_Linux_для_программистов_C
-https://www.freebsd.org/doc/en/books/developers-handbook/x86.html
-https://people.freebsd.org/~lstewart/references/amd64.pdf
-https://www.cs.cmu.edu/~fp/courses/15213-s07/misc/asm64-handout.pdf
-
-=====
-
 Статья 1998 года от Адама Коккрофта, важного инженера в компании Sun, о том,
 почему динамическая компоновка лучше статичной
 http://sunsite.uakom.sk/sunworldonline/swol-02-1996/swol-02-perf.html
