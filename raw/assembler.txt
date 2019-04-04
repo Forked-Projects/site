@@ -57,3 +57,4 @@ https://ru.wikibooks.org/wiki/Ассемблер_в_Linux_для_програм�
 https://www.freebsd.org/doc/en/books/developers-handbook/x86.html
 https://people.freebsd.org/~lstewart/references/amd64.pdf
 https://www.cs.cmu.edu/~fp/courses/15213-s07/misc/asm64-handout.pdf
+https://en.wikipedia.org/wiki/X86_instruction_listings
