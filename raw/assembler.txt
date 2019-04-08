@@ -35,7 +35,7 @@ msg:
 
 Можно записать в файл, например, в hello.S и собрать
 as -o hello.o hello.S
-ld -s -o hello hello.o
+ld -o hello hello.o
 
 Запуск
 $ ./hello
@@ -43,6 +43,10 @@ Hello, world!
 $
 
 =====
+
+Простейший загрузчик, печатающий "Hi!"
+
+
 
 Литература:
 http://asm.sourceforge.net/intro/Assembly-Intro.pdf
@@ -53,7 +57,13 @@ http://neuraldk.org/document.php?att_asm
 http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 http://cs.lmu.edu/~ray/notes/gasexamples
 https://csiflabs.cs.ucdavis.edu/~ssdavis/50/att-syntax.htm
+
+Документация по GNU as
 https://sourceware.org/binutils/docs/as/
+
+Пройстейший загрузчик на ассемблере, печатающий строку текста
+https://medium.com/@g33konaut/writing-an-x86-hello-world-boot-loader-with-assembly-3e4c5bdd96cf
+
 https://ru.wikibooks.org/wiki/Ассемблер_в_Linux_для_программистов_C
 http://www.cs.virginia.edu/~evans/cs216/guides/x86.html
 https://www.freebsd.org/doc/en/books/developers-handbook/x86.html
