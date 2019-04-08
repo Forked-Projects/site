@@ -46,7 +46,30 @@ $
 
 Простейший загрузчик, печатающий "Hi!"
 
+=====
 
+.text
+  .global _start
+  
+_start:
+  movb $0x0e, %ah
+  movb $0x48, %al
+  int  $0x10
+
+  movb $0x0e, %ah
+  movb $0x69, %al
+  int  $0x10
+
+  movb $0x0e, %ah
+  movb $0x21, %al
+  int  $0x10
+
+.fill 510-(.-_start), 1, 0
+
+.byte 0x55
+.byte 0xaa
+
+=====
 
 Литература:
 http://asm.sourceforge.net/intro/Assembly-Intro.pdf
