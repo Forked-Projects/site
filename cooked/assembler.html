@@ -46,7 +46,7 @@ msg:
 
 Можно записать в файл, например, в hello.S и собрать
 as -o hello.o hello.S
-ld -s -o hello hello.o
+ld -o hello hello.o
 
 Запуск
 $ ./hello
@@ -54,6 +54,10 @@ Hello, world!
 $
 
 =====
+
+Простейший загрузчик, печатающий "Hi!"
+
+
 
 Литература:
 <a href="http://asm.sourceforge.net/intro/Assembly-Intro.pdf" target="_blank">http://asm.sourceforge.net/intro/Assembly-Intro.pdf</a>
@@ -64,7 +68,13 @@ $
 <a href="http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html" target="_blank">http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html</a>
 <a href="http://cs.lmu.edu/~ray/notes/gasexamples" target="_blank">http://cs.lmu.edu/~ray/notes/gasexamples</a>
 <a href="https://csiflabs.cs.ucdavis.edu/~ssdavis/50/att-syntax.htm" target="_blank">https://csiflabs.cs.ucdavis.edu/~ssdavis/50/att-syntax.htm</a>
+
+Документация по GNU as
 <a href="https://sourceware.org/binutils/docs/as/" target="_blank">https://sourceware.org/binutils/docs/as/</a>
+
+Пройстейший загрузчик на ассемблере, печатающий строку текста
+<a href="https://medium.com/@g33konaut/writing-an-x86-hello-world-boot-loader-with-assembly-3e4c5bdd96cf" target="_blank">https://medium.com/@g33konaut/writing-an-x86-hello-world-boot-loader-with-assembly-3e4c5bdd96cf</a>
+
 <a href="https://ru.wikibooks.org/wiki/Ассемблер_в_Linux_для_программистов_C" target="_blank">https://ru.wikibooks.org/wiki/Ассемблер_в_Linux_для_программистов_C</a>
 <a href="http://www.cs.virginia.edu/~evans/cs216/guides/x86.html" target="_blank">http://www.cs.virginia.edu/~evans/cs216/guides/x86.html</a>
 <a href="https://www.freebsd.org/doc/en/books/developers-handbook/x86.html" target="_blank">https://www.freebsd.org/doc/en/books/developers-handbook/x86.html</a>
