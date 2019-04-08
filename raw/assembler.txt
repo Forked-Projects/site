@@ -52,27 +52,35 @@ $
   .global _start
   
 _start:
+  movb $0x0e, %ah  # помещает в %ah номер функции отображения символа
+  movb $0x48, %al  # 0x48 -- это 'H' в кодировке ASCII
+  int  $0x10       # вызов вектора прерывания
+
   movb $0x0e, %ah
-  movb $0x48, %al
+  movb $0x69, %al  # это буква 'i'
   int  $0x10
 
   movb $0x0e, %ah
-  movb $0x69, %al
+  movb $0x21, %al  # это восклицательный знак
   int  $0x10
 
-  movb $0x0e, %ah
-  movb $0x21, %al
-  int  $0x10
+.fill 510-(.-_start), 1, 0  # заполняется нулями до 510-го байта
 
-.fill 510-(.-_start), 1, 0
+.byte 0x55         # последние два байта должны быть 55 и aa чтобы
+.byte 0xaa         # BIOS воспринял наши данные как загрузчик
 
-.byte 0x55
-.byte 0xaa
+=====
+
+Сборка:
+$ as -o boot.o boot.s
+$ ld -o boot.bin --oformat binary boot.o
+
+Можно записать на флешку через dd и запустить загрузку компа с флешки.
 
 =====
 
 Литература:
-http://asm.sourceforge.net/intro/Assembly-Intro.pdf
+http://asm.sourceforhe.net/intro/Assembly-Intro.pdf
 http://heather.cs.ucdavis.edu/~matloff/50/LinuxAssembly.html
 https://efxa.org/2011/03/02/assembly-gnulinux/
 https://baptiste-wicht.com/posts/2011/11/print-strings-integers-intel-assembly.html
