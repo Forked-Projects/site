@@ -60,7 +60,7 @@ kern.vty=vt
 
 Отключить вывод системных сообщений в консоль -- в /etc/syslog.conf
 закомментировать строку
-# *.err;kern.warning;auth.notice;mail.crit		/dev/console
+# *.err;kern.warning;auth.notice;mail.crit         /dev/console
 
 =====
 
@@ -141,7 +141,8 @@ freebsd-update install
 =====
 
 Установка маломальского X11
-pkg install xorg-server xinit xterm setxkbmap xset font-misc-misc xf86-input-keyboard xf86-input-mouse xf86-video-intel fluxbox
+pkg install xorg-server xinit xterm setxkbmap xset font-misc-misc \
+            xf86-input-keyboard xf86-input-mouse xf86-video-intel fluxbox
 
 Конечно, вместо xf86-video-intel надо ставить соответствующий драйвер видеокарты
 Или просто
