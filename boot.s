@@ -1,10 +1,10 @@
-# it's just training loader on pure asm that simulates shall for fun.
+# it's just a training loader on pure asm that simulates shall for fun.
 # working commands are time, ls, iam and cat file.txt (it's not really cat =)
 # for making it bootable everybody can do next steps.
 # as -o boot.o boot.s -- builds object file.
 # ld -o boot.bin --oformat binary -Ttext 0x7c00 boot.o -- makes binary block
 # of 512 bytes that can be written for example on usb flash using dd so make
-# usb flash able to boot due to the last bytes of block equal to 0x55aa
+# it able to boot due to the last bytes of block equal to 0x55aa
 
 .code16
 .text
