@@ -28,7 +28,7 @@ read_chars:        # main reading of printed string to the stack
   push %ax
   movb $0x0e, %ah  # print pressed char for interactivity
   int  $0x10
-  cmp  $0x0d, %al  # call echo when Enter was pressed
+  cmp  $0x0d, %al  # call router when Enter was pressed
   je   router
   jmp  read_chars
 
