@@ -1,4 +1,4 @@
-# it's just a training loader on pure asm that simulates shall for fun.
+# it's just a training loader on pure asm that simulates shell for fun.
 # working commands are time, ls, iam and cat file.txt (it's not really cat =)
 # for making it bootable everybody can do next steps.
 # as -o boot.o boot.s -- builds object file.
