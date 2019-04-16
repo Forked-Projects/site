@@ -2,9 +2,9 @@
 # working commands are time, ls, iam and cat file.txt (it's not really cat =)
 # for making it bootable everybody can do next steps.
 # as -o boot.o boot.s -- builds object file.
-# ld -o boot.bin --oformat binary -Ttext 0x7c00 boot.o -- makes binary block
-# of 512 bytes that can be written for example on usb flash using dd so make
-# it able to boot due to the last bytes of block equal to 0x55aa
+# ld -o boot.bin --oformat binary 0x7c00 boot.o -- makes binary block of 512
+# bytes that can be written for example on usb flash using dd so make it able
+# to boot due to the last bytes of block equal to 0x55aa
 
 .code16
 .text
@@ -124,61 +124,148 @@ time:
   jmp  shell
 
 ls:
-  xor  %eax, %eax
   movb $0x0e, %ah
   movb $0x0a, %al  # new line
   int  $0x10       # and
   movb $0x0d, %al  # carriage return
   int  $0x10
-  mov  $ls_msg,  %si
-  movb $0x0e, %ah
-ls_char:
-  lodsb
-  cmp  $0x00, %al
-  je   shell
+  movb $0x2f, %al  # /
   int  $0x10
-  jmp  ls_char
-
-ls_msg:
-  .asciz "/bin  /dev  /etc  /lib  /usr  /kernel"
+  movb $0x62, %al  # b
+  int  $0x10
+  movb $0x69, %al  # i
+  int  $0x10
+  movb $0x6e, %al  # n
+  int  $0x10
+  movb $0x20, %al  # space
+  int  $0x10
+  movb $0x20, %al  # space
+  int  $0x10
+  movb $0x2f, %al  # /
+  int  $0x10
+  movb $0x64, %al  # d
+  int  $0x10
+  movb $0x65, %al  # e
+  int  $0x10
+  movb $0x76, %al  # v
+  int  $0x10
+  movb $0x20, %al  # space
+  int  $0x10
+  movb $0x20, %al  # space
+  int  $0x10
+  movb $0x2f, %al  # /
+  int  $0x10
+  movb $0x6c, %al  # l
+  int  $0x10
+  movb $0x69, %al  # i
+  int  $0x10
+  movb $0x62, %al  # b
+  int  $0x10
+  movb $0x20, %al  # space
+  int  $0x10
+  movb $0x20, %al  # space
+  int  $0x10
+  movb $0x2f, %al  # /
+  int  $0x10
+  movb $0x75, %al  # u
+  int  $0x10
+  movb $0x73, %al  # s
+  int  $0x10
+  movb $0x72, %al  # r
+  int  $0x10
+  movb $0x20, %al  # space
+  int  $0x10
+  movb $0x20, %al  # space
+  int  $0x10
+  movb $0x2f, %al  # /
+  int  $0x10
+  movb $0x6b, %al  # k
+  int  $0x10
+  movb $0x65, %al  # e
+  int  $0x10
+  movb $0x72, %al  # r
+  int  $0x10
+  movb $0x6e, %al  # n
+  int  $0x10
+  movb $0x65, %al  # e
+  int  $0x10
+  movb $0x6c, %al  # l
+  int  $0x10
+  jmp  shell
 
 iam:
-  xor  %eax, %eax
   movb $0x0e, %ah
   movb $0x0a, %al  # new line
   int  $0x10       # and
   movb $0x0d, %al  # carriage return
   int  $0x10
-  mov  $iam_msg,  %si
-  movb $0x0e, %ah
-iam_char:
-  lodsb
-  cmp  $0x00, %al
-  je   shell
+  movb $0x4c, %al  # L
   int  $0x10
-  jmp  iam_char
-
-iam_msg:
-  .asciz "LosharaOS x86 0.01 beta. Copyright by Valentine Astakhov"
+  movb $0x6f, %al  # o
+  int  $0x10
+  movb $0x73, %al  # s
+  int  $0x10
+  movb $0x68, %al  # h
+  int  $0x10
+  movb $0x61, %al  # a
+  int  $0x10
+  movb $0x72, %al  # r
+  int  $0x10
+  movb $0x61, %al  # a
+  int  $0x10
+  movb $0x4f, %al  # O
+  int  $0x10
+  movb $0x53, %al  # S
+  int  $0x10
+  movb $0x20, %al  # space
+  int  $0x10
+  movb $0x62, %al  # b
+  int  $0x10
+  movb $0x79, %al  # y
+  int  $0x10
+  movb $0x20, %al  # space
+  int  $0x10
+  movb $0x56, %al  # V
+  int  $0x10
+  movb $0x2e, %al  # .
+  int  $0x10
+  movb $0x20, %al  # space
+  int  $0x10
+  movb $0x41, %al  # A
+  int  $0x10
+  movb $0x73, %al  # s
+  int  $0x10
+  movb $0x74, %al  # t
+  int  $0x10
+  movb $0x61, %al  # a
+  int  $0x10
+  movb $0x6b, %al  # k
+  int  $0x10
+  movb $0x68, %al  # h
+  int  $0x10
+  movb $0x6f, %al  # o
+  int  $0x10
+  movb $0x76, %al  # v
+  int  $0x10
+  jmp  shell
 
 txt:
-  xor  %eax, %eax
   movb $0x0e, %ah
   movb $0x0a, %al  # new line
   int  $0x10       # and
   movb $0x0d, %al  # carriage return
   int  $0x10
-  mov  $txt_msg,  %si
-  movb $0x0e, %ah
-txt_char:
-  lodsb
-  cmp  $0x00, %al
-  je   shell
+  movb $0x68, %al  # 1
   int  $0x10
-  jmp  txt_char
-
-txt_msg:
-  .asciz "don't believe your eyes"
+  movb $0x65, %al  # 1
+  int  $0x10
+  movb $0x6c, %al  # 1
+  int  $0x10
+  movb $0x6c, %al  # 1
+  int  $0x10
+  movb $0x6f, %al  # 1
+  int  $0x10
+  jmp  shell
 
 .fill 510-(.-_start), 1, 0
 
