@@ -1,10 +1,11 @@
 # it's just a training loader on pure asm that simulates shell for fun.
-# working commands are time, ls, iam and cat file.txt (it's not really cat =)
-# for making it bootable everybody can do next steps.
+# working commands are time, ls, iam and cat /usr/file.txt (it's not really cat
+# of course). for making it bootable everybody can do next steps.
 # as -o boot.o boot.s -- builds object file.
-# ld -o boot.bin --oformat binary 0x7c00 boot.o -- makes binary block of 512
-# bytes that can be written for example on usb flash using dd so make it able
-# to boot due to the last bytes of block equal to 0x55aa
+# ld -o boot.bin --oformat binary boot.o -- makes binary block of 512 bytes
+# that can be written for example on usb flash using dd so make it able to boot
+# due to the last bytes of block equal to 0x55aa
+# qemu-system-i386 -nographic boot.bin -- boots file in qemu.
 
 .code16
 .text
@@ -13,6 +14,7 @@
 _start:
 
 shell:
+  movl %esp, %ebx  # save start of stack
   movb $0x0e, %ah
   movb $0x0a, %al  # new line
   int  $0x10       # and
@@ -255,17 +257,15 @@ txt:
   int  $0x10       # and
   movb $0x0d, %al  # carriage return
   int  $0x10
-  movb $0x68, %al  # 1
+  sub  $0x12,%ebx  # go to address of first char in "filename"
+txt_char:
+  sub  $0x02,%ebx
+  movw (%ebx),%ax  # print chars of "filename"
+  cmp  $0x2e, %al  # if dot is found go back to "shell"
+  je   shell
+  movb $0x0e, %ah
   int  $0x10
-  movb $0x65, %al  # 1
-  int  $0x10
-  movb $0x6c, %al  # 1
-  int  $0x10
-  movb $0x6c, %al  # 1
-  int  $0x10
-  movb $0x6f, %al  # 1
-  int  $0x10
-  jmp  shell
+  jmp  txt_char
 
 .fill 510-(.-_start), 1, 0
 
