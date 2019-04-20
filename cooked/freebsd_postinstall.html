@@ -9,217 +9,216 @@
       <a href="/">vall.su</a>
     </header>
     <div id="main">
-Это минимальный срез того что можно сделать с FreeBSD сразу после установки.
-Всё это есть в FreeBSD Handbook, в wiki.freebsd.org, в man, но тут всё какбэ на
-одной страничке.
-
-Можно скачать 
-fetch --no-verify-peer https://vall.su/raw/freebsd_postinstall.txt
-
-Чтобы fetch мог скачивать с проверкой цифровой подписи (--no-verify-peer её
-отключает) достаточно поставить пакет с корневыми сертификатами
-pkg install ca_root_nss
-
-=====
-
-Если поставил MS Windows после FreeBSD на смежный раздел, то чтобы восстановить
-загрузчик FreeBSD, можно загрузиться с liveUSB и сделать
-boot0cfg -B ada0
-
-Имя диска (ada0) можно узнать из
-dmesg | grep ada
-
-=====
-
-Поменять shell для root с tcsh на sh
-pw user mod -n root -s sh
-
-=====
-
-adduser -- диалог для создания пользователя
-Login group: wheel -- чтоб иметь возможность делать su 
-Invite into other groups: operator -- чтоб иметь возможность выключать комп
-Чтоб создался пользователь без пароля
-Use password-based authentication? -- yes
-Use an empty password? -- yes
-
-Очистить пароль пользователя
-pw user mod -n username -w none
-
-Добавить пользователя в группу operator
-pw group mod operator -m username
-
-=====
-
-Включить kms-драйверы для видеокарты в /boot/loader.conf или исполнить временно
-kldload i915kms -- для Intel
-или
-kldload radeonkms -- для Radeon
-
-=====
-
-Если загружается vt в тексотовом режиме -- в /boot/loader.conf
-hw.vga.textmode=0
-
-Если надо загрузить syscons вместо vt -- туда же
-kern.vty=sc
-
-Загрузить точно vt
-kern.vty=vt
-
-=====
-
-Отключить вывод системных сообщений в консоль -- в /etc/syslog.conf
-закомментировать строку
-# *.err;kern.warning;auth.notice;mail.crit         /dev/console
-
-=====
-
-/etc/wall_cmos_clock -- наличие этого пустого файла сообщает системе, что BIOS
-настроен на местное (фактическое) время; отсутствие же этого файла означает, что
-время в BIOS (CMOS) настроено на UTC, а время в системе рассчитывается по
-часовому поясу.
-Подробнее: man adjkerntz
-
-=====
-
-Настройка времени ожидания загрузчика до начала загрузки -- в /boot/loader.conf
-autoboot_delay="3" -- для трёх секунд, например.
-
-=====
-
-Для проводного интернета в /etc/rc.conf
-ifconfig_re0="DHCP" -- где 're0' -- имя карты в ifconfig
-
-=====
-
-Для WiFi
-sysctl net.wlan.devices  -- так можно глянуть имя wifi-карты, например 'ath0'
-
-И прописать её в rc.conf
-wlans_ath0="wlan0"
-ifconfig_wlan0="WPA SYNCDHCP"
-
-Для пароля
-wpa_passphrase вайфай пароль > /etc/wpa_supplicant.conf
-
-И затестить
-service netif restart
-
-=====
-
-Synaptics touchpad
-
-/boot/loader.conf
-hw.psm.synaptics_support="1"
-
-/etc/rc.conf
-moused_enable="YES"
-
-=====
-
-Чтобы при входе в систему не показывалось сообщение "Welcome to FreeBSD!"
-(motd), можно сделать
-touch ~/.hushlogin
-или отредактировать класс default в /etc/login.conf (если пользователь в этом
-классе или в дочернем), добавив
-:hushlogin:
-после чего
-cap_mkdb /etc/login.conf
-
-=====
-
-Для русской локализации в консоли можно добавить пользователя в класс 'russian'
-pw user mod user -L russian 
-Все классы можно посмотреть в /etc/login.conf
-
-Другой путь -- задать переменную LANG, которую можно прописать в ~/.profile
-export LANG=ru_RU.UTF-8
-Файлы локализации находятся в /usr/share/locale/
-
-Для русского ввода в терминале нужно добавить это в /etc/rc.conf
-keymap="ru.kbd" -- для переключения по CapsLock
-keymap="ru.win.kbd" -- для переключения по Ctrl+Shift
-Файлы клавиатур находятся в /usr/share/vt(syscons)/keymaps/
-
-=====
-
-Обновить систему
-
-freebsd-update fetch
-freebsd-update install
-
-=====
-
-Установка маломальского X11
-pkg install xorg-server xinit xterm setxkbmap xset font-misc-misc \
-            xf86-input-keyboard xf86-input-mouse xf86-video-intel fluxbox
-
-Конечно, вместо xf86-video-intel надо ставить соответствующий драйвер видеокарты
-Или просто
-pkg install xorg -- метапакет, в который входит вся фигня.
-
-=====
-
-Firefox
-
-pkg install firefox
-dbus-uuidgen > /etc/machine-id
-
-Русификацию проще всего сделать как описано здесь
-<a href="https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack" target="_blank">https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack</a>
-
-Вкратце, поставить Add-on
-<a href="https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/" target="_blank">https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/</a>
-
-и в about:config создать строковый параметр
-New - String - intl.locale.requested -> ru
-
-Отключить Pocket
-extensions.pocket.enabled -> false
-
-Отключить рендеринг страниц как для читалки
-reader.parse-on-load.enabled -> false
-
-Включить спокойствие на сайтах без https
-insecure_field_warning.contextual.enabled -> false
-signon.autofillForms.http -> false
-
-=====
-
-Упрощённый ~/.profile
-
-LANG=en_US.UTF-8;
-EDITOR=vi;
-PAGER=less;
-ENV=$HOME/.shrc;
-LESSHISTFILE=-;
-export LANG EDITOR PAGER ENV LESSHISTFILE;
-
-=====
-
-Упрощённый ~/.shrc
-
-set -o vi
-bind -a -r v
-
-=====
-
-~/.xinitrc
-
-export LANG=ru_RU.UTF-8
-setxkbmap -layout 'us,ru' -option 'grp:lwin_toggle,grp_led:scroll';
-xset r rate 250 34;
-fluxbox;
-
-  </div>
+Это минимальный срез того что можно сделать с FreeBSD сразу после установки.<br>
+Всё это есть в FreeBSD Handbook, в wiki.freebsd.org, в man, но тут всё какбэ на<br>
+одной страничке.<br>
+<br>
+Можно скачать <br>
+fetch --no-verify-peer https://vall.su/raw/freebsd_postinstall.txt<br>
+<br>
+Чтобы fetch мог скачивать с проверкой цифровой подписи (--no-verify-peer её<br>
+отключает) достаточно поставить пакет с корневыми сертификатами<br>
+pkg install ca_root_nss<br>
+<br>
+=====<br>
+<br>
+Если поставил MS Windows после FreeBSD на смежный раздел, то чтобы восстановить<br>
+загрузчик FreeBSD, можно загрузиться с liveUSB и сделать<br>
+boot0cfg -B ada0<br>
+<br>
+Имя диска (ada0) можно узнать из<br>
+dmesg | grep ada<br>
+<br>
+=====<br>
+<br>
+Поменять shell для root с tcsh на sh<br>
+pw user mod -n root -s sh<br>
+<br>
+=====<br>
+<br>
+adduser -- диалог для создания пользователя<br>
+Login group: wheel -- чтоб иметь возможность делать su <br>
+Invite into other groups: operator -- чтоб иметь возможность выключать комп<br>
+Чтоб создался пользователь без пароля<br>
+Use password-based authentication? -- yes<br>
+Use an empty password? -- yes<br>
+<br>
+Очистить пароль пользователя<br>
+pw user mod -n username -w none<br>
+<br>
+Добавить пользователя в группу operator<br>
+pw group mod operator -m username<br>
+<br>
+=====<br>
+<br>
+Включить kms-драйверы для видеокарты в /boot/loader.conf или исполнить временно<br>
+kldload i915kms -- для Intel<br>
+или<br>
+kldload radeonkms -- для Radeon<br>
+<br>
+=====<br>
+<br>
+Если загружается vt в тексотовом режиме -- в /boot/loader.conf<br>
+hw.vga.textmode=0<br>
+<br>
+Если надо загрузить syscons вместо vt -- туда же<br>
+kern.vty=sc<br>
+<br>
+Загрузить точно vt<br>
+kern.vty=vt<br>
+<br>
+=====<br>
+<br>
+Отключить вывод системных сообщений в консоль -- в /etc/syslog.conf<br>
+закомментировать строку<br>
+# *.err;kern.warning;auth.notice;mail.crit         /dev/console<br>
+<br>
+=====<br>
+<br>
+/etc/wall_cmos_clock -- наличие этого пустого файла сообщает системе, что BIOS<br>
+настроен на местное (фактическое) время; отсутствие же этого файла означает, что<br>
+время в BIOS (CMOS) настроено на UTC, а время в системе рассчитывается по<br>
+часовому поясу.<br>
+Подробнее: man adjkerntz<br>
+<br>
+=====<br>
+<br>
+Настройка времени ожидания загрузчика до начала загрузки -- в /boot/loader.conf<br>
+autoboot_delay="3" -- для трёх секунд, например.<br>
+<br>
+=====<br>
+<br>
+Для проводного интернета в /etc/rc.conf<br>
+ifconfig_re0="DHCP" -- где 're0' -- имя карты в ifconfig<br>
+<br>
+=====<br>
+<br>
+Для WiFi<br>
+sysctl net.wlan.devices  -- так можно глянуть имя wifi-карты, например 'ath0'<br>
+<br>
+И прописать её в rc.conf<br>
+wlans_ath0="wlan0"<br>
+ifconfig_wlan0="WPA SYNCDHCP"<br>
+<br>
+Для пароля<br>
+wpa_passphrase вайфай пароль > /etc/wpa_supplicant.conf<br>
+<br>
+И затестить<br>
+service netif restart<br>
+<br>
+=====<br>
+<br>
+Synaptics touchpad<br>
+<br>
+/boot/loader.conf<br>
+hw.psm.synaptics_support="1"<br>
+<br>
+/etc/rc.conf<br>
+moused_enable="YES"<br>
+<br>
+=====<br>
+<br>
+Чтобы при входе в систему не показывалось сообщение "Welcome to FreeBSD!"<br>
+(motd), можно сделать<br>
+touch ~/.hushlogin<br>
+или отредактировать класс default в /etc/login.conf (если пользователь в этом<br>
+классе или в дочернем), добавив<br>
+:hushlogin:<br>
+после чего<br>
+cap_mkdb /etc/login.conf<br>
+<br>
+=====<br>
+<br>
+Для русской локализации в консоли можно добавить пользователя в класс 'russian'<br>
+pw user mod user -L russian <br>
+Все классы можно посмотреть в /etc/login.conf<br>
+<br>
+Другой путь -- задать переменную LANG, которую можно прописать в ~/.profile<br>
+export LANG=ru_RU.UTF-8<br>
+Файлы локализации находятся в /usr/share/locale/<br>
+<br>
+Для русского ввода в терминале нужно добавить это в /etc/rc.conf<br>
+keymap="ru.kbd" -- для переключения по CapsLock<br>
+keymap="ru.win.kbd" -- для переключения по Ctrl+Shift<br>
+Файлы клавиатур находятся в /usr/share/vt(syscons)/keymaps/<br>
+<br>
+=====<br>
+<br>
+Обновить систему<br>
+<br>
+freebsd-update fetch<br>
+freebsd-update install<br>
+<br>
+=====<br>
+<br>
+Установка маломальского X11<br>
+pkg install xorg-server xinit xterm setxkbmap xset font-misc-misc \<br>
+            xf86-input-keyboard xf86-input-mouse xf86-video-intel fluxbox<br>
+<br>
+Конечно, вместо xf86-video-intel надо ставить соответствующий драйвер видеокарты<br>
+Или просто<br>
+pkg install xorg -- метапакет, в который входит вся фигня.<br>
+<br>
+=====<br>
+<br>
+Firefox<br>
+<br>
+pkg install firefox<br>
+dbus-uuidgen > /etc/machine-id<br>
+<br>
+Русификацию проще всего сделать как описано здесь<br>
+<a href="https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack" target="_blank">https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack</a><br>
+<br>
+Вкратце, поставить Add-on<br>
+<a href="https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/" target="_blank">https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/</a><br>
+<br>
+и в about:config создать строковый параметр<br>
+New - String - intl.locale.requested -> ru<br>
+<br>
+Отключить Pocket<br>
+extensions.pocket.enabled -> false<br>
+<br>
+Отключить рендеринг страниц как для читалки<br>
+reader.parse-on-load.enabled -> false<br>
+<br>
+Включить спокойствие на сайтах без https<br>
+insecure_field_warning.contextual.enabled -> false<br>
+signon.autofillForms.http -> false<br>
+<br>
+=====<br>
+<br>
+Упрощённый ~/.profile<br>
+<br>
+LANG=en_US.UTF-8;<br>
+EDITOR=vi;<br>
+PAGER=less;<br>
+ENV=$HOME/.shrc;<br>
+LESSHISTFILE=-;<br>
+export LANG EDITOR PAGER ENV LESSHISTFILE;<br>
+<br>
+=====<br>
+<br>
+Упрощённый ~/.shrc<br>
+<br>
+set -o vi<br>
+bind -a -r v<br>
+<br>
+=====<br>
+<br>
+~/.xinitrc<br>
+<br>
+export LANG=ru_RU.UTF-8<br>
+setxkbmap -layout 'us,ru' -option 'grp:lwin_toggle,grp_led:scroll';<br>
+xset r rate 250 34;<br>
+fluxbox;<br>
+<br>
+    </div>
     <div id="menu">
       <ul>
       <li><a href="/cooked/books.html">books</a></li>
       <li><a href="/cooked/links.html">links</a></li>
       <li><a href="/cooked/freebsd_postinstall.html">freebsd_postinstall</a></li>
       <li><a href="/cooked/notes.html">notes</a></li>
-      <li><a href="/cooked/assembler.html">assembler</a></li>
       </ul>
     </div>
   </div>
