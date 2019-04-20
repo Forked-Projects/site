@@ -9,81 +9,82 @@
       <a href="/">vall.su</a>
     </header>
     <div id="main">
-Универскальная переключалка клавиатуры X11 -- setxkbmap<br>
-<br>
-Например<br>
-setxkbmap -layout 'us,ru' -option 'grp:lwin_toggle,grp_led:scroll'<br>
-<br>
-Параметры:<br>
--layout 'us,ru' — список используемых раскладок.<br>
--option 'grp:lctrl_lshift_toggle' — переключение раскладок левым ctrl+shift.<br>
--option 'grp:lalt_lshift_toggle' - переключение левым alt+shift.<br>
--option 'grp:lwin_toggle' - переключение по левому winkey.<br>
--option 'grp:caps_toggle' - переключение по CapsLock.<br>
--option 'grp_led:scroll' - горит ScrollLock когда включена альтернативная<br>
-(русская) раскладка, можно не указывать.<br>
-<br>
-=====<br>
-<br>
-Чтоб NumLock включался при запуске xinit можно поставить numlockx и прописать<br>
-в ~/.xinitrc<br>
-numlockx on <br>
-<br>
-=====<br>
-<br>
-Вот при печати если нужно написать один символ много раз (например, этоооооооо),<br>
-мы нажимаем кнопку символа, и есть задержка, а потом повторения этого символа<br>
-пока держится кнопка символа.<br>
-<br>
-Настройка этого параметра для консоли FreeBSD -- man kbdcontrol, параметр -r.<br>
-По-умолчанию там стоит fast (250.34) <br>
-<br>
-Чтоб задать эти настройки в Xorg, достаточно сделать следующее:<br>
-xset r rate ЗАДЕРЖКА[мс] ЧАСТОТА[Гц]<br>
-<br>
-То есть я себе сделал в ~/.xinitrc как в консоли:<br>
-xset r rate 250 34<br>
-<br>
-=====<br>
-<br>
-xrandr -s 800x600 -- поставить разрешение экрана<br>
-<br>
-=====<br>
-<br>
-Узнать свой внешний IP<br>
-drill @resolver1.opendns.com ANY myip.opendns.com | grep ^myip<br>
-или<br>
-dig   @resolver1.opendns.com ANY myip.opendns.com | grep ^myip<br>
-<br>
-=====<br>
-<br>
-Чтобы в xterm выделенный мышью текст попадал в главный буфер<br>
-~/.Xdefaults<br>
-XTerm*SelectToClipboard: true<br>
-<br>
-=====<br>
-<br>
-wmctrl - это инструмент командной строки для взаимодействия с EWMH/NetWM<br>
-совместимыми менеджерами окон (например Icewm, Kwin, и Xfce). Она может<br>
-максимизировать окна, сделать их липкими, переместить на конкретный рабочий<br>
-стол, установить окно на переднем плане.<br>
-<br>
-=====<br>
-<br>
-zenity -- программа для создания оповещений и диалоговых окон, используется в<br>
-Gnome и Mate.<br>
-<br>
-=====<br>
-<br>
-Sylpheed -- великолепный почтовый клиент.<br>
-<br>
-    </div>
+Универскальная переключалка клавиатуры X11 -- setxkbmap
+
+Например
+setxkbmap -layout 'us,ru' -option 'grp:lwin_toggle,grp_led:scroll'
+
+Параметры:
+-layout 'us,ru' — список используемых раскладок.
+-option 'grp:lctrl_lshift_toggle' — переключение раскладок левым ctrl+shift.
+-option 'grp:lalt_lshift_toggle' - переключение левым alt+shift.
+-option 'grp:lwin_toggle' - переключение по левому winkey.
+-option 'grp:caps_toggle' - переключение по CapsLock.
+-option 'grp_led:scroll' - горит ScrollLock когда включена альтернативная
+(русская) раскладка, можно не указывать.
+
+=====
+
+Чтоб NumLock включался при запуске xinit можно поставить numlockx и прописать
+в ~/.xinitrc
+numlockx on 
+
+=====
+
+Вот при печати если нужно написать один символ много раз (например, этоооооооо),
+мы нажимаем кнопку символа, и есть задержка, а потом повторения этого символа
+пока держится кнопка символа.
+
+Настройка этого параметра для консоли FreeBSD -- man kbdcontrol, параметр -r.
+По-умолчанию там стоит fast (250.34) 
+
+Чтоб задать эти настройки в Xorg, достаточно сделать следующее:
+xset r rate ЗАДЕРЖКА[мс] ЧАСТОТА[Гц]
+
+То есть я себе сделал в ~/.xinitrc как в консоли:
+xset r rate 250 34
+
+=====
+
+xrandr -s 800x600 -- поставить разрешение экрана
+
+=====
+
+Узнать свой внешний IP
+drill @resolver1.opendns.com ANY myip.opendns.com | grep ^myip
+или
+dig   @resolver1.opendns.com ANY myip.opendns.com | grep ^myip
+
+=====
+
+Чтобы в xterm выделенный мышью текст попадал в главный буфер
+~/.Xdefaults
+XTerm*SelectToClipboard: true
+
+=====
+
+wmctrl - это инструмент командной строки для взаимодействия с EWMH/NetWM
+совместимыми менеджерами окон (например Icewm, Kwin, и Xfce). Она может
+максимизировать окна, сделать их липкими, переместить на конкретный рабочий
+стол, установить окно на переднем плане.
+
+=====
+
+zenity -- программа для создания оповещений и диалоговых окон, используется в
+Gnome и Mate.
+
+=====
+
+Sylpheed -- великолепный почтовый клиент.
+
+  </div>
     <div id="menu">
       <ul>
       <li><a href="/cooked/books.html">books</a></li>
       <li><a href="/cooked/links.html">links</a></li>
       <li><a href="/cooked/freebsd_postinstall.html">freebsd_postinstall</a></li>
       <li><a href="/cooked/notes.html">notes</a></li>
+      <li><a href="/cooked/assembler.html">assembler</a></li>
       </ul>
     </div>
   </div>
