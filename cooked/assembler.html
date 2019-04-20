@@ -55,38 +55,8 @@ $
 
 =====
 
-Простейший загрузчик, печатающий "Hi!"
-
-=====
-
-.text
-  .global _start
-  
-_start:
-  movb $0x0e, %ah  # помещает в %ah номер функции отображения символа
-  movb $0x48, %al  # 0x48 -- это 'H' в кодировке ASCII
-  int  $0x10       # вызов вектора прерывания
-
-  movb $0x0e, %ah
-  movb $0x69, %al  # это буква 'i'
-  int  $0x10
-
-  movb $0x0e, %ah
-  movb $0x21, %al  # это восклицательный знак
-  int  $0x10
-
-.fill 510-(.-_start), 1, 0  # заполняется нулями до 510-го байта
-
-.byte 0x55         # последние два байта должны быть 55 и aa чтобы
-.byte 0xaa         # BIOS воспринял наши данные как загрузчик
-
-=====
-
-Сборка:
-$ as -o boot.o boot.s
-$ ld -o boot.bin --oformat binary boot.o
-
-Можно записать на флешку через dd и запустить загрузку компа с флешки.
+Загрузочный блок в 512 байт, очень пахабно эмулирующий Unix shell.
+<a href="https://vall.su/raw/files/boot.s" type="txt/plain">https://vall.su/raw/files/boot.s</a>
 
 =====
 

@@ -15,10 +15,10 @@ _start:
 
 shell:
   movl %esp, %ebx  # save start of stack
-  movb $0x0e, %ah
-  movb $0x0a, %al  # new line
-  int  $0x10       # and
-  movb $0x0d, %al  # carriage return
+  movb $0x0e, %ah  # put the number of BIOS-function of printing symbol to %ah
+  movb $0x0a, %al  # put hexadecimal ASCII code of 'new line' to %al
+  int  $0x10       # and call "print character" interrupt
+  movb $0x0d, %al  # print 'carriage return'
   int  $0x10
   movb $0x24, %al  # print $ character
   int  $0x10
@@ -267,7 +267,7 @@ txt_char:
   int  $0x10
   jmp  txt_char
 
-.fill 510-(.-_start), 1, 0
+.fill 510-(.-_start), 1, 0  # fill the rest 510 bytes with zeroes
 
-.byte 0x55
-.byte 0xaa
+.byte 0x55   # last two bytes must be 55 and aa for the BIOS to accept
+.byte 0xaa   # that our 512 bytes of data are able to boot
