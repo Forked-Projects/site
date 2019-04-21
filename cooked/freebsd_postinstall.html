@@ -51,10 +51,18 @@ pw group mod operator -m username
 
 =====
 
-Включить kms-драйверы для видеокарты в /boot/loader.conf или исполнить временно
+Включить kms-драйверы для видеокарты временно
 kldload i915kms -- для Intel
 или
 kldload radeonkms -- для Radeon
+
+Включить при загрузке на раннем этапе загрузки -- в /boot/loader.conf
+i915kms_load="YES"
+radeonkms_load="YES"
+
+На позднем этапе -- в /etc/rc.conf
+kld_list="i915kms"
+kld_list="radeonkms"
 
 =====
 
