@@ -58,8 +58,8 @@ kldload radeonkms -- для Radeon
 
 Начиная с FreeBSD 13 KMS-драйверы не входят в базовую систему и должны ставиться
 из мета-порта drm-kmod.
-Включение kms драйверов на раннем этапе загрузки в /boot/loader.conf более не
-поддерживается, надо включать на позднем этапе -- в /etc/rc.conf
+
+Включение при загрузке -- в /etc/rc.conf
 kld_list="i915kms" или
 kld_list="radeonkms"
 
