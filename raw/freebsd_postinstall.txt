@@ -143,6 +143,16 @@ kbdcontrol -l /usr/share/vt/keymaps/ru.win.kbd
 
 =====
 
+Если перехимичил с шрифтами, то вернуть шрифт по-умолчанию (Terminus 12 кегль)
+можно так:
+
+vidcontrol -f
+
+Так же через vidcotntrol или vidfont можно поменять или примерить используемый
+шрифт.
+
+=====
+
 Обновить систему
 
 freebsd-update fetch
