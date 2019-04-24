@@ -1,4 +1,5 @@
 set autoindent
+set cedit=H
 
 map ; $
 map ё `
