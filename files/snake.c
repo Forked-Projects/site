@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int height = 28;
+int height = 23;
 int width  = 60;
 
 int apple_x, apple_y;
@@ -18,6 +18,8 @@ void apple()
   srand(time(NULL));
   apple_x = rand()%width;
   apple_y = (rand()/3)%height;
+  if(apple_x == 0 || apple_y == 0)
+    apple();
 }
 
 int area()
@@ -50,6 +52,9 @@ int area()
 void snake_move()
 {
   int n;
+
+  snake_tail_x = snake_x[snake_n];
+  snake_tail_y = snake_y[snake_n];
 
   for(n = snake_n; n >= 1; --n) {
     snake_x[n] = snake_x[n - 1];
@@ -91,8 +96,6 @@ int main()
     c = getchar();
     system("stty cooked");
     if(c == 65 || c == 'k') {
-      snake_tail_x = snake_x[snake_n];
-      snake_tail_y = snake_y[snake_n];
       snake_move();
       if(snake_y[0] == height)
 	snake_y[0] = 1;
@@ -101,8 +104,6 @@ int main()
       check_food();
     }
     if(c == 66 || c == 'j') {
-      snake_tail_x = snake_x[snake_n];
-      snake_tail_y = snake_y[snake_n];
       snake_move();
       if(snake_y[0] == 1)
 	snake_y[0] = height;
@@ -111,8 +112,6 @@ int main()
       check_food();
     }
     if(c == 67 || c == 'l') {
-      snake_tail_x = snake_x[snake_n];
-      snake_tail_y = snake_y[snake_n];
       snake_move();
       if(snake_x[0] == width)
 	snake_x[0] = 1;
@@ -121,8 +120,6 @@ int main()
       check_food();
     }
     if(c == 68 || c == 'h') {
-      snake_tail_x = snake_x[snake_n];
-      snake_tail_y = snake_y[snake_n];
       snake_move();
       if(snake_x[0] == 1)
 	snake_x[0] = width;
