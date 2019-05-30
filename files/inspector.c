@@ -64,8 +64,6 @@ int main()
   before = last;
   }
 
-  printf("%d %d %d %d %d %d %d %d %d %d\n", comm1, comm2, quo1, quo2,\
-	  bra1, bra2, bra3, bbra1, bbra2, bbra3);
   if(comm1 > 0)
     printf("You haven't closed commentary /**/ started at line %d\n", comm1);
   if(quo1 > 0)
@@ -80,4 +78,7 @@ int main()
     printf("You have nonpaired bracket '{' near the line %d\n", bbra2);
   if(bra2 < 0)
     printf("You have nonpaired bracket '}' near the line %d\n", bbra2);
+
+printf("%d %d %d %d %d %d %d %d %d %d\n", comm1, comm2, quo1, quo2,\
+	  bra1, bra2, bra3, bbra1, bbra2, bbra3);
 }
