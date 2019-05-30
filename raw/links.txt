@@ -20,6 +20,10 @@ https://www.ibm.com/developerworks/ru/library/
 https://ru.wikibooks.org/
 
 
+Хорошие, но старые обучающие статьи от The Linux Documentation Project
+http://www.tldp.org/HOWTO/html_single/
+
+
 Сайт о создании операционных систем и программировании на низком уровне
 https://wiki.osdev.org/
 
