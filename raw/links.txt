@@ -20,10 +20,6 @@ https://www.ibm.com/developerworks/ru/library/
 https://ru.wikibooks.org/
 
 
-Хорошие, но старые обучающие статьи от The Linux Documentation Project
-http://www.tldp.org/HOWTO/html_single/
-
-
 Сайт о создании операционных систем и программировании на низком уровне
 https://wiki.osdev.org/
 
@@ -40,6 +36,10 @@ http://www.compsci.hunter.cuny.edu/~sweiss/
 xv6 — это учебная Unix-подобная операционная система, созданная в 2002 году в
 институте MIT для курса по разработке операционных систем
 https://pdos.csail.mit.edu/6.828/2014/reference.html
+
+
+Пособие по программированию на ncurses
+http://www.tldp.org/HOWTO/html_single/NCURSES-Programming-HOWTO/
 
 
 Некоторые авторские материалы Александра Пыхалова, лидирующего разработчика
