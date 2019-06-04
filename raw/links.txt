@@ -38,10 +38,6 @@ xv6 — это учебная Unix-подобная операционная с�
 https://pdos.csail.mit.edu/6.828/2014/reference.html
 
 
-Пособие по программированию на ncurses
-http://www.tldp.org/HOWTO/html_single/NCURSES-Programming-HOWTO/
-
-
 Некоторые авторские материалы Александра Пыхалова, лидирующего разработчика
 операционной системы OpenIndiana
 https://drive.google.com/drive/folders/0B5aSh2tKvpqDdkVQM2Uzbnp2eVE
@@ -79,6 +75,10 @@ https://www.youtube.com/playlist?list=PLDrmKwRSNx7J16QBIZMNmAUDRQjjwVTTG
 https://www.youtube.com/playlist?list=PLzH6n4zXuckqZ90zLyy36qjO5YIn1RulG
 
 =====
+
+Пособие по программированию на ncurses
+http://www.tldp.org/HOWTO/html_single/NCURSES-Programming-HOWTO/
+
 
 Статья 1998 года от Адама Коккрофта, важного инженера в компании Sun, о том,
 почему динамическая компоновка лучше статичной
