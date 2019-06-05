@@ -192,7 +192,7 @@ reader.parse-on-load.enabled -> false
 
 Включить спокойствие на сайтах без https
 insecure_field_warning.contextual.enabled -> false
-signon.autofillForms.http -> false
+signon.autofillForms.http -> true
 
 =====
 
