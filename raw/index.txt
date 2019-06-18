@@ -4,6 +4,22 @@ This is main page.
 
 18/06/2019
 
+Some weeks ago I've spotted lags playing MMORPG. I'm not a gamer, but sometimes
+I repair videocards and test it plaing games on old s775-based computer.
+A little research made me realize that games lags due to slow textures loading
+from slow single HDD, but for me buying SSD is a throwing money away. I'm not
+really interesting in playing games, also I have a bunch of HDDs and wanted to
+test speedup of using RAID.
+So I found two equal 250GB 2.5" HDDs (WD and Seagate) with same 7200rpm and
+tested it on my computer with VIA VT8237A Southbridge.
+In the table:
+- IDE 160GB is just standalone old disk presented for comparison.
+- DISK1 and DISK2 are standalone WD and Seagate disks respectively.
+- RAID1 is Mirroring of two disks. This option seems doesn't improve speed or
+even slowdowns loading of textures in the game.
+- RAID0 has an option to stripe disks with sequensed parts of 64, 32, 16, 8, or
+4 kbytes so data will reads and writes simultaneously speedups I/O.
+
 <table border>
   <tr>
     <th rowspan="2" colspan="2">Speed in MB/s</th>
