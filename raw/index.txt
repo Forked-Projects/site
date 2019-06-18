@@ -6,12 +6,12 @@ This is main page.
 
 <table border>
   <tr>
-    <th></th>
-    <th>IDE 160GB</th>
-    <th>DISK1 250GB</th>
-    <th>DISK2 250GB</th>
+    <th rowspan="2"></th>
+    <th rowspan="2">IDE 160GB</th>
+    <th rowspan="2">DISK1 250GB</th>
+    <th rowspan="2">DISK2 250GB</th>
     <th colspan="5">RAID0 500GB</th>
-    <th>RAID1 250GB</th>
+    <th rowspan="2">RAID1 250GB</th>
   </tr>
     <th>64kb</th>
     <th>32kb</th>
