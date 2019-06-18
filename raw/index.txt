@@ -6,10 +6,18 @@ This is main page.
 
 <table border>
   <tr>
-    <th>CONFIGURATION</th> <th>READ (Mb/s)</th> <th>WRITE (Mb/s)</th>
+    <th></th>
+    <th>IDE 160GB</th>
+    <th>DISK1 250GB</th>
+    <th>DISK2 250GB</th>
+    <th rowspan="5">RAID0 500GB</th>
+    <th>RAID1 250GB</th>
   </tr>
-  <tr> <th rowspan="4">IDE 160GB</th> <td>52.75</td> <td>40.5</td></tr>
-  <tr> <td>0.489</td> </tr>
-  <tr> <td>0.469</td> </tr>
-  <tr> <td>0.247</td> </tr>
+    <th>64kb</th>
+    <th>32kb</th>
+    <th>16kb</th>
+    <th>8kb</th>
+    <th>4kb</th>
+  <tr>
+  </tr>
 </table>
