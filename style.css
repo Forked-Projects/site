@@ -50,3 +50,6 @@ header {
   white-space: pre;
 }
 
+td {
+  text-align: center;
+}
