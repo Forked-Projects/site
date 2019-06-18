@@ -10,7 +10,7 @@ This is main page.
     <th>IDE 160GB</th>
     <th>DISK1 250GB</th>
     <th>DISK2 250GB</th>
-    <th rowspan="5">RAID0 500GB</th>
+    <th colspan="5">RAID0 500GB</th>
     <th>RAID1 250GB</th>
   </tr>
     <th>64kb</th>
