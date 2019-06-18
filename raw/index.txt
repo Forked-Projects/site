@@ -5,7 +5,7 @@ This is main page.
 18/06/2019
 
 Some weeks ago I've spotted lags playing MMORPG. I'm not a gamer, but sometimes
-I repair videocards and test it plaing games on old s775-based computer.
+I repair videocards and test it plaing games on old computer with s775 Pentium.
 A little research made me realize that games lags due to slow textures loading
 from slow single HDD, but for me buying SSD is a throwing money away. I'm not
 really interesting in playing games, also I have a bunch of HDDs and wanted to
