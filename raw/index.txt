@@ -23,18 +23,50 @@ This is main page.
   <tr>
     <th rowspan="4">READ</th>
     <th>Seq Q32T1</th>
-    <td>10</td>
+    <td>52.75</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>92.81</td>
   </tr>
   <tr>
     <th>4KiB Q8T8</th>
-    <td>20</td>
+    <td>0.489</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0.629</td>
   </tr>
   <tr>
     <th>4KiB Q32T1</th>
+    <td>0.469</td>
     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0.621</td>
   </tr>
   <tr>
     <th>4KiB Q1T1</th>
+    <td>0.247</td>
     <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0.622</td>
   </tr>
 </table>
