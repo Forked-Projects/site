@@ -50,6 +50,10 @@ header {
   white-space: pre;
 }
 
+table {
+  border-collapse: collapse;
+}
+
 td {
   text-align: center;
 }
