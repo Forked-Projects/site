@@ -4,7 +4,7 @@ This is main page.
 
 18/06/2019
 
-<table border="1">
+<table border>
   <tr>
     <th rowspan="2" colspan="2">Speed in MB/s</th>
     <th rowspan="2">IDE 160GB</th>
