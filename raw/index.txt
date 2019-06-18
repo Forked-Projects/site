@@ -24,49 +24,49 @@ This is main page.
     <th rowspan="4">READ</th>
     <th>Seq Q32T1</th>
     <td>52.75</td>
+    <td>92.94</td>
+    <td>103.4</td>
+    <td>123.0</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>159.1</td>
     <td>92.81</td>
   </tr>
   <tr>
     <th>4KiB Q8T8</th>
     <td>0.489</td>
+    <td>0.696</td>
+    <td>0.607</td>
+    <td>0.588</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>0.612</td>
     <td>0.629</td>
   </tr>
   <tr>
     <th>4KiB Q32T1</th>
     <td>0.469</td>
+    <td>0.714</td>
+    <td>0.591</td>
+    <td>0.575</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>0.584</td>
     <td>0.621</td>
   </tr>
   <tr>
     <th>4KiB Q1T1</th>
     <td>0.247</td>
+    <td>0.620</td>
+    <td>0.493</td>
+    <td>0.575</td>
     <td></td>
     <td></td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>0.576</td>
     <td>0.622</td>
   </tr>
 </table>
