@@ -64,7 +64,7 @@ faster in random read.
     <td>0.605</td>
     <td>0.589</td>
     <th>0.612</th>
-    <td>0.629</td>
+    <th>0.629</th>
   </tr>
   <tr>
     <th>4KiB Q32T1</th>
@@ -76,7 +76,7 @@ faster in random read.
     <td>0.579</td>
     <th>0.594</th>
     <td>0.584</td>
-    <td>0.621</td>
+    <th>0.621</th>
   </tr>
   <tr>
     <th>4KiB Q1T1</th>
@@ -86,9 +86,9 @@ faster in random read.
     <td>0.575</td>
     <th>0.593</th>
     <td>0.579</td>
-    <td>0.584</td>
+    <th>0.584</th>
     <td>0.576</td>
-    <td>0.622</td>
+    <th>0.622</th>
   </tr>
   <tr>
     <th rowspan="4">WRITE</th>
