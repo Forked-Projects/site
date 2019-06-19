@@ -23,7 +23,8 @@ really interesting in playing games, also I have a bunch of HDDs and wanted to
 test speedup from using RAID.
 So I found two equal 250GB 2.5" HDDs (WD and Seagate) with same 7200rpm and
 tested it on my computer with VIA VT8237A Southbridge.
-In the table:
+
+CrystalDiskMark 6.0.2 with defaults (1Gb testfile) was used for tests:
 - IDE 160GB is just standalone old disk presented for comparison.
 - DISK1 and DISK2 are standalone WD and Seagate disks respectively.
 - RAID1 is Mirroring of two disks. This option seems doesn't improve speed or
@@ -31,7 +32,7 @@ even slowdowns loading of textures in the game.
 - RAID0 combines two smaller disks to one big disk and has an option to stripe
 disks by parts of 64, 32, 16, 8, or 4 kbytes so data will reads and writes
 simultaneously that speedups I/O.
-CrystalDiskMark 6.0.2 with defaults (1Gb testfile) was used for tests.
+
 While two disks in RAID0 are faster in linear read and write than standalone
 disk, I marked best values only in RAID0 subtable, though DISK1 and RAID1 seems
 faster in random read.
@@ -151,6 +152,9 @@ faster in random read.
     <td>0.851</td>
   </tr>
 </table>
+
+Note that Q8T8 test where 8 threads was used show nothing about speed in real
+life because Windows apps doesn't really parallel accesses to disk.
   </div>
     <div id="menu">
       <ul>
