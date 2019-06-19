@@ -142,5 +142,5 @@ faster in random read.
   </tr>
 </table>
 
-Note that Q8T8 test where 8 threads was used show nothing about speed in real
+Note that Q8T8 test where 8 threads was used shows nothing about speed in real
 life because Windows apps doesn't really parallel accesses to disk.
