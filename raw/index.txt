@@ -63,7 +63,7 @@ faster in random read.
     <td>0.588</td>
     <td>0.584</td>
     <td>0.605</td>
-    <td>0.589</td>
+    <td>0.595</td>
     <th>0.612</th>
     <th>0.629</th>
   </tr>
@@ -73,9 +73,9 @@ faster in random read.
     <td>0.716</td>
     <td>0.591</td>
     <td>0.575</td>
-    <th>0.591</th>
+    <td>0.591</td>
     <td>0.579</td>
-    <th>0.594</th>
+    <th>0.603</th>
     <td>0.584</td>
     <th>0.621</th>
   </tr>
@@ -112,7 +112,7 @@ faster in random read.
     <th>1.901</th>
     <th>1.897</th>
     <td>1.832</td>
-    <td>1.685</td>
+    <td>1.856</td>
     <td>1.855</td>
     <td>0.837</td>
   </tr>
@@ -123,8 +123,8 @@ faster in random read.
     <td>0.853</td>
     <td>1.846</td>
     <td>1.867</td>
-    <th>1.900</th>
-    <td>1.879</td>
+    <td>1.900</td>
+    <th>1.917</th>
     <td>1.756</td>
     <td>0.878</td>
   </tr>
