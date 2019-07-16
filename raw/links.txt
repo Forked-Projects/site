@@ -308,7 +308,7 @@ https://opensource.google.com/projects/list/featured
 http://www.softelectro.ru/
 
 
-Тур по Ubuntu
+Тур по Ubuntu Unity 7
 http://tour.ubuntu.com/
 
 
