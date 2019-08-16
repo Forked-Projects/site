@@ -150,10 +150,17 @@ https://mexalib.com/view/10588
 http://rutracker.org/forum/viewtopic.php?t=5145559
 
 
-С. В. Зубков
-Assembler для DOS, Windows и UNIX
-Год: 2004
-http://publ.lib.ru/ARCHIVES/D/%27%27Dlya_programmistov%27%27/_''DP''.html#003
+А.Я. Савельев
+Арифметические и логические основы цифровых автоматов
+Год: 1987
+http://libarch.nmu.org.ua/handle/GenofondUA/51765
+
+
+К. Г. Самофалов, А. М. Риманкевич, В. Н. Валуйский, Ю. С. Каневский,
+М. М. Пиневич
+Прикладная теория цифровых автоматов
+Год: 1987
+http://en.bookfi.net/book/600701
 
 
 Коутинхо С.
@@ -161,6 +168,12 @@ http://publ.lib.ru/ARCHIVES/D/%27%27Dlya_programmistov%27%27/_''DP''.html#003
 Год: 2001
 Перевод: С. А. Кулешов
 http://mexalib.com/view/2653
+
+
+С. В. Зубков
+Assembler для DOS, Windows и UNIX
+Год: 2004
+http://publ.lib.ru/ARCHIVES/D/%27%27Dlya_programmistov%27%27/_''DP''.html#003
 
 
 Ричард Бёрд
