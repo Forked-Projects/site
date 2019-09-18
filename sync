@@ -5,6 +5,7 @@ name=$1;
 echo '<html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.68">
     <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
   <body>
@@ -12,11 +13,11 @@ echo '<html>
     <header>
       <a href="/">vall.su</a>
     </header>
-    <div id="main">' > $dir/cooked/$name.html;
+    <main>' > $dir/cooked/$name.html;
 sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt \
 >> $dir/cooked/$name.html;
-echo '  </div>
-    <div id="menu">
+echo '    </main>
+    <nav>
       <ul>' >> $dir/cooked/$name.html;
 echo '
 books
@@ -27,7 +28,7 @@ assembler
 ' | sed '/^$/d' | sed 's:.*:      <li><a href="/cooked/&.html">&</a></li>:' \
 >> $dir/cooked/$name.html;
 echo '      </ul>
-    </div>
+    </nav>
   </div>
   </body>
 </html>' >> $dir/cooked/$name.html;

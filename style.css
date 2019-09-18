@@ -12,6 +12,28 @@ body {
   margin: 5px auto;
 }
 
+header, main, nav {
+  display: inline-block;
+}
+
+header {
+  height: 20px;
+  vertical-align: top;
+  text-align: center;
+  padding: 10px;
+}
+
+menu {
+  vertical-align: top;
+}
+
+nav {
+  width: 80ch;
+  border: dotted;
+  padding: 0px 7px;
+  white-space: pre;
+}
+
 a {
   color: #0c4984;
 }
@@ -26,26 +48,4 @@ a {
 ul {
   list-style: none;
   padding-left: 2px;
-}
-
-header, #main, #menu {
-  display: inline-block;
-}
-
-header {
-  height: 20px;
-  vertical-align: top;
-  text-align: center;
-  padding: 10px;
-}
-
-#menu {
-  vertical-align: top;
-}
-
-#main {
-  width: 80ch;
-  border: dotted;
-  padding: 0px 7px;
-  white-space: pre;
 }
