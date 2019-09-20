@@ -2,14 +2,24 @@ body {
   font-family: monospace;
   display: flex;
   justify-content: center;
+  margin: 5px 0;
+}
+
+header {
+  padding: 1em 0;
 }
 
 main {
   width: 80ch;
   border: dotted;
-  padding: 0px 7px;
-  margin: 0px 5px;
+  padding: 0 7px;
+  margin: 0 7px;
   white-space: pre;
+}
+
+ul {
+  list-style: none;
+  padding-left: 2px;
 }
 
 a {
@@ -21,9 +31,4 @@ main a {
   max-width: 80ch;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-ul {
-  list-style: none;
-  padding-left: 2px;
 }
