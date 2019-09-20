@@ -1,8 +1,13 @@
 body {
   font-family: monospace;
-  display: flex;
-  justify-content: center;
   margin: 0.3em 0;
+  text-align: center;
+}
+
+header, main, nav {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
 }
 
 header {
