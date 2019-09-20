@@ -1,44 +1,22 @@
-html {
-  font-family: monospace;
-}
-
 body {
-  margin: 0px;
-  width: 100%;
-}
-
-#wrapper {
-  width: 115ch;
-  margin: 5px auto;
-}
-
-header, main, nav {
-  display: inline-block;
-}
-
-header {
-  height: 20px;
-  vertical-align: top;
-  text-align: center;
-  padding: 10px;
+  font-family: monospace;
+  display: flex;
+  justify-content: center;
 }
 
 main {
   width: 80ch;
   border: dotted;
   padding: 0px 7px;
+  margin: 0px 5px;
   white-space: pre;
-}
-
-nav {
-  vertical-align: top;
 }
 
 a {
   color: #0c4984;
 }
 
-#main a {
+main a {
   display: inline-block;
   max-width: 80ch;
   overflow: hidden;

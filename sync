@@ -5,11 +5,10 @@ name=$1;
 echo '<html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.68">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
   <body>
-  <div id="wrapper">
     <header>
       <a href="/">vall.su</a>
     </header>
@@ -29,7 +28,6 @@ assembler
 >> $dir/cooked/$name.html;
 echo '      </ul>
     </nav>
-  </div>
   </body>
 </html>' >> $dir/cooked/$name.html;
 }
