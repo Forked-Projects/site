@@ -4,7 +4,7 @@ body {
 }
 
 #wrapper {
-  text-align: inline-block;
+  display: inline-block;
 }
 
 header, main, nav {
