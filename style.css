@@ -1,11 +1,21 @@
 body {
   font-family: monospace;
-  display: table;
+}
+
+#wrapper {
   margin: 0.3em auto;
 }
 
 header, main, nav {
-  display: table-cell;
+  text-align: left;
+}
+
+header, main {
+  float: left;
+}
+
+nav {
+  float: right;
 }
 
 header, nav ul {

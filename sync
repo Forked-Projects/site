@@ -5,28 +5,31 @@ name=$1;
 echo '<html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
   <body>
-    <header>
-      <a href="/">vall.su</a>
-    </header>
-    <main>' > $dir/cooked/$name.html;
-sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt \
->> $dir/cooked/$name.html;
-echo '    </main>
-    <nav>
-      <ul>' >> $dir/cooked/$name.html;
+    <div id="wrapper">
+      <header>
+        <a href="/">vall.su</a>
+      </header>
+      <nav>
+        <ul>' > $dir/cooked/$name.html;
 echo '
 books
 links
 freebsd_postinstall
 notes
 assembler
-' | sed '/^$/d' | sed 's:.*:        <li><a href="/cooked/&.html">&</a></li>:' \
+' | sed '/^$/d' | sed 's:.*:          <li><a href="/cooked/&.html">&</a></li>:'\
 >> $dir/cooked/$name.html;
-echo '      </ul>
-    </nav>
+echo '        </ul>
+      </nav>
+      <main>' >> $dir/cooked/$name.html;
+sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt \
+>> $dir/cooked/$name.html;
+echo '      </main>
+    </div>
   </body>
 </html>' >> $dir/cooked/$name.html;
 }
