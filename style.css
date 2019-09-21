@@ -1,9 +1,10 @@
 body {
   font-family: monospace;
+  text-align: center;
 }
 
 #wrapper {
-  margin: 0.3em auto;
+  text-align: display-block;
 }
 
 header, main, nav {
@@ -25,6 +26,7 @@ header, nav ul {
 
 main {
   width: 80ch;
+  margin: 0 0.3em;
   border: dotted;
   padding: 0 0.6em;
   white-space: pre;
