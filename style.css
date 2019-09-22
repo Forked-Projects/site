@@ -49,6 +49,8 @@ main a {
   text-overflow: ellipsis;
 }
 
-@viewport {
-  width: device-width;
+@media only screen and (width: 980px) {
+  body {
+    font-size: 1.1em;
+  }
 }
