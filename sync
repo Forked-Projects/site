@@ -38,7 +38,7 @@ if [ `svnliteversion $dir | sed 's/:.*//; s/M$//'` -lt `svnlite status -u $dir \
  | grep '^Status' | cut -d ':' -f 2` ]
 then
   svnlite update $dir;
-  exec $(readlink -f $0);
+  exec "sh $(readlink -f $0)";
 fi;
 
 for i in $(ls -1 $dir/raw/ | sed 's/.txt$//');
