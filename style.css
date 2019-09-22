@@ -49,6 +49,10 @@ main a {
 }
 
 @media only screen and (max-width: 80ch) {
+  body {
+    font-size: 2vw;
+  }
+
   header, nav, main {
     float: none;
   }
