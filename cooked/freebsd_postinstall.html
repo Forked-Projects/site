@@ -1,24 +1,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
   <body>
-    <div id="wrapper">
-      <header>
-        <a href="/">vall.su</a>
-      </header>
-      <nav>
-        <ul>
-          <li><a href="/cooked/books.html">books</a></li>
-          <li><a href="/cooked/links.html">links</a></li>
-          <li><a href="/cooked/freebsd_postinstall.html">freebsd_postinstall</a></li>
-          <li><a href="/cooked/notes.html">notes</a></li>
-          <li><a href="/cooked/assembler.html">assembler</a></li>
-        </ul>
-      </nav>
-      <main>
+    <header>
+      <a href="/">vall.su</a>
+    </header>
+    <main>
 Это минимальный срез того что можно сделать с FreeBSD сразу после установки.
 Всё это есть в FreeBSD Handbook, в wiki.freebsd.org, в man, но тут всё какбэ на
 одной страничке.
@@ -242,7 +231,15 @@ setxkbmap -layout 'us,ru' -option 'grp:lwin_toggle,grp_led:scroll';
 xset r rate 250 34;
 fluxbox;
 
-      </main>
-    </div>
+    </main>
+    <nav>
+      <ul>
+        <li><a href="/cooked/books.html">books</a></li>
+        <li><a href="/cooked/links.html">links</a></li>
+        <li><a href="/cooked/freebsd_postinstall.html">freebsd_postinstall</a></li>
+        <li><a href="/cooked/notes.html">notes</a></li>
+        <li><a href="/cooked/assembler.html">assembler</a></li>
+      </ul>
+    </nav>
   </body>
 </html>
