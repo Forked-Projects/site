@@ -48,7 +48,7 @@ main a {
   text-overflow: ellipsis;
 }
 
-@media only screen and (max-width: 80ch) {
+@media only screen and (max-width: 79ch) {
   body {
     font-size: 2vw;
   }
