@@ -49,7 +49,7 @@ main a {
   text-overflow: ellipsis;
 }
 
-@media only screen and (width: 80ch) {
+@media only screen and (max-width: 80ch) {
   header, nav, main {
     float: none;
   }
