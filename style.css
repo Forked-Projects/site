@@ -53,6 +53,10 @@ main a {
 }
 
 @media only screen and (max-width: 80ch) {
+  html {
+    width: 100vw;
+  }
+
   header, nav, main {
     float: none;
   }
