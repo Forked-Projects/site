@@ -54,6 +54,10 @@ main a {
     float: none;
   }
 
+  header {
+    font-size: 1.3em;
+  }
+
   nav {
     display: none;
   }
