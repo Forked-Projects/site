@@ -53,10 +53,6 @@ main a {
 }
 
 @media only screen and (max-width: 80ch) {
-  body {
-    font-size: 0.7em;
-  }
-
   header, nav, main {
     float: none;
   }
@@ -68,5 +64,11 @@ main a {
   nav li {
     display: inline-block;
     margin-right: 0.2em;
+  }
+}
+
+@media only screen and (max-width: 80ch) end (orientation: portrait) {
+  body {
+    font-size: 0.7em;
   }
 }
