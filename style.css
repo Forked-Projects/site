@@ -67,7 +67,7 @@ main a {
   }
 }
 
-@media only screen and (max-width: 80ch) end (orientation: portrait) {
+@media only screen and (max-width: 80ch) and (orientation: portrait) {
   body {
     font-size: 0.7em;
   }
