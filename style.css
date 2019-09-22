@@ -48,3 +48,7 @@ main a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+@viewport {
+  width: device-width;
+}
