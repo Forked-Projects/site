@@ -5,6 +5,7 @@ html {
 body {
   font-family: monospace;
   display: inline-block;
+  text-align: left;
   margin: 0 auto;
   padding: 0.3em 1px;
 }
@@ -15,7 +16,6 @@ section {
 }
 
 header, nav, main {
-  text-align: left;
   display: inline-block;
   vertical-align: top;
   direction: ltr;
