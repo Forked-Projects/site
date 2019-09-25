@@ -1,17 +1,20 @@
 body {
   font-family: monospace;
+  display: inline-block;
   text-align: center;
   margin: 0;
+  padding: 0.3em 1px;
 }
 
 #wrapper {
   display: inline-block;
-  padding: 0.3em 1px;
+  direction: rtl;
 }
 
 header, nav, main {
   text-align: left;
   display: inline-block;
+  vertical-align: top;
 }
 
 header, main {
@@ -44,7 +47,7 @@ main a {
   text-overflow: ellipsis;
 }
 
-@media only screen and (max-width: 80ch) {
+@media only screen and (max-width: 90ch) {
   header, nav, main {
     display: block;
   }
