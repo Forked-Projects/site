@@ -11,17 +11,17 @@ body {
 
 header, nav, main {
   text-align: left;
+  display: inline-block;
 }
 
 header, main {
-  float: left;
 }
 
-nav {
-  float: right;
+nav a {
+  display: block;
 }
 
-header, nav ul {
+header, nav {
   margin: 0.5em 0;
   padding: 0 0.6em;
 }
@@ -31,10 +31,6 @@ main {
   border: dotted 0.2em;
   padding: 0 0.6em;
   white-space: pre;
-}
-
-ul {
-  list-style: none;
 }
 
 a {
@@ -49,20 +45,21 @@ main a {
 }
 
 @media only screen and (max-width: 80ch) {
-  body {
-    font-size: 2vw;
+  header, nav, main {
+    display: block;
   }
 
-  header, nav, main {
-    float: none;
+  nav a {
+    display: inline-block;
+    margin-right: 0.2em;
+  }
+}
+
+@media only screen and (max-width: 60ch) {
+  body {
+    font-size: 2vw;
   }
 
   header, nav {
     font-size: 1.3em;
   }
-
-  nav li {
-    display: inline-block;
-    margin-right: 0.2em;
-  }
-}
