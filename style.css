@@ -31,7 +31,6 @@ nav a {
 
 header, nav {
   margin: 0.5em 0;
-  padding: 0 0.6em;
 }
 
 main {
@@ -63,7 +62,7 @@ main a {
   }
 }
 
-@media only screen and (max-width: 60ch) {
+@media only screen and (max-width: 70ch) {
   body {
     font-size: 2vw;
   }
@@ -71,3 +70,4 @@ main a {
   header, nav {
     font-size: 1.3em;
   }
+}
