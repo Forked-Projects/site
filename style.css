@@ -13,6 +13,7 @@ body {
 section {
   display: inline-block;
   direction: rtl;
+  white-space: nowrap;
 }
 
 header, nav, main {
