@@ -62,11 +62,13 @@ main a {
   }
 }
 
-@media only screen and (max-width: 70ch) {
+@media only screen and (max-width: 80ch) {
   body {
     font-size: 2vw;
   }
+}
 
+@media only screen and (max-width: 65ch) {
   header, nav {
     font-size: 1.3em;
   }
