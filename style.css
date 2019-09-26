@@ -51,7 +51,7 @@ main a {
   text-overflow: ellipsis;
 }
 
-@media only screen and (max-width: 90ch) {
+@media only screen and (max-width: 100ch) {
   header, nav, main {
     display: block;
   }
@@ -68,7 +68,7 @@ main a {
   }
 }
 
-@media only screen and (max-width: 65ch) {
+@media only screen and (max-width: 60ch) {
   header, nav {
     font-size: 1.3em;
   }
