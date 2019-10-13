@@ -17,8 +17,8 @@ echo '<html>
 echo '
 books
 links
-freebsd_postinstall
 notes
+freebsd_postinstall
 firefox
 assembler
 ' | sed '/^$/d' | sed 's:.*:        <a href="/cooked/&.html">&</a>:'\
