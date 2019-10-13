@@ -19,6 +19,7 @@ books
 links
 freebsd_postinstall
 notes
+firefox
 assembler
 ' | sed '/^$/d' | sed 's:.*:        <a href="/cooked/&.html">&</a>:'\
 >> $dir/cooked/$name.html;

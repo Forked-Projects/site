@@ -14,6 +14,7 @@
         <a href="/cooked/links.html">links</a>
         <a href="/cooked/freebsd_postinstall.html">freebsd_postinstall</a>
         <a href="/cooked/notes.html">notes</a>
+        <a href="/cooked/firefox.html">firefox</a>
         <a href="/cooked/assembler.html">assembler</a>
       </nav>
       <main>
@@ -186,32 +187,6 @@ pkg install xorg-server xinit xterm setxkbmap xset font-misc-misc \
 Конечно, вместо xf86-video-intel надо ставить соответствующий драйвер видеокарты
 Или просто
 pkg install xorg -- метапакет, в который входит вся фигня.
-
-=====
-
-Firefox
-
-pkg install firefox
-dbus-uuidgen > /etc/machine-id
-
-Русификацию проще всего сделать как описано здесь
-<a href="https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack" target="_blank">https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack</a>
-
-Вкратце, поставить Add-on
-<a href="https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/" target="_blank">https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/</a>
-
-и в about:config создать строковый параметр
-New - String - intl.locale.requested -> ru
-
-Отключить Pocket
-extensions.pocket.enabled -> false
-
-Отключить рендеринг страниц как для читалки
-reader.parse-on-load.enabled -> false
-
-Включить спокойствие на сайтах без https
-insecure_field_warning.contextual.enabled -> false
-signon.autofillForms.http -> true
 
 =====
 

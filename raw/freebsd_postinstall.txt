@@ -170,32 +170,6 @@ pkg install xorg -- метапакет, в который входит вся ф
 
 =====
 
-Firefox
-
-pkg install firefox
-dbus-uuidgen > /etc/machine-id
-
-Русификацию проще всего сделать как описано здесь
-https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack
-
-Вкратце, поставить Add-on
-https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/
-
-и в about:config создать строковый параметр
-New - String - intl.locale.requested -> ru
-
-Отключить Pocket
-extensions.pocket.enabled -> false
-
-Отключить рендеринг страниц как для читалки
-reader.parse-on-load.enabled -> false
-
-Включить спокойствие на сайтах без https
-insecure_field_warning.contextual.enabled -> false
-signon.autofillForms.http -> true
-
-=====
-
 Упрощённый ~/.profile
 
 LANG=en_US.UTF-8;

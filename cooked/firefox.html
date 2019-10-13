@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <a href="/">vall.su</a>
+    </header>
+    <section>
+      <nav>
+        <a href="/cooked/books.html">books</a>
+        <a href="/cooked/links.html">links</a>
+        <a href="/cooked/freebsd_postinstall.html">freebsd_postinstall</a>
+        <a href="/cooked/notes.html">notes</a>
+        <a href="/cooked/firefox.html">firefox</a>
+        <a href="/cooked/assembler.html">assembler</a>
+      </nav>
+      <main>
+Установка во FreeBSD:
+
+pkg install firefox
+dbus-uuidgen > /etc/machine-id
+
+=====
+
+Русификацию проще всего сделать как описано здесь
+<a href="https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack" target="_blank">https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack</a>
+
+Вкратце, поставить Add-on
+<a href="https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/" target="_blank">https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/</a>
+
+и в about:config создать строковый параметр
+New - String - intl.locale.requested -> ru
+
+=====
+
+Отключить Pocket
+extensions.pocket.enabled -> false
+
+Отключить рендеринг страниц как для читалки
+reader.parse-on-load.enabled -> false
+
+Включить спокойствие на сайтах без https
+insecure_field_warning.contextual.enabled -> false
+signon.autofillForms.http -> true
+
+=====
+
+Включить возможность своего userChrome.css
+toolkit.legacyUserProfileCustomizations.stylesheets -> true
+
+mkdir ~/.mozilla/firefox/PROFILE/chrome
+touch ~/.mozilla/firefox/PROFILE/chrome/userChrome.css
+
+=====
+
+@-moz-document url(chrome://browser/content/browser.xhtml) {
+  #urlbar .urlbar-history-dropmarker {
+    opacity: 1 !important;
+  }
+  #alltabs-button {
+    display: none !important;
+  }
+  .urlbar-icon.urlbar-page-action {
+    display: none !important;
+  }
+  #pageActionSeparator {
+    display: none !important;
+  }
+}
+      </main>
+    </section>
+  </body>
+</html>
