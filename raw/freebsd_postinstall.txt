@@ -54,7 +54,7 @@ kld_list="radeonkms"
 
 =====
 
-Если загружается vt в тексотовом режиме -- в /boot/loader.conf
+Если загружается vt в текстовом режиме -- в /boot/loader.conf
 hw.vga.textmode=0
 
 Если надо загрузить syscons вместо vt -- туда же
