@@ -5,10 +5,12 @@ body {
 
 header, main, nav {
   display: inline-block;
+  vertical-align: top;
 }
 
 header, nav {
   line-height: 1.3em;
+  margin: 0.5em 0;
 }
 
 main {
