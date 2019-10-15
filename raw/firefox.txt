@@ -42,13 +42,13 @@ touch ~/.mozilla/firefox/PROFILE/chrome/userChrome.css
   #urlbar .urlbar-history-dropmarker {
     opacity: 1 !important;
   }
-  #alltabs-button {
-    display: none !important;
-  }
-  .urlbar-icon.urlbar-page-action {
-    display: none !important;
-  }
-  #pageActionSeparator {
+  #alltabs-button,
+  .urlbar-icon.urlbar-page-action,
+  #pageActionSeparator,
+  #appMenu-tp-button,
+  #appMenu-tp-separator,
+  #appMenu-fxa-status,
+  .sync-ui-item {
     display: none !important;
   }
 }
