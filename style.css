@@ -1,29 +1,8 @@
-html {
-  text-align: center;
-}
-
 body {
   font-family: monospace;
-  display: inline-block;
-  text-align: left;
+  display: flex;
   margin: 0 auto;
-  padding: 0.3em 1px;
-}
-
-section {
-  display: inline-block;
-  direction: rtl;
-  white-space: nowrap;
-}
-
-header, nav, main {
-  display: inline-block;
-  vertical-align: top;
-  direction: ltr;
-}
-
-header {
-  padding-left: 0.3em;
+  padding: 0.3em;
 }
 
 nav a {
@@ -31,7 +10,7 @@ nav a {
 }
 
 header, nav {
-  margin: 0.5em 0;
+  line-height: 1.5em;
 }
 
 main {
@@ -50,25 +29,4 @@ main a {
   max-width: 80ch;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-@media only screen and (max-width: 100ch) {
-  header, nav, main {
-    display: block;
-  }
-
-  nav a {
-    display: inline-block;
-    padding-left: 0.3em;
-  }
-}
-
-@media only screen and (max-width: 80ch) {
-  body {
-    font-size: 2vw;
-  }
-
-  header, nav {
-    font-size: 1.2em;
-  }
 }

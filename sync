@@ -12,8 +12,7 @@ echo '<html>
     <header>
       <a href="/">vall.su</a>
     </header>
-    <section>
-      <nav>' > $dir/cooked/$name.html;
+    <nav>' > $dir/cooked/$name.html;
 echo '
 books
 links
@@ -21,13 +20,12 @@ notes
 freebsd_postinstall
 firefox
 assembler
-' | sed '/^$/d' | sed 's:.*:        <a href="/cooked/&.html">&</a>:'\
+' | sed '/^$/d' | sed 's:.*:      <a href="/cooked/&.html">&</a>:'\
 >> $dir/cooked/$name.html;
-echo -e '      </nav>\n      <main>' >> $dir/cooked/$name.html;
+echo -e '    </nav>\n    <main>' >> $dir/cooked/$name.html;
 sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt \
 >> $dir/cooked/$name.html;
-echo '      </main>
-    </section>
+echo '    </main>
   </body>
 </html>' >> $dir/cooked/$name.html;
 }
