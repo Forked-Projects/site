@@ -1,11 +1,15 @@
 body {
   font-family: monospace;
-  margin: 0.5em;
+  margin: 0;
+  padding: 0.4em;
+  white-space: nowrap;
+  text-align: center;
 }
 
 header, main, nav {
   display: inline-block;
   vertical-align: top;
+  text-align: left;
 }
 
 header, nav {
