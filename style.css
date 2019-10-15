@@ -1,25 +1,14 @@
 body {
   font-family: monospace;
-  display: flex;
   margin: 0.5em;
-  justify-content: center;
 }
 
-header {
-  order: 0;
-}
-
-main {
-  order: 1;
-}
-
-nav {
-  order: 2;
+header, main, nav {
+  display: inline-block;
 }
 
 header, nav {
-  padding: 0.6em;
-  line-height: 1.4em;
+  line-height: 1.3em;
 }
 
 main {

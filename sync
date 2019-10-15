@@ -12,7 +12,10 @@ echo '<html>
     <header>
       <a href="/">vall.su</a>
     </header>
-    <nav>' > $dir/cooked/$name.html;
+    <main>' > $dir/cooked/$name.html;
+sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt \
+>> $dir/cooked/$name.html;
+echo -e '    </main>\n    <nav>' >> $dir/cooked/$name.html;
 echo '
 books
 links
@@ -22,10 +25,7 @@ firefox
 assembler
 ' | sed '/^$/d' | sed 's:.*:      <a href="/cooked/&.html">&</a>:'\
 >> $dir/cooked/$name.html;
-echo -e '    </nav>\n    <main>' >> $dir/cooked/$name.html;
-sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt \
->> $dir/cooked/$name.html;
-echo '    </main>
+echo '    </nav>
   </body>
 </html>' >> $dir/cooked/$name.html;
 }
