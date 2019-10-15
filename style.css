@@ -1,15 +1,24 @@
 body {
   font-family: monospace;
   display: flex;
-  margin: 0 auto;
   padding: 0.3em;
+  justify-content: center;
 }
 
-nav a {
-  display: block;
+header {
+  order: 0;
+}
+
+main {
+  order: 1;
+}
+
+nav {
+  order: 2;
 }
 
 header, nav {
+  padding: 0.6em;
   line-height: 1.5em;
 }
 
@@ -22,6 +31,10 @@ main {
 
 a {
   color: #0c4984;
+}
+
+nav a {
+  display: block;
 }
 
 main a {
