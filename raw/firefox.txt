@@ -22,6 +22,9 @@ extensions.pocket.enabled -> false
 Отключить рендеринг страниц как для читалки
 reader.parse-on-load.enabled -> false
 
+Отключить Sync
+identity.fxaccounts.enabled -> false
+
 Включить спокойствие на сайтах без https
 insecure_field_warning.contextual.enabled -> false
 signon.autofillForms.http -> true
@@ -33,6 +36,8 @@ toolkit.legacyUserProfileCustomizations.stylesheets -> true
 
 mkdir ~/.mozilla/firefox/PROFILE/chrome
 touch ~/.mozilla/firefox/PROFILE/chrome/userChrome.css
+или
+%AppData%/Mozilla/Firefox/Profiles/PROFILE/chrome/userChrome.css
 
 =====
 
