@@ -42,7 +42,8 @@ dig   @resolver1.opendns.com ANY myip.opendns.com | grep ^myip
 
 =====
 
-Чтобы в xterm выделенный мышью текст попадал в главный буфер
+Чтобы в xterm выделенный мышью текст попадал в главный буфер, чтоб можно было
+его потом вставлять в другие программы по Ctrl+V
 ~/.Xdefaults
 XTerm*SelectToClipboard: true
 
@@ -68,12 +69,9 @@ xterm*font: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
 
 =====
 
-Цвета в xterm
+Сделать xterm как консоль FreeBSD -- серый текст на чёрном фоне,
+нет подчёркивания текста, жирный шрифт подсвечивается белым -- в .Xdefaults
 
--fg и bg -- цвет шрифта и фона соответственно
-
-Сделать xterm как консоль FreeBSD (серый текст на чёрном фоне, жирный шрифт
-подсвечивается белым, подчёркивания текста нет) -- в .Xdefaults
 xterm*font: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
 xterm*Background: black
 xterm*Foreground: grey
