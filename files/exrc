@@ -1,5 +1,6 @@
+set ruler
 set autoindent
-set cedit=H
+set cedit=h
 
 map ; $
 map ё `

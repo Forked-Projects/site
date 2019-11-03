@@ -48,4 +48,40 @@ XTerm*SelectToClipboard: true
 
 =====
 
+Шрифт terminus для xterm
+
+pkg install terminus-font
+
+Если xfontsel не показывает что в системе присутствует terminus, то
+xset +fp /usr/local/share/fonts/terminus-font/ -- временно
+или постоянно
+в /usr/local/etc/X11/xorg.conf.d/15-terminus.conf
+Section "Files"
+  FontPath "/usr/local/share/fonts/terminus-font/"
+EndSection
+
+Запустить xterm с шрифтом terminus
+xterm -fn -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+
+Применить постоянно -- в .Xdefaults
+xterm*font: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+
+=====
+
+Цвета в xterm
+
+-fg и bg -- цвет шрифта и фона соответственно
+
+Сделать xterm как консоль FreeBSD (серый текст на чёрном фоне, жирный шрифт
+подсвечивается белым, подчёркивания текста нет) -- в .Xdefaults
+xterm*font: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+xterm*Background: black
+xterm*Foreground: grey
+xterm*colorBD: white
+xterm*colorBDMode: on
+xterm*underLine: off
+xterm*veryBoldColors: 6
+
+=====
+
 Sylpheed -- великолепный почтовый клиент.
