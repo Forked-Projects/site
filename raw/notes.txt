@@ -53,10 +53,13 @@ XTerm*SelectToClipboard: true
 
 pkg install terminus-font
 
-Если xfontsel не показывает что в системе присутствует terminus, то
-xset +fp /usr/local/share/fonts/terminus-font/ -- временно
-или постоянно
-в /usr/local/etc/X11/xorg.conf.d/15-terminus.conf
+Если xfontsel не показывает что в системе присутствует terminus,
+то можно временно добавить шрифт в базу X11:
+
+xset +fp /usr/local/share/fonts/terminus-font/
+
+или постоянно в /usr/local/etc/X11/xorg.conf.d/15-terminus.conf
+
 Section "Files"
   FontPath "/usr/local/share/fonts/terminus-font/"
 EndSection
@@ -64,7 +67,7 @@ EndSection
 Запустить xterm с шрифтом terminus
 xterm -fn -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
 
-Применить постоянно -- в .Xdefaults
+или в .Xdefaults
 xterm*font: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
 
 =====
