@@ -61,23 +61,33 @@ int main()
 char getop()
 {
   int i, c;
+  static int lastchar;
   i = 0;
 
-  while ((s[0] = c = getchar()) == ' ' || c == '\t')
-    ;
-  if(!isdigit(c) && c != '.' && c != '-')
+  if(lastchar) {
+    c = lastchar;
+    lastchar = 0;
     return c;
-  if(c == '-')
-    if(!isdigit(s[1] = c = getchar()))
-      return s[0];
-  if(isdigit(c))
-    while (isdigit(s[++i] = c = getchar()))
+  }
+  else {
+    while ((s[0] = c = getchar()) == ' ' || c == '\t')
       ;
-  if (c == '.')
-    while (isdigit(s[++i] = c = getchar()))
-      ;
-  s[i] = '\0';
-  return NUMBER;
+    if(!isdigit(c) && c != '.' && c != '-')
+      return c;
+    if(c == '-')
+      if(!isdigit(s[1] = c = getchar())) {
+	lastchar = c;
+        return s[0];
+      }
+    if(isdigit(c))
+      while (isdigit(s[++i] = c = getchar()))
+        ;
+    if (c == '.')
+      while (isdigit(s[++i] = c = getchar()))
+        ;
+    s[i] = '\0';
+    return NUMBER;
+  }
 }
 
 void push(double f)
