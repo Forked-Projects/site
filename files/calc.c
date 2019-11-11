@@ -5,10 +5,15 @@
 #define MAXOP 100
 #define NUMBER 1
 
-char getop();
 char s[MAXOP];
+char buf[MAXOP];
+int bufp = 0;
+
+char getop();
 void push(double f);
 double pop();
+int getch();
+void ungetch();
 
 int sp = 0;
 double val[MAXOP];
@@ -61,33 +66,25 @@ int main()
 char getop()
 {
   int i, c;
-  static int lastchar;
   i = 0;
 
-  if(lastchar) {
-    c = lastchar;
-    lastchar = 0;
+  while ((s[0] = c = getch()) == ' ' || c == '\t')
+    ;
+  if(!isdigit(c) && c != '.' && c != '-')
     return c;
-  }
-  else {
-    while ((s[0] = c = getchar()) == ' ' || c == '\t')
+  if(c == '-')
+    if(!isdigit(s[++i] = c = getch())) {
+      ungetch(c);
+      return s[0];
+    }
+  if(isdigit(c))
+    while (isdigit(s[++i] = c = getch()))
       ;
-    if(!isdigit(c) && c != '.' && c != '-')
-      return c;
-    if(c == '-')
-      if(!isdigit(s[1] = c = getchar())) {
-	lastchar = c;
-        return s[0];
-      }
-    if(isdigit(c))
-      while (isdigit(s[++i] = c = getchar()))
-        ;
-    if (c == '.')
-      while (isdigit(s[++i] = c = getchar()))
-        ;
-    s[i] = '\0';
-    return NUMBER;
-  }
+  if (c == '.')
+    while (isdigit(s[++i] = c = getch()))
+      ;
+  s[i] = '\0';
+  return NUMBER;
 }
 
 void push(double f)
@@ -105,4 +102,20 @@ double pop()
   else
     printf("error: stack is empty, nothing to pop\n");
     return 0.0;
+}
+
+int getch()
+{
+  if(bufp > 0)
+    return buf[--bufp];
+  else
+    return getchar();
+}
+
+void ungetch(int c)
+{
+  if(bufp < MAXOP)
+    buf[bufp++] = c;
+  else
+    printf("ungetch buffer is full\n");
 }
