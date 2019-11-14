@@ -6,6 +6,7 @@
 #define NUMBER 1
 
 char s[MAXOP];
+char o[MAXOP];
 char buf[MAXOP];
 int bufp = 0;
 
@@ -14,6 +15,7 @@ void push(double f);
 double pop();
 int getch();
 void ungetch();
+void getlinee();
 
 int sp = 0;
 double val[MAXOP];
@@ -23,10 +25,11 @@ int main()
   int type;
   double op1, op2;
 
+  getlinee();
   while ((type = getop()) != EOF) {
     switch(type) {
       case NUMBER:
-	push(atof(s));
+	push(atof(o));
 	break;
       case '+':
 	push(pop() + pop());
@@ -56,14 +59,17 @@ int main()
       case '\n':
 	printf("%g\n", pop());
 	break;
+      case '\0':
+	printf("NUL %g\n", pop());
+	break;
       default:
-	printf("error: unknown command %s\n", s);
+	printf("error: unknown command %s\n", o);
 	break;
     }
   }
 }
 
-char getop()
+char oldgetop()
 {
   int i, c;
   i = 0;
@@ -84,6 +90,33 @@ char getop()
     while (isdigit(s[++i] = c = getch()))
       ;
   s[i] = '\0';
+  return NUMBER;
+}
+
+char getop()
+{
+  static int i;
+  int j = 0;
+
+  if (s[i] == '\0') {
+    getlinee();
+    i = 0;
+  }
+  while ((o[0] = s[i++]) == ' ' || o[0] == '\t')
+    ;
+  if(!isdigit(o[0]) && o[0] != '.' && o[0] != '-')
+    return o[0];
+  if(o[0] == '-' && !isdigit(o[++j] = s[i++]) && o[j] != '.') {
+    --i;
+    return o[0];
+  }
+  if(isdigit(o[j]))
+    while (isdigit(o[++j] = s[i++]))
+      ;
+  if (o[j] == '.')
+    while (isdigit(o[++j] = s[i++]))
+      ;
+  o[j] = '\0';
   return NUMBER;
 }
 
@@ -118,4 +151,14 @@ void ungetch(int c)
     buf[bufp++] = c;
   else
     printf("ungetch buffer is full\n");
+}
+
+void getlinee()
+{
+  int i;
+  i = 0;
+
+  while((s[i++] = getchar()) != '\n' && s[i - 1] != EOF)
+    ;
+  s[i] = '\0';
 }
