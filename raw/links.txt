@@ -333,8 +333,9 @@ OpenSUSE + Gilouche
 https://vk.com/public34632406?w=wall-34632406_4061
 
 
-Для создания загрузочных флешек с MSWindows лучше всего работает WinSetupFromUSB
+Для создания загрузочных флешек с Microsoft Windows
 https://winsetupfromusb.com
+http://rufus.ie
 
 
 Для плохих парней
