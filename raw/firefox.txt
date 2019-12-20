@@ -43,8 +43,11 @@ touch ~/.mozilla/firefox/PROFILE/chrome/userChrome.css
     opacity: 1 !important;
   }
   #alltabs-button,
-  .urlbar-icon.urlbar-page-action,
+  /* url bar */
   #tracking-protection-icon-container,
+  .autoplay-media-icon,
+  .urlbar-icon.urlbar-page-action,
+  /* main menu */
   #pageActionSeparator,
   #appMenu-protection-report-button,
   #appMenu-tp-separator,
