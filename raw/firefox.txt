@@ -59,11 +59,19 @@ touch ~/.mozilla/firefox/PROFILE/chrome/userChrome.css
 
 vk Stylish
 
-div#ads_left, div#profile_gifts, div#profile_friends_recomm,
-div#chat_onl_wrap, div#profile_friends_online, a#top_notify_btn {
+#ads_left, #profile_gifts, #profile_friends_recomm,
+#chat_onl_wrap, #profile_friends_online {
     display: none !important;
 }
 
-div#wide_column div:nth-child(3) {
+#wide_column div:nth-child(3) {
     box-shadow: none !important;
+}
+
+#top_notify_btn {
+    width: 0;
+}
+
+.top_nav_btn#top_notify_btn .top_nav_btn_icon {
+    background-image: none;
 }
