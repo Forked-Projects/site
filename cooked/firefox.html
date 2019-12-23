@@ -53,8 +53,9 @@ touch ~/.mozilla/firefox/PROFILE/chrome/userChrome.css
     opacity: 1 !important;
   }
   #alltabs-button,
-  .urlbar-icon.urlbar-page-action,
   #tracking-protection-icon-container,
+  .autoplay-media-icon,
+  .urlbar-icon.urlbar-page-action,
   #pageActionSeparator,
   #appMenu-protection-report-button,
   #appMenu-tp-separator,
@@ -62,6 +63,27 @@ touch ~/.mozilla/firefox/PROFILE/chrome/userChrome.css
   .sync-ui-item {
     display: none !important;
   }
+}
+
+=====
+
+vk Stylish
+
+#ads_left, #profile_gifts, #profile_friends_recomm,
+#chat_onl_wrap, #profile_friends_online {
+    display: none !important;
+}
+
+#wide_column div:nth-child(3) {
+    box-shadow: none !important;
+}
+
+#top_notify_btn {
+    width: 0;
+}
+
+.top_nav_btn#top_notify_btn .top_nav_btn_icon {
+    background-image: none;
 }
     </main>
     <nav>
