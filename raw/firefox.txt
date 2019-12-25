@@ -63,15 +63,12 @@ vk Stylish
 #chat_onl_wrap, #profile_friends_online {
     display: none !important;
 }
-
 #wide_column div:nth-child(3) {
     box-shadow: none !important;
 }
-
 #top_notify_btn {
     width: 0;
 }
-
 .top_nav_btn#top_notify_btn .top_nav_btn_icon {
-    background-image: none;
+    background-image: none !important;
 }
