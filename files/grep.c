@@ -1,29 +1,33 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int ngetline(char *line);
+void strocc();
 
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
   char *line = NULL;
+  int l;
 
-  while(ngetline(*line) >= 0)
-    if(strocc(line, argv[1]))
-      printf("%s", line);
+  while((l = ngetline(line)) > 0)
+    printf("%s\n", line);
   return 0;
 }
 
 int ngetline(char *line)
 {
-  char c;
+  char c, *start;
   int i;
+  start = line = malloc(1);
 
   for(i = 0; (c = getchar()) != EOF && c != '\n'; i++)
     *line++ = c;
   *line = '\0';
-  line = line - i;
-  return i;
+  line = start;
+  if(c >= 0)
+    return i;
 }
 
-int strcmp()
+void strocc()
 {
 }
