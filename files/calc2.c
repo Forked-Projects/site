@@ -64,10 +64,12 @@ int gline()
   line[i++] = '\0';
   if(c == EOF)
     return 0;
-  if(!compat(c) && c != '\n')
+  if(!compat(c) && c != '\n') {
+    while(getchar() != '\n')
+      ;
     return -1;
+  }
   return i;
-
 }
 
 void getops()
