@@ -15,38 +15,41 @@ int compat(char c);
 
 int main()
 {
-  int i;
+  int i, l;
 
-  while(gline() > 0) {
-    getops();
-    if(ops[0][opp - 1] == NUM) {
-      for(i = 0; i < opp; i++) {
-	switch(ops[1][i]) {
-	  case '*':
-	    ops[1][i - 1] = ops[1][i - 1] * ops[1][i + 1];
-	    squeeze(i);
-	    break;
-	  case '/':
-	    ops[1][i - 1] = ops[1][i - 1] / ops[1][i + 1];
-	    squeeze(i);
-	    break;
-	}
-      }
-      for(i = 0; i < opp; i++) {
-	switch(ops[1][i]) {
-	  case '+':
-	    ops[1][i - 1] = ops[1][i - 1] + ops[1][i + 1];
-	    squeeze(i);
-	    break;
-	  case '-':
-	    ops[1][i - 1] = ops[1][i - 1] - ops[1][i + 1];
-	    squeeze(i);
-	    break;
-	}
+  while((l = gline())) {
+    if(l > 0) {
+      getops();
+      if(ops[0][opp - 1] == NUM) {
+        for(i = 0; i < opp; i++) {
+	  switch(ops[1][i]) {
+	    case '*':
+	      ops[1][i - 1] = ops[1][i - 1] * ops[1][i + 1];
+	      squeeze(i);
+	      break;
+	    case '/':
+	      ops[1][i - 1] = ops[1][i - 1] / ops[1][i + 1];
+	      squeeze(i);
+	      break;
+	  }
+        }
+        for(i = 0; i < opp; i++) {
+	  switch(ops[1][i]) {
+	    case '+':
+	      ops[1][i - 1] = ops[1][i - 1] + ops[1][i + 1];
+	      squeeze(i);
+	      break;
+	    case '-':
+	      ops[1][i - 1] = ops[1][i - 1] - ops[1][i + 1];
+	      squeeze(i);
+	      break;
+	  }
+        }
+	printf("%d\n", ops[1][0]);
       }
     }
-    for(i = 0; i < opp; i++)
-      printf("%d\n", ops[1][i]);
+    else if(l < 0)
+      printf("wat?\n");
   }
 }
 
@@ -61,10 +64,8 @@ int gline()
   line[i++] = '\0';
   if(c == EOF)
     return 0;
-  if(!compat(c) && c != '\n') {
-    printf("wat?\n");
+  if(!compat(c) && c != '\n')
     return -1;
-  }
   return i;
 
 }
@@ -82,6 +83,7 @@ void getops()
 	num = num * 10 + (line[i++] - '0');
       ops[0][opp] = NUM;
       ops[1][opp++] = num;
+      --i;
     }
     if(line[i] == '-' || line[i] == '+' || line[i] == '*' || line[i] == '/') {
       ops[0][opp] = 0;
