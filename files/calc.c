@@ -1,164 +1,171 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
+#define MAX 100
+#define CLEAR 0
+#define NUM 1
+#define OPER 2
 
-#define MAXOP 100
-#define NUMBER 1
+int opp = 0;
+int ops[2][MAX];
+char line[MAX];
 
-char s[MAXOP];
-char o[MAXOP];
-char buf[MAXOP];
-int bufp = 0;
-
-char getop();
-void push(double f);
-double pop();
-int getch();
-void ungetch();
-void getlinee();
-
-int sp = 0;
-double val[MAXOP];
+int gline();
+int digit(char c);
+int compat(char c);
+void getops();
+void squeeze(int i);
 
 int main()
 {
-  int type;
-  double op1, op2;
+  int i, l, result, error, reserve;
 
-  getlinee();
-  while ((type = getop()) != EOF) {
-    switch(type) {
-      case NUMBER:
-	push(atof(o));
-	break;
-      case '+':
-	push(pop() + pop());
-	break;
-      case '-':
-	op2 = pop();
-	push(pop() - op2);
-	break;
-      case '*':
-	push(pop() * pop());
-	break;
-      case '/':
-	op2 = pop();
-	if(op2 != 0.0)
-	  push(pop() / op2);
-	else
-	  printf("error: division by zero\n");
-	break;
-      case '%':
-	op2 = pop();
-	op1 = pop();
-	if(op2 != 0.0)
-	  push((op1 / op2) - ((int) (op1 / op2)));
-	else
-	  printf("error: division by zero\n");
-	break;
-      case '\n':
-	printf("%g\n", pop());
-	break;
-      case '\0':
-	printf("NUL %g\n", pop());
-	break;
-      default:
-	printf("error: unknown command %s\n", o);
-	break;
+  result = 0;
+  while((l = gline())) {
+    error = 0;
+    if(l > 0) {
+      getops();
+      reserve = ops[1][0];
+      if(ops[0][1] == NUM && (result)) {
+        --opp;
+	for(i = 0; i < opp; i++) {
+          ops[0][i] = ops[0][i + 1];
+	  ops[1][i] = ops[1][i + 1];
+        }
+	ops[0][opp] = CLEAR;
+	result = 0;
+      }
+      for(i = 0; !error && i < opp ; i++) {
+	if(ops[0][i] == ops[0][i + 1])
+	  error = 1;
+      }
+      if(ops[0][opp - 1] == NUM && !error) {
+        for(i = 0; i < opp; ) {
+	  if(ops[0][i] == OPER) {
+	    switch(ops[1][i]) {
+	      case '*':
+	        ops[1][i - 1] = ops[1][i - 1] * ops[1][i + 1];
+	        squeeze(i);
+	        break;
+	      case '/':
+	        ops[1][i - 1] = ops[1][i - 1] / ops[1][i + 1];
+	        squeeze(i);
+	        break;
+	      default:
+	        ++i;
+	    }
+	  }
+	  else
+	    ++i;
+        }
+        for(i = 0; i < opp; ) {
+	  if(ops[0][i] == OPER) {
+	    switch(ops[1][i]) {
+	      case '+':
+	        ops[1][i - 1] = ops[1][i - 1] + ops[1][i + 1];
+	        squeeze(i);
+	        break;
+	      case '-':
+	        ops[1][i - 1] = ops[1][i - 1] - ops[1][i + 1];
+	        squeeze(i);
+	        break;
+	      default:
+	        ++i;
+	    }
+	  }
+	  else
+	    ++i;
+        }
+	result = 1;
+	printf("%d\n", ops[1][0]);
+      }
+      else if((error)) {
+        printf("wat?\n");
+	ops[0][0] = NUM;
+	ops[1][0] = reserve;
+	opp = 1;
+	ops[0][opp] = CLEAR;
+	printf("%d\n", ops[1][0]);
+      }
     }
+    else if(l < 0)
+      printf("wat?\n");
   }
 }
 
-char oldgetop()
+int gline()
 {
-  int i, c;
-  i = 0;
-
-  while ((s[0] = c = getch()) == ' ' || c == '\t')
-    ;
-  if(!isdigit(c) && c != '.' && c != '-')
-    return c;
-  if(c == '-')
-    if(!isdigit(s[++i] = c = getch())) {
-      ungetch(c);
-      return s[0];
-    }
-  if(isdigit(c))
-    while (isdigit(s[++i] = c = getch()))
-      ;
-  if (c == '.')
-    while (isdigit(s[++i] = c = getch()))
-      ;
-  s[i] = '\0';
-  return NUMBER;
-}
-
-char getop()
-{
-  static int i;
-  int j = 0;
-
-  if (s[i] == '\0') {
-    getlinee();
-    i = 0;
-  }
-  while ((o[0] = s[i++]) == ' ' || o[0] == '\t')
-    ;
-  if(!isdigit(o[0]) && o[0] != '.' && o[0] != '-')
-    return o[0];
-  if(o[0] == '-' && !isdigit(o[++j] = s[i++]) && o[j] != '.') {
-    --i;
-    return o[0];
-  }
-  if(isdigit(o[j]))
-    while (isdigit(o[++j] = s[i++]))
-      ;
-  if (o[j] == '.')
-    while (isdigit(o[++j] = s[i++]))
-      ;
-  o[j] = '\0';
-  return NUMBER;
-}
-
-void push(double f)
-{
-  if(sp < MAXOP)
-    val[sp++] = f;
-  else
-    printf("error: stack is full, can't push %f\n", f);
-}
-
-double pop()
-{
-  if(sp > 0)
-    return val[--sp];
-  else
-    printf("error: stack is empty, nothing to pop\n");
-    return 0.0;
-}
-
-int getch()
-{
-  if(bufp > 0)
-    return buf[--bufp];
-  else
-    return getchar();
-}
-
-void ungetch(int c)
-{
-  if(bufp < MAXOP)
-    buf[bufp++] = c;
-  else
-    printf("ungetch buffer is full\n");
-}
-
-void getlinee()
-{
+  char c;
   int i;
-  i = 0;
 
-  while((s[i++] = getchar()) != '\n' && s[i - 1] != EOF)
-    ;
-  s[i] = '\0';
+  for(i = 0; (c = getchar()) != '\n' && c != EOF && compat(c) && i < MAX; i++) {
+    line[i] = c;
+  }
+  line[i++] = '\0';
+  if(c == EOF)
+    return 0;
+  if(!compat(c) && c != '\n') {
+    while(getchar() != '\n')
+      ;
+    return -1;
+  }
+  return i;
+}
+
+void getops()
+{
+  int i, num, sign, firstinline;
+
+  firstinline = 1;
+  for(i = 0; line[i] != '\0'; i++) {
+    while(line[i] == ' ' || line[i] == '\t')
+      i++;
+    if(digit(line[i]) ||
+	  (line[i] == '-' && digit(line[i + 1]) &&
+	      (ops[0][opp - 1] == OPER || (firstinline) ))) {
+      num = 0;
+      sign = 1;
+      if(line[i] == '-') {
+	sign = -1;
+	++i;
+      }
+      while(digit(line[i]))
+	num = num * 10 + (line[i++] - '0');
+      ops[0][opp] = NUM;
+      ops[1][opp++] = sign * num;
+      --i;
+    }
+    else if(line[i] == '-' ||  line[i] == '+'
+            || line[i] == '*' || line[i] == '/') {
+      ops[0][opp] = OPER;
+      ops[1][opp++] = line[i];
+    }
+    firstinline = 0;
+  }
+}
+
+int digit(char c)
+{
+  if(c >= '0' && c <= '9')
+    return 1;
+  else
+    return 0;
+}
+
+int compat(char c)
+{
+  if(digit(c) || c == '-' || c == '+' || c == '*'
+              || c == '/' || c == ' ' || c == '\t')
+    return 1;
+  else
+    return 0;
+}
+
+void squeeze(int i)
+{
+  opp -= 2;
+  for( ; i <= opp; i++) {
+    ops[0][i] = ops[0][i + 2];
+    ops[1][i] = ops[1][i + 2];
+  }
+  ops[0][i] = CLEAR;
+  ops[0][i + 1] = CLEAR;
 }
