@@ -16,78 +16,79 @@ void squeeze(int i);
 
 int main()
 {
-  int i, l, result, error, reserve;
+  int i, l, error;
 
-  result = 0;
+  ops[0][opp++] = NUM;
   while((l = gline())) {
     error = 0;
     if(l > 0) {
       getops();
-      reserve = ops[1][0];
-      if(ops[0][1] == NUM && (result)) {
-        --opp;
-	for(i = 0; i < opp; i++) {
-          ops[0][i] = ops[0][i + 1];
-	  ops[1][i] = ops[1][i + 1];
-        }
-	ops[0][opp] = CLEAR;
-	result = 0;
-      }
-      for(i = 0; !error && i < opp ; i++) {
+      for(i = 1; i < opp; i++) {
 	if(ops[0][i] == ops[0][i + 1])
 	  error = 1;
       }
-      if(ops[0][opp - 1] == NUM && !error) {
-        for(i = 0; i < opp; ) {
-	  if(ops[0][i] == OPER) {
-	    switch(ops[1][i]) {
-	      case '*':
-	        ops[1][i - 1] = ops[1][i - 1] * ops[1][i + 1];
-	        squeeze(i);
-	        break;
-	      case '/':
-	        ops[1][i - 1] = ops[1][i - 1] / ops[1][i + 1];
-	        squeeze(i);
-	        break;
-	      default:
-	        ++i;
-	    }
-	  }
-	  else
-	    ++i;
+      if(!(error)) {
+        if(ops[0][1] == NUM) {
+          --opp;
+	  for(i = 0; i < opp; i++) {
+            ops[0][i] = ops[0][i + 1];
+	    ops[1][i] = ops[1][i + 1];
+          }
+	  ops[0][opp] = CLEAR;
+	  ops[1][opp] = CLEAR;
         }
-        for(i = 0; i < opp; ) {
-	  if(ops[0][i] == OPER) {
-	    switch(ops[1][i]) {
-	      case '+':
-	        ops[1][i - 1] = ops[1][i - 1] + ops[1][i + 1];
-	        squeeze(i);
-	        break;
-	      case '-':
-	        ops[1][i - 1] = ops[1][i - 1] - ops[1][i + 1];
-	        squeeze(i);
-	        break;
-	      default:
-	        ++i;
+        if(ops[0][opp - 1] == NUM) {
+          for(i = 1; i < opp; ) {
+	    if(ops[0][i] == OPER) {
+	      switch(ops[1][i]) {
+	        case '*':
+	          ops[1][i - 1] = ops[1][i - 1] * ops[1][i + 1];
+	          squeeze(i);
+	          break;
+	        case '/':
+	          ops[1][i - 1] = ops[1][i - 1] / ops[1][i + 1];
+	          squeeze(i);
+	          break;
+	        default:
+	          ++i;
+	      }
 	    }
-	  }
-	  else
-	    ++i;
-        }
-	result = 1;
-	printf("%d\n", ops[1][0]);
+	    else
+	      ++i;
+          }
+          for(i = 1; i < opp; ) {
+	    if(ops[0][i] == OPER) {
+	      switch(ops[1][i]) {
+	        case '+':
+	          ops[1][i - 1] = ops[1][i - 1] + ops[1][i + 1];
+	          squeeze(i);
+	          break;
+	        case '-':
+	          ops[1][i - 1] = ops[1][i - 1] - ops[1][i + 1];
+	          squeeze(i);
+	          break;
+	        default:
+	          ++i;
+	      }
+	    }
+	    else
+	      ++i;
+          }
+	}
       }
-      else if((error)) {
-        printf("wat?\n");
-	ops[0][0] = NUM;
-	ops[1][0] = reserve;
+      else {
+	for(i = 1; i <= opp; i++) {
+	  ops[0][i] = CLEAR;
+	  ops[1][i] = CLEAR;
+	}
 	opp = 1;
-	ops[0][opp] = CLEAR;
-	printf("%d\n", ops[1][0]);
+        printf("wat?\n");
       }
     }
-    else if(l < 0)
+    else if(l < 0) {
       printf("wat?\n");
+    }
+    printf("%d\n", ops[1][0]);
   }
 }
 
@@ -162,10 +163,12 @@ int compat(char c)
 void squeeze(int i)
 {
   opp -= 2;
-  for( ; i <= opp; i++) {
+  for( ; i < opp; i++) {
     ops[0][i] = ops[0][i + 2];
     ops[1][i] = ops[1][i + 2];
   }
   ops[0][i] = CLEAR;
+  ops[1][i] = CLEAR;
   ops[0][i + 1] = CLEAR;
+  ops[1][i + 1] = CLEAR;
 }
