@@ -5,91 +5,90 @@
 #define OPER 2
 
 int opp = 0;
-int ops[2][MAX];
+float ops[2][MAX];
 char line[MAX];
 
 int gline();
 int digit(char c);
 int compat(char c);
-void getops();
+int calc();
+int getops();
 void squeeze(int i);
 
 int main()
 {
-  int i, l, error;
+  int i, l;
 
   ops[0][opp++] = NUM;
   while((l = gline())) {
-    error = 0;
     if(l > 0) {
-      getops();
-      for(i = 1; i < opp; i++) {
-	if(ops[0][i] == ops[0][i + 1])
-	  error = 1;
-      }
-      if(!(error)) {
-        if(ops[0][1] == NUM) {
-          --opp;
-	  for(i = 0; i < opp; i++) {
-            ops[0][i] = ops[0][i + 1];
-	    ops[1][i] = ops[1][i + 1];
-          }
-	  ops[0][opp] = CLEAR;
-	  ops[1][opp] = CLEAR;
+      if(getops() < 0 || calc() < 0) {
+        for(i = 1; i <= opp; i++) {
+          ops[0][i] = CLEAR;
+          ops[1][i] = CLEAR;
         }
-        if(ops[0][opp - 1] == NUM) {
-          for(i = 1; i < opp; ) {
-	    if(ops[0][i] == OPER) {
-	      switch(ops[1][i]) {
-	        case '*':
-	          ops[1][i - 1] = ops[1][i - 1] * ops[1][i + 1];
-	          squeeze(i);
-	          break;
-	        case '/':
-	          ops[1][i - 1] = ops[1][i - 1] / ops[1][i + 1];
-	          squeeze(i);
-	          break;
-	        default:
-	          ++i;
-	      }
-	    }
-	    else
-	      ++i;
-          }
-          for(i = 1; i < opp; ) {
-	    if(ops[0][i] == OPER) {
-	      switch(ops[1][i]) {
-	        case '+':
-	          ops[1][i - 1] = ops[1][i - 1] + ops[1][i + 1];
-	          squeeze(i);
-	          break;
-	        case '-':
-	          ops[1][i - 1] = ops[1][i - 1] - ops[1][i + 1];
-	          squeeze(i);
-	          break;
-	        default:
-	          ++i;
-	      }
-	    }
-	    else
-	      ++i;
-          }
-	}
-      }
-      else {
-	for(i = 1; i <= opp; i++) {
-	  ops[0][i] = CLEAR;
-	  ops[1][i] = CLEAR;
-	}
-	opp = 1;
-        printf("wat?\n");
+        opp = 1;
       }
     }
-    else if(l < 0) {
-      printf("wat?\n");
-    }
-    printf("%d\n", ops[1][0]);
+    printf("%g\n", ops[1][0]);
   }
+}
+
+int calc()
+{
+  int i;
+  for(i = 1; i < opp; i++) {
+    if(ops[0][i] == ops[0][i + 1]) {
+      printf("error: non arithmetic expression\n");
+      return -1;
+    }
+    if(ops[1][i] == '/' && ops[1][i + 1] == 0) {
+      printf("error: division by zero\n");
+      return -1;
+    }
+  }
+  if(ops[0][1] == NUM) {
+    --opp;
+    for(i = 0; i < opp; i++) {
+      ops[0][i] = ops[0][i + 1];
+      ops[1][i] = ops[1][i + 1];
+    }
+    ops[0][opp] = CLEAR;
+    ops[1][opp] = CLEAR;
+  }
+  if(ops[0][opp - 1] == NUM) {
+    for(i = 1; i < opp; ) {
+      if(ops[0][i] == OPER) {
+        if(ops[1][i] == '*' || ops[1][i] == '/') {
+	  if(ops[1][i] == '*')
+            ops[1][i - 1] = ops[1][i - 1] * ops[1][i + 1];
+	  if(ops[1][i] == '/')
+            ops[1][i - 1] = ops[1][i - 1] / ops[1][i + 1];
+          squeeze(i);
+        }
+	else
+	  ++i;
+      }
+      else
+        ++i;
+    }
+    for(i = 1; i < opp; ) {
+      if(ops[0][i] == OPER) {
+        if(ops[1][i] == '+' || ops[1][i] == '-') {
+	  if(ops[1][i] == '+')
+            ops[1][i - 1] = ops[1][i - 1] + ops[1][i + 1];
+	  if(ops[1][i] == '-')
+            ops[1][i - 1] = ops[1][i - 1] - ops[1][i + 1];
+          squeeze(i);
+        }
+	else
+	  ++i;
+      }
+      else
+        ++i;
+    }
+  }
+  return 0;
 }
 
 int gline()
@@ -106,32 +105,49 @@ int gline()
   if(!compat(c) && c != '\n') {
     while(getchar() != '\n')
       ;
+    printf("error: unrecognized char in line\n");
     return -1;
   }
   return i;
 }
 
-void getops()
+int getops()
 {
-  int i, num, sign, firstinline;
+  int i, sign, power, point, firstinline;
+  float num;
 
   firstinline = 1;
   for(i = 0; line[i] != '\0'; i++) {
     while(line[i] == ' ' || line[i] == '\t')
       i++;
-    if(digit(line[i]) ||
-	  (line[i] == '-' && digit(line[i + 1]) &&
-	      (ops[0][opp - 1] == OPER || (firstinline) ))) {
+    if(digit(line[i]) || line[i] == '.' ||
+          (line[i] == '-' && digit(line[i + 1]) &&
+              (ops[0][opp - 1] == OPER || (firstinline) ))) {
       num = 0;
+      point = 0;
+      power = 1;
       sign = 1;
       if(line[i] == '-') {
-	sign = -1;
-	++i;
+        sign = -1;
+        ++i;
       }
-      while(digit(line[i]))
-	num = num * 10 + (line[i++] - '0');
+      while(digit(line[i]) || line[i] == '.') {
+        if(point > 1) {
+          printf("error: too many points in number\n");
+          return -1;
+        }
+        if(digit(line[i])) {
+          num = num * 10.0 + (line[i++] - '0');
+          if(point > 0)
+            power *= 10.0;
+        }
+        else {
+	  i++;
+          point++;
+	}
+      }
       ops[0][opp] = NUM;
-      ops[1][opp++] = sign * num;
+      ops[1][opp++] = sign * num / power;
       --i;
     }
     else if(line[i] == '-' ||  line[i] == '+'
@@ -141,6 +157,7 @@ void getops()
     }
     firstinline = 0;
   }
+  return 0;
 }
 
 int digit(char c)
@@ -153,7 +170,7 @@ int digit(char c)
 
 int compat(char c)
 {
-  if(digit(c) || c == '-' || c == '+' || c == '*'
+  if(digit(c) || c == '-' || c == '+' || c == '*' || c == '.'
               || c == '/' || c == ' ' || c == '\t')
     return 1;
   else
