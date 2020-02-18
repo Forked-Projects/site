@@ -105,7 +105,7 @@ int gline()
   if(!compat(c) && c != '\n') {
     while(getchar() != '\n')
       ;
-    printf("error: unrecognized char in line\n");
+    printf("error: unrecognized character in line\n");
     return -1;
   }
   return i;
