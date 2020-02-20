@@ -99,15 +99,21 @@ int gline()
   for(i = 0; (c = getchar()) != '\n' && c != EOF && compat(c) && i < MAX; i++) {
     line[i] = c;
   }
-  line[i++] = '\0';
   if(c == EOF)
     return 0;
+  if(i >= MAX) {
+    while(getchar() != '\n')
+      ;
+    printf("error: too many arguments in line or line is too long\n");
+    return -1;
+  }
   if(!compat(c) && c != '\n') {
     while(getchar() != '\n')
       ;
     printf("error: unrecognized character in line\n");
     return -1;
   }
+  line[i++] = '\0';
   return i;
 }
 
