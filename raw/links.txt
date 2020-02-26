@@ -256,7 +256,9 @@ https://github.com/FabioLolix/BSD-Timeline/releases
 https://wolfram.schneider.org/bsd/ftp/releases/
 
 
-The Unix Heritage Society -- архивы дистрибутивов и документации о Unix
+The Unix Heritage Society -- архивы дистрибутивов, исходных текстов и
+документации о Unix
+https://minnie.tuhs.org/cgi-bin/utree.pl
 http://www.tuhs.org/Archive/Distributions/Research/
 
 
