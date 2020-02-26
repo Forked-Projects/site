@@ -104,6 +104,10 @@ http://mywiki.wooledge.org/BashPitfalls
 Почему Devuan (форк Debian без systemd) — это не просто из вредности
 https://ungleich.ch/en-us/cms/blog/2017/12/10/the-importance-of-devuan/
 
+
+Статья о написании текстового редактора менее чем в 1000 строк кода с нуля
+https://viewsourcecode.org/snaptoken/kilo/
+
 =====
 
 Полный список команд для nvi/vim
@@ -259,6 +263,10 @@ http://www.tuhs.org/Archive/Distributions/Research/
 Уоррен Туми по крупицам восстанавливает считающийся утерянным код оригинальной
 UNIX 1969 года, написанной дла PDP-7 на ассемблере
 https://github.com/DoctorWkt/pdp7-unix
+
+
+Множество документации, распространявшейся вместе или для Unix 7th edition
+https://wolfram.schneider.org/bsd/7thEdManVol2/
 
 
 Ретро компы и интерфейсы
