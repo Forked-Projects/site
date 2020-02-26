@@ -89,6 +89,10 @@ http://sunsite.uakom.sk/sunworldonline/swol-02-1996/swol-02-perf.html
 https://indradhanush.github.io/blog/writing-a-unix-shell-part-1/
 
 
+Статья о написании текстового редактора менее чем в 1000 строк кода с нуля
+https://viewsourcecode.org/snaptoken/kilo/
+
+
 Journaling vs Soft Updates: Asynchronous Meta-data Protection in File Systems
 https://www.archive.ece.cmu.edu/~ganger/papers/usenix2000.pdf
 
@@ -103,10 +107,6 @@ http://mywiki.wooledge.org/BashPitfalls
 
 Почему Devuan (форк Debian без systemd) — это не просто из вредности
 https://ungleich.ch/en-us/cms/blog/2017/12/10/the-importance-of-devuan/
-
-
-Статья о написании текстового редактора менее чем в 1000 строк кода с нуля
-https://viewsourcecode.org/snaptoken/kilo/
 
 =====
 
@@ -260,13 +260,13 @@ The Unix Heritage Society -- архивы дистрибутивов и доку
 http://www.tuhs.org/Archive/Distributions/Research/
 
 
+Множество документации, распространявшейся вместе или для Unix 7th edition
+https://wolfram.schneider.org/bsd/7thEdManVol2/
+
+
 Уоррен Туми по крупицам восстанавливает считающийся утерянным код оригинальной
 UNIX 1969 года, написанной дла PDP-7 на ассемблере
 https://github.com/DoctorWkt/pdp7-unix
-
-
-Множество документации, распространявшейся вместе или для Unix 7th edition
-https://wolfram.schneider.org/bsd/7thEdManVol2/
 
 
 Ретро компы и интерфейсы
