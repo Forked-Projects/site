@@ -1,2 +1,39 @@
-This is main page.
-It's clear but you can go to menu.
+Запуск Unix v7 в симуляторе SIMH
+
+Скачаем сам образ диска Research Unix 7
+http://simh.trailing-edge.com/kits/uv7swre.zip
+в нём unix_v7_rl.dsk -- это образ диска.
+
+Сборки SIMH для Windows
+https://github.com/simh/Win32-Development-Binaries
+в архиве интересует файл pdp11.exe -- это симулятор PDP-11.
+
+Для Unix-like системы установите simh из репозитория, например для FreeBSD
+# pkg install simh
+
+Распакуем в каталог, например "unixv7", образ unix_v7_rl.dsk и pdp11.exe
+
+Перейдём в каталог unixv7, в нём запускаем симулятор:
+$ pdp11
+
+sim> -- это приглашение командной строки симулятора
+
+Настраиваем систему, передавая команды терминалу simh:
+set cpu 11/45   -- определяет тип эмулируемой системы
+set tto 7b      -- устанавливает разрядность эмулируемого телетайпа в 7 бит
+att rl unix_v7_rl.dsk -- монтирует образ диска к контроллеру rl
+boot rl    -- загружает наш образ
+
+Далее, в приглашении @ вводим
+@boot
+New Boot, known devices are hp ht rk rl rp tm vt 
+:
+
+Далее, указываем раздел, с которого необходимо загрузиться
+: rl(0,0)rl2unix
+mem = 177856
+#
+И сразу попадаем в командную строку под суперпользователем.
+
+Источник:
+http://www.jdpressman.com/2015/11/27/how-to-emulate-unix-v7-using-SIMH-(2015).html
