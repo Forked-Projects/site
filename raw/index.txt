@@ -11,7 +11,7 @@ https://github.com/simh/Win32-Development-Binaries
 Для Unix-like системы установите simh из репозитория, например для FreeBSD:
 # pkg install simh
 
-Распакуем в каталог, например "unixv7", образ unix_v7_rl.dsk и pdp11.exe.
+Распакуем в каталог, например в "unixv7", образ unix_v7_rl.dsk и pdp11.exe.
 
 Перейдём в каталог unixv7, в нём запускаем эмулятор:
 $ pdp11
