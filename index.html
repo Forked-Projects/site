@@ -8,7 +8,7 @@
       <a href="/">vall.su</a>
     </header>
     <main>
-Запуск Unix v7 в симуляторе SIMH
+Запуск Unix v7 в эмуляторе SIMH
 
 Скачаем сам образ диска Research Unix 7
 <a href="http://simh.trailing-edge.com/kits/uv7swre.zip" target="_blank">http://simh.trailing-edge.com/kits/uv7swre.zip</a>
@@ -16,37 +16,40 @@
 
 Сборки SIMH для Windows
 <a href="https://github.com/simh/Win32-Development-Binaries" target="_blank">https://github.com/simh/Win32-Development-Binaries</a>
-в архиве интересует файл pdp11.exe -- это симулятор PDP-11.
+в архиве интересует файл pdp11.exe -- это эмулятор PDP-11.
 
-Для Unix-like системы установите simh из репозитория, например для FreeBSD
+Для Unix-like системы установите simh из репозитория, например для FreeBSD:
 # pkg install simh
 
-Распакуем в каталог, например "unixv7", образ unix_v7_rl.dsk и pdp11.exe
+Распакуем в каталог, например "unixv7", образ unix_v7_rl.dsk и pdp11.exe.
 
-Перейдём в каталог unixv7, в нём запускаем симулятор:
+Перейдём в каталог unixv7, в нём запускаем эмулятор:
 $ pdp11
 
-sim> -- это приглашение командной строки симулятора
+sim> -- это приглашение командной строки эмулятора.
 
 Настраиваем систему, передавая команды терминалу simh:
-sim> set cpu 11/45  -- определяет тип эмулируемой системы
-sim> set tto 7b     -- устанавливает разрядность эмулируемого телетайпа в 7 бит
-sim> att rl unix_v7_rl.dsk  -- монтирует образ диска к контроллеру rl
-sim> boot rl        -- загружает наш образ
+sim> set cpu 11/45  -- определяет тип эмулируемой системы,
+sim> set tto 7b     -- устанавливает разрядность эмулируемого телетайпа в 7 бит,
+sim> att rl unix_v7_rl.dsk  -- монтирует образ диска к контроллеру rl,
+sim> boot rl        -- загружает наш образ.
 
-Далее, в приглашении @ вводим
+Далее, в приглашении @ вводим:
 @boot
 New Boot, known devices are hp ht rk rl rp tm vt 
 :
 
-Указываем раздел(rl2) и образ ядра(unix), который необходимо загрузить
+Указываем раздел(rl2) и образ ядра(unix), который необходимо загрузить:
 : rl(0,0)rl2unix
 mem = 177856
 #
+
 И сразу попадаем в командную строку под суперпользователем.
 
-Источник:
+
+Источники:
 <a href="http://www.jdpressman.com/2015/11/27/how-to-emulate-unix-v7-using-SIMH-(2015).html" target="_blank">http://www.jdpressman.com/2015/11/27/how-to-emulate-unix-v7-using-SIMH-(2015).html</a>
+<a href="http://simh.trailing-edge.com/" target="_blank">http://simh.trailing-edge.com/</a>
     </main>
     <nav>
       <a href="/cooked/books.html">books</a>
