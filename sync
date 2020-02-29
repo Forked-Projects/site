@@ -1,4 +1,11 @@
 dir=$(dirname $0);
+svn=svnlite;
+svnversion=svnliteversion;
+if [ -e /usr/bin/svn ]
+then
+  svn=svn;
+  svnversion=svnversion;
+fi;
 
 makehtml() {
 name=$1;
@@ -29,10 +36,10 @@ echo '    </nav>
 </html>' >> $dir/cooked/$name.html;
 }
 
-if [ `svnliteversion $dir | sed 's/:.*//; s/M$//'` -lt `svnlite status -u $dir \
+if [ `$svnversion $dir | sed 's/:.*//; s/M$//'` -lt `$svn status -u $dir \
  | grep '^Status' | cut -d ':' -f 2` ]
 then
-  svnlite update $dir;
+  $svn update $dir;
   exec $SHELL $(readlink -f $0);
 fi;
 
@@ -41,8 +48,8 @@ do makehtml $i;
 done;
 mv $dir/cooked/index.html $dir/;
 
-svnlite status $dir | grep ^'?' | sed 's/?  *//' | xargs svnlite add;
-svnlite status $dir | grep ^'!' | sed 's/!  *//' | xargs svnlite del;
-svnlite commit --username vallnoob -m "Update `date +%d-%h-%Y_%H-%M`" $dir;
-svnlite update $dir;
-svnlite status -uv $dir;
+$svn status $dir | grep ^'?' | sed 's/?  *//' | xargs $svn add;
+$svn status $dir | grep ^'!' | sed 's/!  *//' | xargs $svn del;
+$svn commit --username vallnoob -m "Update `date +%d-%h-%Y_%H-%M`" $dir;
+$svn update $dir;
+$svn status -uv $dir;
