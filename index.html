@@ -109,6 +109,20 @@ $
 И можно учиться истинному Unix, например по книге "UNIX. Программное окружение"
 Брайана Кернигана и Роба Пайка.
 
+Для автоматизации запуска эмулятора pdp11 можон создать файл pdp11.ini с
+командами запуска:
+$ cat pdp11.ini
+set cpu 11/45
+set tto 7b
+att rl unix_v7_rl.dsk
+boot rl
+$
+
+То есть каталог для запуска Research Unix 7 имеет содержимое:
+pdp11.exe -- на Windows
+pdp11.ini
+unix_v7_rl.dsk
+
 
 Источники:
 <a href="http://www.jdpressman.com/2015/11/27/how-to-emulate-unix-v7-using-SIMH-(2015).html" target="_blank">http://www.jdpressman.com/2015/11/27/how-to-emulate-unix-v7-using-SIMH-(2015).html</a>
