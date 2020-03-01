@@ -33,22 +33,39 @@ sim> -- это приглашение командной строки эмуля
 
 Настраиваем систему, передавая команды терминалу simh:
 sim> set cpu 11/45  -- определяет тип эмулируемой системы,
+Disabling XQ
 sim> set tto 7b     -- устанавливает разрядность эмулируемого телетайпа в 7 бит,
 sim> att rl unix_v7_rl.dsk  -- монтирует образ диска к контроллеру rl,
 sim> boot rl        -- загружает наш образ.
+@
 
 Далее, в приглашении @ вводим:
 @boot
 New Boot, known devices are hp ht rk rl rp tm vt 
 :
 
-Указываем раздел(rl2) и образ ядра(unix), который необходимо загрузить:
+Указываем раздел (0,0) и образ ядра(rl2unix), который необходимо загрузить:
 : rl(0,0)rl2unix
 mem = 177856
 #
 
 И сразу попадаем в командную строку под суперпользователем.
-
+# ls -l
+total 642
+drwxrwxr-x 2 bin      2512 Sep 22 05:32 bin
+-rwxr-xr-x 1 bin      8986 Jun  8  1979 boot
+drwxrwxr-x 2 bin       160 Sep 22 05:47 dev
+drwxrwxr-x 2 bin       336 Sep 22 05:33 etc
+-rwxr-xr-x 1 sys     53302 Jun  8  1979 hphtunix
+-rwxr-xr-x 1 sys     52850 Jun  8  1979 hptmunix
+drwxrwxr-x 2 bin       320 Sep 22 05:33 lib
+drwxrwxr-x 2 root       96 Sep 22 05:46 mdec
+-rwxr-xr-x 1 root    50990 Jun  8  1979 rkunix
+-rwxr-xr-x 1 root    51982 Jun  8  1979 rl2unix
+-rwxr-xr-x 1 sys     51790 Jun  8  1979 rphtunix
+-rwxr-xr-x 1 sys     51274 Jun  8  1979 rptmunix
+drwxrwxr-x11 root      176 Sep 22 05:46 us
+#
 
 Источники:
 <a href="http://www.jdpressman.com/2015/11/27/how-to-emulate-unix-v7-using-SIMH-(2015).html" target="_blank">http://www.jdpressman.com/2015/11/27/how-to-emulate-unix-v7-using-SIMH-(2015).html</a>

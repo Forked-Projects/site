@@ -8,14 +8,7 @@
       <a href="/">vall.su</a>
     </header>
     <main>
-Установка во FreeBSD:
-
-pkg install firefox
-dbus-uuidgen > /etc/machine-id
-
-=====
-
-Русификацию проще всего сделать как описано здесь
+Если нет русского языка, русификацию проще всего сделать как описано здесь
 <a href="https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack" target="_blank">https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack</a>
 
 Вкратце, поставить Add-on
@@ -43,10 +36,13 @@ toolkit.legacyUserProfileCustomizations.stylesheets -> true
 
 mkdir ~/.mozilla/firefox/PROFILE/chrome
 touch ~/.mozilla/firefox/PROFILE/chrome/userChrome.css
-или
+
+или если Windows
 %AppData%/Mozilla/Firefox/Profiles/PROFILE/chrome/userChrome.css
 
 =====
+
+Отключение ненужных элементов интерфейса в userChrome.css
 
 @-moz-document url(chrome://browser/content/browser.xhtml) {
   #urlbar .urlbar-history-dropmarker {
