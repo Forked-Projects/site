@@ -180,40 +180,7 @@ pkg install xorg -- метапакет, в который входит вся ф
 
 =====
 
-Нормальные шрифты -- создать такой ~/.fonts.conf
-
-<?xml version="1.0"?>
-<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
-<fontconfig>
-    <!-- Font Display Settings -->
-    <match target="font" >
-        <edit mode="assign" name="rgba" >
-            <const>rgb</const>
-        </edit>
-    </match>
-        <match target="font" >
-        <edit mode="assign" name="hinting" >
-            <bool>true</bool>
-        </edit>
-    </match>
-    <match target="font" >
-        <edit mode="assign" name="hintstyle" >
-            <const>hintslight</const>
-        </edit>
-    </match>
-    <match target="font" >
-        <edit mode="assign" name="antialias" >
-            <bool>true</bool>
-        </edit>
-    </match>
-    <match target="font" >
-        <edit mode="assign" name="lcdfilter" >
-            <const>lcddefault</const>
-        </edit>
-    </match>
-</fontconfig>
-
-Взято отсюда:
+Нормальные шрифты:
 <a href="https://forums.freebsd.org/threads/howto-nice-fonts.2021/#post-52244" target="_blank">https://forums.freebsd.org/threads/howto-nice-fonts.2021/#post-52244</a>
 
 =====
