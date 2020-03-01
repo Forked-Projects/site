@@ -57,6 +57,48 @@ drwxrwxr-x 2 root       96 Sep 22 05:46 mdec
 drwxrwxr-x11 root      176 Sep 22 05:46 us
 #
 
+Замечание: для удаления последнего введённого символа в Unix используется
+символ # , а не клавиша Backspace. Пример исправления опечатки:
+# echo unixz#
+unix
+#
+
+Для начала создадим каталог /tmp , иначе многие программы не смогут работать
+из-за невозможности создать временные файлы, например:
+# man man
+Cannot create temp file.
+# mkdir /tmp
+# chmod 777 /tmp
+#
+
+Посмотрим какие есть в системе пользователи
+# cat /etc/passwd
+root:VwL97VCAx1Qhs:0:1::/:
+daemon:x:1:1::/:
+sys::2:2::/usr/sys:
+bin::3:3::/bin:
+uucp::4:4::/usr/lib/uucp:/usr/lib/uucico
+dmr::7:3::/usr/dmr:
+# 
+
+dmr -- аккаунт Денниса Ритчи, исторический аккаунт непревелигированного
+пользователя Unix. Можно создать свой аккаунт в системе:
+# echo 'vall::100:3::/usr/vall:' >> /etc/passwd
+# mkdir /usr/vall
+# chown vall /usr/vall
+# chgrp 3 /usr/vall
+
+И зададим пароль root, потому что мы его сейчас не знаем:
+# passwd root
+
+Для выхода из системы используется ^D (Ctrl+D).
+#
+login: vall
+$
+
+И можно учиться истинному Unix, например по книге "UNIX. Программное окружение"
+Брайана Кернигана и Роба Пайка.
+
 Источники:
 http://www.jdpressman.com/2015/11/27/how-to-emulate-unix-v7-using-SIMH-(2015).html
 http://simh.trailing-edge.com/

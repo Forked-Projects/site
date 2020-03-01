@@ -85,13 +85,14 @@ xterm*veryBoldColors: 6
 
 =====
 
-Ещё раз о шрифтах. Чтоб TTF шрифт в xterm рендерился как в Konsole, через
-библиотеку Xft (по-умолачнию он использует freetype напрямую):
+Ещё раз о шрифтах.
+Чтоб TTF шрифт в xterm рендерился как в Konsole, через библиотеку Xft
+(по-умолачнию он использует freetype напрямую):
 
-xterm -fn "x:fixed,xft:DejaVu Sans Mono:pixelsize=11"
+$ xterm -fn "x:fixed,xft:DejaVu Sans Mono:pixelsize=11"
 
-То есть указываем явно использовать xft шрифт, x:fixed указан для использования
-в случае отсутствия xft шрифта.
+То есть указываем явно использовать xft шрифт, x:fixed указан для случая
+если шрифт для Xft не найдётся.
 
 Либо в ~/.Xresources
 XTerm*faceName: x:fixed,xft:DejaVu Sans Mono
