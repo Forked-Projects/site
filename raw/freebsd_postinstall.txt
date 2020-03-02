@@ -161,7 +161,7 @@ freebsd-update install
 =====
 
 Установка маломальского X11
-pkg install xorg-server xinit xterm setxkbmap xset font-misc-misc \
+pkg install xorg-server xinit xterm setxkbmap xset xrdb font-misc-misc \
             xf86-input-keyboard xf86-input-mouse xf86-video-intel fluxbox
 
 Конечно, вместо xf86-video-intel надо ставить соответствующий драйвер видеокарты
