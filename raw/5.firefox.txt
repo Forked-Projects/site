@@ -1,18 +1,8 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/style.css">
-  </head>
-  <body>
-    <header>
-      <a href="/">vall.su</a>
-    </header>
-    <main>
 Если нет русского языка, русификацию проще всего сделать как описано здесь
-<a href="https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack" target="_blank">https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack</a>
+https://support.mozilla.org/en-US/kb/use-firefox-interface-other-languages-language-pack
 
 Вкратце, поставить Add-on
-<a href="https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/" target="_blank">https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/</a>
+https://addons.mozilla.org/ru/firefox/addon/russian-ru-language-pack/
 
 и в about:config создать строковый параметр
 New - String - intl.locale.requested -> ru
@@ -78,20 +68,3 @@ vk Stylish
 .top_nav_btn#top_notify_btn .top_nav_btn_icon {
     background-image: none !important;
 }
-    </main>
-    <nav>
-      <a href="/cooked/books.html">books</a>
-      <a href="/cooked/links.html">links</a>
-      <a href="/cooked/notes.html">notes</a>
-      <a href="/cooked/freebsd_postinstall.html">freebsd_postinstall</a>
-      <a href="/cooked/firefox.html">firefox</a>
-      <a href="/cooked/assembler.html">assembler</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-    </nav>\n  </body>\n</html>

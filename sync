@@ -22,18 +22,9 @@ echo '<html>
 sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.txt \
 >> $dir/cooked/$name.html;
 echo -e '    </main>\n    <nav>' >> $dir/cooked/$name.html;
-echo '
-books
-links
-notes
-freebsd_postinstall
-firefox
-assembler
-' | sed '/^$/d' | sed 's:.*:      <a href="/cooked/&.html">&</a>:'\
+ls -1 site/raw/ | cut -d . -f 2 | sed '/index/d;s:.*:      <a href="/cooked/&.html">&</a>:'\
 >> $dir/cooked/$name.html;
-echo '    </nav>
-  </body>
-</html>' >> $dir/cooked/$name.html;
+echo '    </nav>\n  </body>\n</html>' >> $dir/cooked/$name.html;
 }
 
 if [ `$svnversion $dir | sed 's/:.*//; s/M$//'` -lt `$svn status -u $dir \
@@ -43,7 +34,7 @@ then
   exec $SHELL $(readlink -f $0);
 fi;
 
-for i in $(ls -1 $dir/raw/ | sed 's/.txt$//');
+for i in $(ls -1 $dir/raw/ | cut -d . -f 2);
 do makehtml $i;
 done;
 mv $dir/cooked/index.html $dir/;

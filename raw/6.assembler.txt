@@ -1,0 +1,74 @@
+Простая программа Hello, world! на стандартном ассемблере as во FreeBSD i386 с
+использованием классического синтаксиса Unix, называемого AT&T синтаксис или
+GNU Assembler синтаксис.
+Во FreeBSD до сих пор используются GNU as и GNU ld из пакета GNU Binutils.
+
+=====
+
+.text
+  .global _start
+
+_syscall:
+  int   $0x80
+  ret
+
+_start:
+  pushl $len
+  pushl $msg
+  pushl $1
+  movl  $0x4,%eax
+  call  _syscall
+
+  add   $12,%esp
+
+  pushl $0
+  movl  $0x1,%eax
+  call  _syscall
+
+.data
+
+msg:
+  .ascii "Hello, world!\n"
+  len = . - msg
+
+=====
+
+Можно записать в файл, например, в hello.S и собрать
+as -o hello.o hello.S
+ld -o hello hello.o
+
+Запуск
+$ ./hello
+Hello, world!
+$
+
+=====
+
+Загрузчик на ассемблере в 512 байт, очень пахабно эмулирующий Unix shell
+используя системные вызовы BIOS без операционной системы.
+https://raw.githubusercontent.com/vallnoob/site/master/files/boot.s
+
+=====
+
+Литература:
+http://asm.sourceforge.net/intro/Assembly-Intro.pdf
+http://heather.cs.ucdavis.edu/~matloff/50/LinuxAssembly.html
+https://efxa.org/2011/03/02/assembly-gnulinux/
+https://baptiste-wicht.com/posts/2011/11/print-strings-integers-intel-assembly.html
+http://neuraldk.org/document.php?att_asm
+http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
+http://cs.lmu.edu/~ray/notes/gasexamples
+https://csiflabs.cs.ucdavis.edu/~ssdavis/50/att-syntax.htm
+
+Документация по GNU as
+https://sourceware.org/binutils/docs/as/
+
+Пройстейший загрузчик на ассемблере, печатающий строку текста
+https://medium.com/@g33konaut/writing-an-x86-hello-world-boot-loader-with-assembly-3e4c5bdd96cf
+
+https://ru.wikibooks.org/wiki/Ассемблер_в_Linux_для_программистов_C
+http://www.cs.virginia.edu/~evans/cs216/guides/x86.html
+https://www.freebsd.org/doc/en/books/developers-handbook/x86.html
+https://people.freebsd.org/~lstewart/references/amd64.pdf
+https://www.cs.cmu.edu/~fp/courses/15213-s07/misc/asm64-handout.pdf
+https://en.wikipedia.org/wiki/X86_instruction_listings

@@ -1,13 +1,3 @@
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="/style.css">
-  </head>
-  <body>
-    <header>
-      <a href="/">vall.su</a>
-    </header>
-    <main>
 Универскальная переключалка клавиатуры X11 -- setxkbmap
 
 Например
@@ -126,20 +116,3 @@ cd nvi/dist
 make
 make install
 ldconfig
-    </main>
-    <nav>
-      <a href="/cooked/books.html">books</a>
-      <a href="/cooked/links.html">links</a>
-      <a href="/cooked/notes.html">notes</a>
-      <a href="/cooked/freebsd_postinstall.html">freebsd_postinstall</a>
-      <a href="/cooked/firefox.html">firefox</a>
-      <a href="/cooked/assembler.html">assembler</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-      <a href="/cooked/txt.html">txt</a>
-    </nav>\n  </body>\n</html>
