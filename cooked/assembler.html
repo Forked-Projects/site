@@ -8,6 +8,80 @@
       <a href="/">vall.su</a>
     </header>
     <main>
+Простая программа Hello, world! на стандартном ассемблере as во FreeBSD i386 с
+использованием классического синтаксиса Unix, называемого AT&T синтаксис или
+GNU Assembler синтаксис.
+Во FreeBSD до сих пор используются GNU as и GNU ld из пакета GNU Binutils.
+
+=====
+
+.text
+  .global _start
+
+_syscall:
+  int   $0x80
+  ret
+
+_start:
+  pushl $len
+  pushl $msg
+  pushl $1
+  movl  $0x4,%eax
+  call  _syscall
+
+  add   $12,%esp
+
+  pushl $0
+  movl  $0x1,%eax
+  call  _syscall
+
+.data
+
+msg:
+  .ascii "Hello, world!\n"
+  len = . - msg
+
+=====
+
+Можно записать в файл, например, в hello.S и собрать
+as -o hello.o hello.S
+ld -o hello hello.o
+
+Запуск
+$ ./hello
+Hello, world!
+$
+
+=====
+
+Загрузчик на ассемблере в 512 байт, очень пахабно эмулирующий Unix shell
+используя системные вызовы BIOS без операционной системы.
+<a href="https://raw.githubusercontent.com/vallnoob/site/master/files/boot.s" target="_blank">https://raw.githubusercontent.com/vallnoob/site/master/files/boot.s</a>
+
+=====
+
+Литература:
+<a href="http://asm.sourceforge.net/intro/Assembly-Intro.pdf" target="_blank">http://asm.sourceforge.net/intro/Assembly-Intro.pdf</a>
+<a href="http://heather.cs.ucdavis.edu/~matloff/50/LinuxAssembly.html" target="_blank">http://heather.cs.ucdavis.edu/~matloff/50/LinuxAssembly.html</a>
+<a href="https://efxa.org/2011/03/02/assembly-gnulinux/" target="_blank">https://efxa.org/2011/03/02/assembly-gnulinux/</a>
+<a href="https://baptiste-wicht.com/posts/2011/11/print-strings-integers-intel-assembly.html" target="_blank">https://baptiste-wicht.com/posts/2011/11/print-strings-integers-intel-assembly.html</a>
+<a href="http://neuraldk.org/document.php?att_asm" target="_blank">http://neuraldk.org/document.php?att_asm</a>
+<a href="http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html" target="_blank">http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html</a>
+<a href="http://cs.lmu.edu/~ray/notes/gasexamples" target="_blank">http://cs.lmu.edu/~ray/notes/gasexamples</a>
+<a href="https://csiflabs.cs.ucdavis.edu/~ssdavis/50/att-syntax.htm" target="_blank">https://csiflabs.cs.ucdavis.edu/~ssdavis/50/att-syntax.htm</a>
+
+Документация по GNU as
+<a href="https://sourceware.org/binutils/docs/as/" target="_blank">https://sourceware.org/binutils/docs/as/</a>
+
+Пройстейший загрузчик на ассемблере, печатающий строку текста
+<a href="https://medium.com/@g33konaut/writing-an-x86-hello-world-boot-loader-with-assembly-3e4c5bdd96cf" target="_blank">https://medium.com/@g33konaut/writing-an-x86-hello-world-boot-loader-with-assembly-3e4c5bdd96cf</a>
+
+<a href="https://ru.wikibooks.org/wiki/Ассемблер_в_Linux_для_программистов_C" target="_blank">https://ru.wikibooks.org/wiki/Ассемблер_в_Linux_для_программистов_C</a>
+<a href="http://www.cs.virginia.edu/~evans/cs216/guides/x86.html" target="_blank">http://www.cs.virginia.edu/~evans/cs216/guides/x86.html</a>
+<a href="https://www.freebsd.org/doc/en/books/developers-handbook/x86.html" target="_blank">https://www.freebsd.org/doc/en/books/developers-handbook/x86.html</a>
+<a href="https://people.freebsd.org/~lstewart/references/amd64.pdf" target="_blank">https://people.freebsd.org/~lstewart/references/amd64.pdf</a>
+<a href="https://www.cs.cmu.edu/~fp/courses/15213-s07/misc/asm64-handout.pdf" target="_blank">https://www.cs.cmu.edu/~fp/courses/15213-s07/misc/asm64-handout.pdf</a>
+<a href="https://en.wikipedia.org/wiki/X86_instruction_listings" target="_blank">https://en.wikipedia.org/wiki/X86_instruction_listings</a>
     </main>
     <nav>
       <a href="/cooked/books.html">books</a>

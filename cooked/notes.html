@@ -8,6 +8,124 @@
       <a href="/">vall.su</a>
     </header>
     <main>
+Универскальная переключалка клавиатуры X11 -- setxkbmap
+
+Например
+setxkbmap -layout 'us,ru' -option 'grp:lwin_toggle,grp_led:scroll'
+
+Параметры:
+-layout 'us,ru' — список используемых раскладок.
+-option 'grp:lctrl_lshift_toggle' — переключение раскладок левым ctrl+shift.
+-option 'grp:lalt_lshift_toggle' - переключение левым alt+shift.
+-option 'grp:lwin_toggle' - переключение по левому winkey.
+-option 'grp:caps_toggle' - переключение по CapsLock.
+-option 'grp_led:scroll' - горит ScrollLock когда включена альтернативная
+(русская) раскладка, можно не указывать.
+
+=====
+
+Чтоб NumLock включался при запуске xinit можно поставить numlockx и прописать
+в ~/.xinitrc
+numlockx on 
+
+=====
+
+Вот при печати если нужно написать один символ много раз (например, этоооооооо),
+мы нажимаем кнопку символа, и есть задержка, а потом повторения этого символа
+пока держится кнопка символа.
+
+Настройка этого параметра для консоли FreeBSD -- man kbdcontrol, параметр -r.
+По-умолчанию там стоит fast (250.34) 
+
+Чтоб задать эти настройки в Xorg, достаточно сделать следующее:
+xset r rate ЗАДЕРЖКА[мс] ЧАСТОТА[Гц]
+
+То есть я себе сделал в ~/.xinitrc как в консоли:
+xset r rate 250 34
+
+=====
+
+Узнать свой внешний IP
+drill @resolver1.opendns.com ANY myip.opendns.com | grep ^myip
+или
+dig   @resolver1.opendns.com ANY myip.opendns.com | grep ^myip
+
+=====
+
+Чтобы в xterm выделенный мышью текст попадал в главный буфер, чтоб можно было
+его потом вставлять в другие программы по Ctrl+V
+~/.Xdefaults
+XTerm*SelectToClipboard: true
+
+=====
+
+Шрифт terminus для xterm
+
+pkg install terminus-font
+
+Если xfontsel не показывает что в системе присутствует terminus,
+то можно временно добавить шрифт в базу X11:
+
+xset +fp /usr/local/share/fonts/terminus-font/
+
+или постоянно в /usr/local/etc/X11/xorg.conf.d/15-terminus.conf
+
+Section "Files"
+  FontPath "/usr/local/share/fonts/terminus-font/"
+EndSection
+
+Запустить xterm с шрифтом terminus
+xterm -fn -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+
+или в .Xdefaults
+xterm*font: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+
+=====
+
+Сделать xterm как консоль FreeBSD -- серый текст на чёрном фоне,
+нет подчёркивания текста, жирный шрифт подсвечивается белым -- в .Xdefaults
+
+xterm*font: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+xterm*Background: black
+xterm*Foreground: grey
+xterm*colorBD: white
+xterm*colorBDMode: on
+xterm*underLine: off
+xterm*veryBoldColors: 6
+
+=====
+
+Ещё раз о шрифтах.
+Чтоб TTF шрифт в xterm рендерился как в Konsole, через библиотеку Xft
+(по-умолачнию он использует freetype напрямую):
+
+$ xterm -fn "x:fixed,xft:DejaVu Sans Mono:pixelsize=11"
+
+То есть указываем явно использовать xft шрифт, x:fixed указан для случая
+если шрифт для Xft не найдётся.
+
+Либо в ~/.Xresources
+XTerm*faceName: x:fixed,xft:DejaVu Sans Mono
+XTerm*faceSize: 8
+
+И для применения изменений надо сделать
+xrdb -merge ~/.Xresources
+
+=====
+
+Sylpheed -- великолепный почтовый клиент.
+
+=====
+
+nvi in GNU/Linux
+
+git clone git://repo.or.cz/nvi.git
+cd nvi/dist
+./distrib
+./configure
+make
+make install
+ldconfig
     </main>
     <nav>
       <a href="/cooked/books.html">books</a>
