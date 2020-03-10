@@ -7,21 +7,21 @@ fetch --no-verify-peer https://vall.su/raw/freebsd_postinstall.txt
 
 Чтобы fetch мог скачивать с проверкой цифровой подписи (--no-verify-peer её
 отключает) достаточно поставить пакет с корневыми сертификатами
-pkg install ca_root_nss
+# pkg install ca_root_nss
 
 =====
 
 Если поставил MS Windows после FreeBSD на смежный раздел, то чтобы восстановить
 загрузчик FreeBSD, можно загрузиться с liveUSB и сделать
-boot0cfg -B ada0
+# boot0cfg -B ada0
 
 Имя диска (ada0) можно узнать из
-dmesg | grep ada
+$ dmesg | grep ada
 
 =====
 
 Поменять shell для root с tcsh на sh
-pw user mod -n root -s sh
+# pw user mod -n root -s sh
 
 =====
 
@@ -33,17 +33,17 @@ Use password-based authentication? -- yes
 Use an empty password? -- yes
 
 Очистить пароль пользователя
-pw user mod -n username -w none
+# pw user mod -n username -w none
 
 Добавить пользователя в группу operator
-pw group mod operator -m username
+# pw group mod operator -m username
 
 =====
 
 Включить kms-драйверы для видеокарты временно
-kldload i915kms -- для Intel
+# kldload i915kms -- для Intel
 или
-kldload radeonkms -- для Radeon
+# kldload radeonkms -- для Radeon
 
 Начиная с FreeBSD 13 KMS-драйверы не входят в базовую систему и должны ставиться
 из мета-порта drm-kmod.
@@ -90,17 +90,17 @@ ifconfig_re0="DHCP" -- где 're0' -- имя карты в ifconfig
 =====
 
 Для WiFi
-sysctl net.wlan.devices  -- так можно глянуть имя wifi-карты, например 'ath0'
+# sysctl net.wlan.devices  -- так можно глянуть имя wifi-карты, например 'ath0'
 
 И прописать её в rc.conf
 wlans_ath0="wlan0"
 ifconfig_wlan0="WPA SYNCDHCP"
 
 Для пароля
-wpa_passphrase вайфай пароль > /etc/wpa_supplicant.conf
+# wpa_passphrase вайфай пароль > /etc/wpa_supplicant.conf
 
 И затестить
-service netif restart
+# service netif restart
 
 =====
 
@@ -116,21 +116,21 @@ moused_enable="YES"
 
 Чтобы при входе в систему не показывалось сообщение "Welcome to FreeBSD!"
 (motd), можно сделать
-touch ~/.hushlogin
+$ touch ~/.hushlogin
 или отредактировать класс default в /etc/login.conf (если пользователь в этом
 классе или в дочернем), добавив
 :hushlogin:
 после чего
-cap_mkdb /etc/login.conf
+# cap_mkdb /etc/login.conf
 
 =====
 
 Для русской локализации в консоли можно добавить пользователя в класс 'russian'
-pw user mod user -L russian 
+# pw user mod user -L russian 
 Все классы можно посмотреть в /etc/login.conf
 
 Другой путь -- задать переменную LANG, которую можно прописать в ~/.profile
-export LANG=ru_RU.UTF-8
+$ export LANG=ru_RU.UTF-8
 Файлы локализации находятся в /usr/share/locale/
 
 Для русского ввода в терминале нужно добавить это в /etc/rc.conf
@@ -139,14 +139,14 @@ keymap="ru.win.kbd" -- для переключения по Ctrl+Shift
 Файлы клавиатур находятся в /usr/share/vt(syscons)/keymaps/
 
 Также файл клавиатуры можно применить временно:
-kbdcontrol -l /usr/share/vt/keymaps/ru.win.kbd
+# kbdcontrol -l /usr/share/vt/keymaps/ru.win.kbd
 
 =====
 
 Если перехимичил с шрифтами, то вернуть шрифт по-умолчанию (Terminus 12 кегль)
 можно так:
 
-vidcontrol -f
+$ vidcontrol -f
 
 Так же через vidcontrol или vidfont можно поменять или примерить используемый
 шрифт.
@@ -155,18 +155,18 @@ vidcontrol -f
 
 Обновить систему
 
-freebsd-update fetch
-freebsd-update install
+# freebsd-update fetch
+# freebsd-update install
 
 =====
 
 Установка маломальского X11
-pkg install xorg-server xinit xterm setxkbmap xset xrdb font-misc-misc \
-            xf86-input-keyboard xf86-input-mouse xf86-video-intel fluxbox
+# pkg install xorg-server xinit xterm setxkbmap xset xrdb font-misc-misc \
+              xf86-input-keyboard xf86-input-mouse xf86-video-intel fluxbox
 
 Конечно, вместо xf86-video-intel надо ставить соответствующий драйвер видеокарты
 Или просто
-pkg install xorg -- метапакет, в который входит вся фигня.
+# pkg install xorg -- метапакет, в который входит вся фигня.
 
 =====
 
