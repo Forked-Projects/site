@@ -49,7 +49,7 @@ END
 getlist() {
   echo '********************************************************************************'
   chatnum=0 
-  while read line
+  while read -r line
   do
     if [ $(echo $line | grep local_id) ]
       then
@@ -64,7 +64,7 @@ getlist() {
 	sed 's/"attachments":\[{"type":"photo/: >> Изображение/' |\
 	sed 's/"attachments":\[{"type":"sticker/: Стикер/' |\
 	sed 's/"fwd_messages":\[{.*/: @ Сообщение/' |\
-	sed 's/"text":"/:  /; s/"$//' |\
+	sed 's/"text":"/:  /; s/"$//; s/\\n/ /g; s/\\"/"/g; s/  / /g' |\
         grep -v '^: *$' |\
 	tr -d '\n'
     fi
