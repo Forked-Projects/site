@@ -34,7 +34,7 @@ then
   exec $SHELL $(readlink -f $0);
 fi;
 
-for i in $(ls -1 $dir/raw/ | cut -d . -f 2);
+for i in $(ls -1 $dir/raw/ | cut -d . -f 1);
 do makehtml $i;
 done;
 mv $dir/cooked/index.html $dir/;
