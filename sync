@@ -22,7 +22,7 @@ echo '<html>
 sed '/^http/ s:.*:<a href="&" target="_blank">&</a>:' $dir/raw/$name.*.txt \
 >> $dir/cooked/$name.html;
 echo -e '    </main>\n    <nav>' >> $dir/cooked/$name.html;
-ls -1 $dir/raw/ | cut -d . -f 1 | sort -t . -k 2 |\
+ls -1 $dir/raw/ | sort -t . -k 2 | cut -d . -f 1 |\
 sed '/index/d;s:.*:      <a href="/cooked/&.html">&</a>:'\
 >> $dir/cooked/$name.html;
 echo -e '    </nav>\n  </body>\n</html>' >> $dir/cooked/$name.html;
