@@ -2,11 +2,15 @@
 Всё это есть в FreeBSD Handbook, в wiki.freebsd.org, в man, но тут всё какбэ на
 одной страничке.
 
-Можно скачать 
-fetch --no-verify-peer https://vall.su/raw/freebsd_postinstall.txt
+=====
 
-Чтобы fetch мог скачивать с проверкой цифровой подписи (--no-verify-peer её
-отключает) достаточно поставить пакет с корневыми сертификатами
+Качать файлы можно с помощью fetch, например
+fetch --no-verify-peer https://vall.su/raw/freebsd_postinstall.4.txt
+
+Опция --no-verify-peer отключает проверку сертификата SSL, потому что FreeBSD
+в базовой системе поставляется без списка корневых сертификатов, необходимых
+для работы с https.
+Пакет с корневыми сертификатами можно поставить так
 # pkg install ca_root_nss
 
 =====
@@ -28,7 +32,7 @@ $ dmesg | grep ada
 adduser -- диалог для создания пользователя
 Login group: wheel -- чтоб иметь возможность делать su 
 Invite into other groups: operator -- чтоб иметь возможность выключать комп
-Чтоб создался пользователь без пароля
+Чтоб создался пользователь без пароля нужно отвечать так
 Use password-based authentication? -- yes
 Use an empty password? -- yes
 
@@ -45,16 +49,18 @@ Use an empty password? -- yes
 или
 # kldload radeonkms -- для Radeon
 
-Начиная с FreeBSD 13 KMS-драйверы не входят в базовую систему и должны ставиться
-из мета-порта drm-kmod.
-
 Включение при загрузке -- в /etc/rc.conf
 kld_list="i915kms" или
 kld_list="radeonkms"
 
+Начиная с FreeBSD 13 KMS-драйверы не входят в базовую систему и должны ставиться
+из мета-порта drm-kmod и прописываться в /etc/rc.conf так
+kld_list="/boot/modules/i915kms.ko" или
+kld_list="/boot/modules/radeonkms.ko"
+
 =====
 
-Если загружается vt в текстовом режиме -- в /boot/loader.conf
+Если загружается vt в текстовом режиме (в VirtualBox) -- в /boot/loader.conf
 hw.vga.textmode=0
 
 Если надо загрузить syscons вместо vt -- туда же
@@ -68,6 +74,9 @@ kern.vty=vt
 Отключить вывод системных сообщений в консоль -- в /etc/syslog.conf
 закомментировать строку
 # *.err;kern.warning;auth.notice;mail.crit         /dev/console
+
+и перезагрузить syslogd
+# service syslogd restart
 
 =====
 
@@ -139,7 +148,7 @@ keymap="ru.win.kbd" -- для переключения по Ctrl+Shift
 Файлы клавиатур находятся в /usr/share/vt(syscons)/keymaps/
 
 Также файл клавиатуры можно применить временно:
-# kbdcontrol -l /usr/share/vt/keymaps/ru.win.kbd
+$ kbdcontrol -l /usr/share/vt/keymaps/ru.win.kbd
 
 =====
 
