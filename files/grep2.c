@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 char *pattern;
-void grep(char *fname, char *pattern);
+void grep(char *fname, FILE *fp, char *pattern);
 FILE *fp;
 
 int main(int argc, char *argv[])
@@ -14,24 +15,27 @@ int main(int argc, char *argv[])
   else {
     pattern = *++argv;
     if(argc == 2)
-      grep("stdin", pattern);
+      grep("input stream", stdin, pattern);
     else {
       while(argc-- > 2)
-        grep(*++argv, pattern);
+	if((fp = fopen(*++argv, "r")) != NULL)
+          grep(*argv, fp, pattern);
+        else
+          exit(2);
     }
   }
 }
 
-void grep(char *fname, char *pattern)
+void grep(char *fname, FILE *fp, char *pattern)
 {
   char *line = NULL;
   size_t linecap = 32;
   size_t nline = 0;
 
-  fp = fopen(fname, "r");
-  while(getline(&line, &linecap, fp) != EOF) {
+  while(getline(&line, &linecap, fp) > 0) {
     ++nline;
     if(strstr(line, pattern))
       printf("%s: %zu: %s", fname, nline, line);
   }
+  fclose(fp);
 }
