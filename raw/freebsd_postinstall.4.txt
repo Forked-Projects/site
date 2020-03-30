@@ -174,6 +174,9 @@ $ vidcontrol -f
               xf86-input-keyboard xf86-input-mouse xf86-video-intel fluxbox
 
 Конечно, вместо xf86-video-intel надо ставить соответствующий драйвер видеокарты
+xf86-video-ati -- для карт Radeon, или если старая видеокарта, такая как X1600,
+то xf86-video-ati-legacy -- драйвер для старых карт.
+Radeon, таких как X1600.
 Или просто
 # pkg install xorg -- метапакет, в который входит вся фигня.
 
@@ -208,4 +211,5 @@ bind -a -r .
 export LANG=ru_RU.UTF-8
 setxkbmap -layout 'us,ru' -option 'grp:lwin_toggle,grp_led:scroll';
 xset r rate 250 34;
+numlockx;
 fluxbox;

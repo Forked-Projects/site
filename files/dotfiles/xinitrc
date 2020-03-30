@@ -1,0 +1,5 @@
+export LANG=ru_RU.UTF-8
+setxkbmap -layout 'us,ru' -option 'grp:lwin_toggle,grp_led:scroll';
+xset r rate 250 34;
+numlockx;
+fluxbox
