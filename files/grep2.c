@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+#define MAXLINE 500
+
 char *pattern;
 void grep(char *fname, FILE *fp, char *pattern);
 FILE *fp;
@@ -30,11 +32,11 @@ int main(int argc, char *argv[])
 
 void grep(char *fname, FILE *fp, char *pattern)
 {
-  char *line = NULL;
-  size_t linecap = 32;
+  char *line;
   size_t nline = 0;
+  line = malloc(1);
 
-  while(getline(&line, &linecap, fp) > 0) {
+  while(fgets(line, MAXLINE, fp) != NULL) {
     ++nline;
     if(strstr(line, pattern))
       printf("%s: %zu: %s", fname, nline, line);
