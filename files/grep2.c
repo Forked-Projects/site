@@ -20,8 +20,10 @@ int main(int argc, char *argv[])
       while(argc-- > 2)
 	if((fp = fopen(*++argv, "r")) != NULL)
           grep(*argv, fp, pattern);
-        else
+        else {
+	  fprintf(stderr, "grep: %s: no such file or directory\n", *argv);
           exit(2);
+	}
     }
   }
 }
